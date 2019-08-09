@@ -1,4 +1,4 @@
-#**
+"""
 #** Testharness to generate various different types of arrays of integers
 #** and then sort them using various sorts.
 #**
@@ -13,6 +13,7 @@
 #** Date:    August 2017
 #** Modified (python): Hayden Richards
 #** Date:    March 2018
+"""
 
 import numpy as np
 import sys
@@ -21,9 +22,10 @@ import DSAsorts
 import random
 
 
-REPEATS = 3           #No times to run sorts to get mean time
-NEARLY_PERCENT = 0.10 #% of items to move in nearly sorted array
-RANDOM_TIMES = 100    #No times to randomly swap elements in array
+REPEATS = 3              # No times to run sorts to get mean time
+NEARLY_PERCENT = 0.10    # % of items to move in nearly sorted array
+RANDOM_TIMES = 100       # No times to randomly swap elements in array
+
 
 def usage():
     print(" Usage: java TestHarness n xy [xy ...]")
@@ -41,12 +43,13 @@ def usage():
     print("           r - 1..n in random order")
     print("           n - 1..n nearly sorted (10% moved)")
 
+
 def doSort(n, sortType, arrayType):
-        A = np.arange(1, n+1, 1)   #create array with values from 1 to n
+        A = np.arange(1, n+1, 1)   # create array with values from 1 to n
         
         if arrayType == 'a':
             ...
-        elif arrayType =='d':  #convert to descending
+        elif arrayType =='d':  # convert to descending
             for i in range(0, int(n/2)):
                 temp = A[i]
                 A[i] = A[n-i-1]
@@ -88,7 +91,8 @@ def doSort(n, sortType, arrayType):
             if (A[i] > A[i+1]):
                 raise ValueError("Array not in order")
 
-#main program
+# main program
+
 
 if len(sys.argv) < 3:
     usage()
@@ -102,10 +106,10 @@ else:
         runningTotal = 0
 
         for repeat in range(REPEATS):
-             startTime = timeit.default_timer()
-             doSort(n, sortType, arrayType)
-             endTime = timeit.default_timer()
+            startTime = timeit.default_timer()
+            doSort(n, sortType, arrayType)
+            endTime = timeit.default_timer()
 
-             runningTotal += (endTime - startTime)
+            runningTotal += (endTime - startTime)
     
         print(sortType + arrayType + " " + str(n) + " " + str(runningTotal/(REPEATS - 1)))

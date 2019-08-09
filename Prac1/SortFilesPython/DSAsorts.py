@@ -1,8 +1,8 @@
-#
+"""
 # Data Structures and Algorithms COMP1002
 #
 # Python file to hold all sorting methods
-#
+"""
 
 my_list = [29, 5, 18, 13, 12, 20, 50, 214, 1]
 verbose_output = True
@@ -93,6 +93,7 @@ def do_partitioning(array, leftIdx, rightIdx, pivotIdx):
     ...
 
 
-# bubble_sort(my_list)
-# selection_sort(my_list)
-insertion_sort(my_list)
+if __name__ == "__main__":
+    # bubble_sort(my_list)
+    # selection_sort(my_list)
+    insertion_sort(my_list)
