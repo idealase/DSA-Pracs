@@ -1,18 +1,22 @@
 """
-#** Testharness to generate various different types of arrays of integers
-#** and then sort them using various sorts.
-#**
-#** Each sort is run REPEATS times, with the first result discarded,
-#** and the last REPEATS-1 runs averaged to give the running time.
-#**
-#** Author of java version: Andrew Turpin (andrew@cs.curtin.edu.au)
-#** Date:    August 2004
-#** Modified (java): Patrick Peursum
-#** Date:     Sep 2009
-#** Modified (python): Valerie Maxville
-#** Date:    August 2017
-#** Modified (python): Hayden Richards
-#** Date:    March 2018
+Testharness to generate various different types of arrays of integers
+and then sort them using various sorts.
+
+Each sort is run REPEATS times, with the first result discarded,
+and the last REPEATS-1 runs averaged to give the running time.
+
+-------------------------------------------------------------
+
+Author of java version: Andrew Turpin (andrew@cs.curtin.edu.au)
+Date:    August 2004
+Modified (java): Patrick Peursum
+Date:     Sep 2009
+Modified (python): Valerie Maxville
+Date:    August 2017
+Modified (python): Hayden Richards
+Date:    March 2018
+Modified (python): Brodie Sandford
+Date: August 2019
 """
 
 import numpy as np
@@ -44,7 +48,7 @@ def usage():
     print("           n - 1..n nearly sorted (10% moved)")
 
 
-def doSort(n, sortType, arrayType):
+def do_sort(n, sortType, arrayType):
         A = np.arange(1, n+1, 1)   # create array with values from 1 to n
         
         if arrayType == 'a':
@@ -75,20 +79,20 @@ def doSort(n, sortType, arrayType):
             print("Unsupported array type")
 
         if sortType == "b":
-            DSAsorts.bubbleSort(A)
+            DSAsorts.bubble_sort(A)
         elif sortType == "s":
-            DSAsorts.selectionSort(A)
+            DSAsorts.selection_sort(A)
         elif sortType == "i":
-            DSAsorts.insertionSort(A)
+            DSAsorts.insertion_sort(A)
         elif sortType == "m":
-            DSAsorts.mergeSort(A)
+            DSAsorts.merge_sort(A)
         elif sortType == "q":
-            DSAsorts.quickSort(A)
+            DSAsorts.quick_sort(A)
         else:
             print("Unsupported sort algorithm")
 
         for i in range(n-2):
-            if (A[i] > A[i+1]):
+            if A[i] > A[i+1]:
                 raise ValueError("Array not in order")
 
 # main program
@@ -107,7 +111,7 @@ else:
 
         for repeat in range(REPEATS):
             startTime = timeit.default_timer()
-            doSort(n, sortType, arrayType)
+            do_sort(n, sortType, arrayType)
             endTime = timeit.default_timer()
 
             runningTotal += (endTime - startTime)
