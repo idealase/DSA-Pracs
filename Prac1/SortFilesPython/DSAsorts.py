@@ -28,11 +28,25 @@ def bubble_sort(array):
                     print(str(prev_array) + " -----> " +
                           str(array) + "\n")
         pass_num += 1
-    print("Sorted list: " + str(array))
+    print("\n\nSorted list: " + str(array))
 
 
 def insertion_sort(array):
-    ...
+    for i in range(1, (len(array))):
+        ii = i
+        while (ii > 0) and (array[ii-1] > array[ii]):
+            prev_array = array.copy()
+            temp = array[ii]
+            array[ii] = array[ii-1]
+            array[ii-1] = temp
+            if verbose_output:
+                print("Swapped " + str(array[ii-1]) + " with " +
+                      str(array[ii]))
+                print(str(prev_array) + " -----> " + str(array))
+
+            ii -= 1
+
+    print("\n\nSorted list: " + str(array))
 
 
 def selection_sort(array):
@@ -48,7 +62,7 @@ def selection_sort(array):
         if verbose_output:
             print(str(prev_array) + " -----> " + str(array))
 
-    print("Sorted list: " + str(array))
+    print("\n\nSorted list: " + str(array))
 
 
 def merge_sort(array):
@@ -80,4 +94,5 @@ def do_partitioning(array, leftIdx, rightIdx, pivotIdx):
 
 
 # bubble_sort(my_list)
-selection_sort(my_list)
+# selection_sort(my_list)
+insertion_sort(my_list)
