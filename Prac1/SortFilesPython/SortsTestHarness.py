@@ -32,7 +32,7 @@ RANDOM_TIMES = 100       # No times to randomly swap elements in array
 
 
 def usage():
-    print(" Usage: java TestHarness n xy [xy ...]")
+    print(" Usage: python SortsTestHarness.py n xy [xy ...]")
     print("        where")
     print("        n is number of integers to sort")
     print("        x is one of")
@@ -97,6 +97,8 @@ def do_sort(n, sortType, arrayType):
 
 # main program
 
+
+print("\n")
 
 if len(sys.argv) < 3:
     usage()

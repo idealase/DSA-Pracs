@@ -5,7 +5,7 @@ Python file to hold all sorting methods
 """
 
 my_list = [29, 5, 18, 13, 12, 20, 50, 214, 1]
-verbose_output = True
+verbose_output = False
 
 
 def bubble_sort(array):
@@ -28,7 +28,7 @@ def bubble_sort(array):
                     print(str(prev_array) + " -----> " +
                           str(array) + "\n")
         pass_num += 1
-    print("\n\nSorted list: " + str(array))
+    print("Bubble Sorted list: " + str(array) + "\n")
 
 
 def insertion_sort(array):
@@ -46,7 +46,7 @@ def insertion_sort(array):
 
             ii -= 1
 
-    print("\n\nSorted list: " + str(array))
+    print("Insertion Sorted list: " + str(array) + "\n")
 
 
 def selection_sort(array):
@@ -62,7 +62,7 @@ def selection_sort(array):
         if verbose_output:
             print(str(prev_array) + " -----> " + str(array))
 
-    print("\n\nSorted list: " + str(array))
+    print("Selection Sorted list: " + str(array) + "\n")
 
 
 def merge_sort(array):
@@ -94,6 +94,8 @@ def do_partitioning(array, leftIdx, rightIdx, pivotIdx):
 
 
 if __name__ == "__main__":
+
+    verbose_output = True
 
     sort_choice = input("Choose a sort (B)ubble, (I)nsertion, "
                         "or (S)election: ")
