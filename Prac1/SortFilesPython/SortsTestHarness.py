@@ -49,50 +49,50 @@ def usage():
 
 
 def do_sort(n, sortType, arrayType):
-        A = np.arange(1, n+1, 1)   # create array with values from 1 to n
+        array = np.arange(1, n+1, 1)   # create array with values from 1 to n
         
         if arrayType == 'a':
-            ...
-        elif arrayType =='d':  # convert to descending
+            print("Ascending: ", array)
+        elif arrayType == 'd':  # convert to descending
             for i in range(0, int(n/2)):
-                temp = A[i]
-                A[i] = A[n-i-1]
-                A[n-i-1] = temp
-            print("Descending: ", A)
+                temp = array[i]
+                array[i] = array[n-i-1]
+                array[n-i-1] = temp
+            print("Descending: ", array)
         elif arrayType == 'r':
             for i in range(RANDOM_TIMES*n):
                 x = int(random.random()*n)
                 y = int(random.random()*n)
-                temp = A[x]
-                A[x] = A[y]
-                A[y] = temp
-            print("Random: ", A)
+                temp = array[x]
+                array[x] = array[y]
+                array[y] = temp
+            print("Random: ", array)
         elif arrayType == 'n':
             for i in range(int(n*NEARLY_PERCENT/2+1)):
                 x = int(random.random()*n)
                 y = int(random.random()*n)
-                temp = A[x]
-                A[x] = A[y]
-                A[y] = temp
-            print("Nearly sorted: ", A)
+                temp = array[x]
+                array[x] = array[y]
+                array[y] = temp
+            print("Nearly sorted: ", array)
         else:
             print("Unsupported array type")
 
         if sortType == "b":
-            DSAsorts.bubble_sort(A)
+            DSAsorts.bubble_sort(array)
         elif sortType == "s":
-            DSAsorts.selection_sort(A)
+            DSAsorts.selection_sort(array)
         elif sortType == "i":
-            DSAsorts.insertion_sort(A)
+            DSAsorts.insertion_sort(array)
         elif sortType == "m":
-            DSAsorts.merge_sort(A)
+            DSAsorts.merge_sort(array)
         elif sortType == "q":
-            DSAsorts.quick_sort(A)
+            DSAsorts.quick_sort(array)
         else:
             print("Unsupported sort algorithm")
 
         for i in range(n-2):
-            if A[i] > A[i+1]:
+            if array[i] > array[i+1]:
                 raise ValueError("Array not in order")
 
 # main program
@@ -104,16 +104,17 @@ else:
     for aa in range(2, len(sys.argv)):
         
         n = int(sys.argv[1])
-        sortType = sys.argv[aa][0]
-        arrayType = sys.argv[aa][1]
+        sort_type = sys.argv[aa][0]
+        array_type = sys.argv[aa][1]
 
         runningTotal = 0
 
         for repeat in range(REPEATS):
             startTime = timeit.default_timer()
-            do_sort(n, sortType, arrayType)
+            do_sort(n, sort_type, array_type)
             endTime = timeit.default_timer()
 
             runningTotal += (endTime - startTime)
     
-        print(sortType + arrayType + " " + str(n) + " " + str(runningTotal/(REPEATS - 1)))
+        print(sort_type + array_type + " " + str(n) + " " +
+              str(runningTotal / (REPEATS - 1)))

@@ -1,7 +1,7 @@
 """
-# Data Structures and Algorithms COMP1002
-#
-# Python file to hold all sorting methods
+Data Structures and Algorithms COMP1002
+
+Python file to hold all sorting methods
 """
 
 my_list = [29, 5, 18, 13, 12, 20, 50, 214, 1]
@@ -94,6 +94,17 @@ def do_partitioning(array, leftIdx, rightIdx, pivotIdx):
 
 
 if __name__ == "__main__":
-    # bubble_sort(my_list)
-    # selection_sort(my_list)
-    insertion_sort(my_list)
+
+    sort_choice = input("Choose a sort (B)ubble, (I)nsertion, "
+                        "or (S)election: ")
+    if sort_choice.upper() == "B":
+        print("Bubble Sort")
+        bubble_sort(my_list)
+    elif sort_choice.upper() == "I":
+        print("Insertion Sort")
+        insertion_sort(my_list)
+    elif sort_choice.upper() == "S":
+        print("Selection Sort")
+        selection_sort(my_list)
+    else:
+        print("Poor choice")
