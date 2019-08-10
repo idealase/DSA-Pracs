@@ -3,8 +3,40 @@
 # Activity 2 - Implement Stacks and Queues
 
 # DSA Stack
+# arrays as data structure
 
-# arrays as ds
+class DSAStack:
+    def __init__(self, stack, count, def_cap = 100):
+        self.stack = stack
+        self.count = count
+        self.def_cap = def_cap
+
+    def is_full(self):
+        """Checks if stack is full"""
+        pass
+
+    def push(self, value):
+        """add new item to top of stack"""
+        if self.is_full():
+            print("Stack full")     # FIXME: handle this correctly
+            pass
+        else:
+            self[count] = value
+            self.count += 1
+        pass
+
+    def pop(self):
+        """take top-most item from stack"""
+        pass
+
+    def top(self):
+        """look at top-most item, leave it on stack"""
+        pass
+
+    def is_empty(self):
+        """check if stack is empty"""
+        pass
+
 
 # DSAQueue
 
