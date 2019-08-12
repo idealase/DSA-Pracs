@@ -26,12 +26,19 @@ import DSAsorts
 import random
 import csv
 
+
 def inp_csv():
     with open('RandomNames7000.csv', 'rt') as file:
         reader = csv.reader(file)
         names_dict = {}
         for row in reader:
-            names_dict
+            k = row[0]
+            v = row[1]
+            names_dict[k] = v
+
+
+inp_csv()
+print(names_dict[0:5])
 
 
 REPEATS = 3              # No times to run sorts to get mean time
