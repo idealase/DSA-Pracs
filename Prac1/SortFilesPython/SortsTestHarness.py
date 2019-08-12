@@ -24,6 +24,14 @@ import sys
 import timeit
 import DSAsorts
 import random
+import csv
+
+def inp_csv():
+    with open('RandomNames7000.csv', 'rt') as file:
+        reader = csv.reader(file)
+        names_dict = {}
+        for row in reader:
+            names_dict
 
 
 REPEATS = 3              # No times to run sorts to get mean time
