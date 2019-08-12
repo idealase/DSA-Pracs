@@ -24,14 +24,6 @@ import sys
 import timeit
 import DSAsorts
 import random
-import csv
-
-
-with open('RandomNames.csv', 'rt') as file:
-    reader = csv.reader(file)
-    names_list = []
-    for row in reader:
-        names_list.append(row[0])
 
 
 REPEATS = 3              # No times to run sorts to get mean time
