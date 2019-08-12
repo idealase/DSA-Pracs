@@ -27,18 +27,11 @@ import random
 import csv
 
 
-def inp_csv():
-    with open('RandomNames7000.csv', 'rt') as file:
-        reader = csv.reader(file)
-        names_dict = {}
-        for row in reader:
-            k = row[0]
-            v = row[1]
-            names_dict[k] = v
-
-
-inp_csv()
-print(names_dict[0:5])
+with open('RandomNames.csv', 'rt') as file:
+    reader = csv.reader(file)
+    names_list = []
+    for row in reader:
+        names_list.append(row[0])
 
 
 REPEATS = 3              # No times to run sorts to get mean time
