@@ -49,7 +49,7 @@ def usage():
 
 
 def do_sort(n, sortType, arrayType):
-        array = np.arange(1, n+1, 1)   # create array with values from 1 to n
+        array = np.arange(1, n+1, 1)   # array w/ values from 1 to n
         
         if arrayType == 'a':
             print("Ascending: ", array)
