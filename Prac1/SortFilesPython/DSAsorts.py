@@ -98,19 +98,19 @@ if __name__ == "__main__":
 
     verbose_output = True
 
-sort_choice = input("Choose a sort (B)ubble, (I)nsertion, "
-                    "or (S)election: ")
-if sort_choice.upper() == "B":
-    print("Bubble Sort")
-    bubble_sort(my_list)
-elif sort_choice.upper() == "I":
-    print("Insertion Sort")
-    insertion_sort(my_list)
-elif sort_choice.upper() == "S":
-    print("Selection Sort")
-    selection_sort(my_list)
-else:
-    print("Poor choice")
+    sort_choice = input("Choose a sort (B)ubble, (I)nsertion, "
+                        "or (S)election: ")
+    if sort_choice.upper() == "B":
+        print("Bubble Sort")
+        bubble_sort(my_list)
+    elif sort_choice.upper() == "I":
+        print("Insertion Sort")
+        insertion_sort(my_list)
+    elif sort_choice.upper() == "S":
+        print("Selection Sort")
+        selection_sort(my_list)
+    else:
+        print("Poor choice")
 
 
 
