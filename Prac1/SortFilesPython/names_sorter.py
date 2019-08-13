@@ -19,6 +19,10 @@ def sorter3000():
         end_time = timeit.default_timer()
         total_time = (end_time - start_time)
         print(total_time)
+        with open('sorted_names.csv', 'w') as csvfile:
+            writer = csv.writer(csvfile, delimiter=',')
+            for name in names_list:
+                writer.writerow(name)
     elif sort_choice.upper() == "I":
         print("Insertion Sort")
         start_time = timeit.default_timer()
@@ -26,6 +30,10 @@ def sorter3000():
         end_time = timeit.default_timer()
         total_time = (end_time - start_time)
         print(total_time)
+        with open('sorted_names.csv', 'w') as csvfile:
+            writer = csv.writer(csvfile, delimiter=',')
+            for name in names_list:
+                writer.writerow(name)
     elif sort_choice.upper() == "S":
         print("Selection Sort")
         start_time = timeit.default_timer()
@@ -33,6 +41,10 @@ def sorter3000():
         end_time = timeit.default_timer()
         total_time = (end_time - start_time)
         print(total_time)
+        with open('sorted_names.csv', 'w') as csvfile:
+            writer = csv.writer(csvfile, delimiter=',')
+            for name in names_list:
+                writer.writerow(name)
     else:
         print("Poor choice")
 
