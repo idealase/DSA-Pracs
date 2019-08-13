@@ -5,6 +5,7 @@
 # DSA Stack
 # arrays as data structure
 
+# FIXME: ???
 class DSAStack:
     def __init__(self, stack, count, def_cap = 100):
         self.stack = stack
@@ -40,86 +41,35 @@ class DSAStack:
 
 # DSAQueue
 
+class DSAQueue:
+    def __init__(self, queue, count, def_cap = 100):
+        self.queue = queue
+        self.count = count
+        self.def_cap = def_cap
 
+    def get_count(self):
+        return self.count
 
-# Activity 3 - Equation Solver
+    def is_empty(self):
+        if self.count == 0:
+            return True
+        else:
+            return False
 
+    def is_full(self):
+        if self.count == self.def_cap:
+            return True
+        else:
+            return False
 
-"""
-Simple class that takes string of infix equation
+    def enqueue(self, value):
+        pass        # TODO: implement
 
-converts to postfix
-evaluates postfix
-"""
+    def dequeue(self):
+        last_val = self.queue[-1]
+        del self.queue[-1]
+        return last_val
 
-infix = "4 + 3 * 12"
-
-
-class EqSolver:
-    def __init__(self):
-
-
-    def precedence_of(the_operator):
-        """Helper function for parse_infix_2_postfix()
-
-        Returns precedence (as int) of the_operator
-
-        examples:
-            + or - return 1
-            * or / return 2"""
-        pass
-
-    def parse_next_term(equation):
-        pass
-
-    def parse_infix_2_postfix(equation):
-        """Convert infix form equation to postfix
-
-        Stores postfix terms in queue of objects"""
-        postfix = []
-
-        while infix:
-            term = parse_next_term()  # TODO: implement method
-
-            if term == "(":
-                op_stack.push("(")  # TODO: implement
-            elif term == ")":
-                while op_stack.top() not "(":
-                    postfix = postfix + op_stack.pop()
-                op_stack.pop()
-            elif (term == "+") or (term == "-") or (term == "*") or (
-                    term == "/"):
-                while (not op_stack.is_empty()) and (op_stack.top()
-                not "(") and (
-                precendence_of(op_stack.top() >= precendence_of(term))):
-                    postfix = postfix + op_stack.pop()
-                op_stack.push(term)
-            else:
-                postfix = postfix + term
-
-        while not op_stack.is_empty():
-            postfix = postfix + op_stack.pop()
-
-
-
-
-
-
-    def execute_operation(op1, op2, op3):
-        """Helper function for eval_postfix()
-
-        Executes binary operation implied by op and returns result"""
-        pass
-
-
-    def eval_postfix(postfix_queue):
-        """Takes postfix queue and evaluates it"""
-        pass
-
-
-    def solve(equation):
-        """Should call parse_infix_2_postfix() and then eval_postfix()"""
-        pass
-
-
+    def peek(self):
+        return self.queue[-1]
 
