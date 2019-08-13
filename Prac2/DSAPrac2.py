@@ -1,20 +1,32 @@
+"""
+Activity 2 - Implement Stacks and Queues
 
 
-# Activity 2 - Implement Stacks and Queues
+DSA Stack
+arrays as data structure
+"""
 
-# DSA Stack
-# arrays as data structure
+import numpy as np
 
-# FIXME: ???
+
 class DSAStack:
-    def __init__(self, stack, count, def_cap = 100):
-        self.stack = stack
-        self.count = count
-        self.def_cap = def_cap
+    def __init__(self, n=100):
+        self.stack = np.empty(n)
+        self.count = 0
 
     def is_full(self):
         """Checks if stack is full"""
-        pass
+        if self.count == len(self.stack):
+            return True
+        else:
+            return False
+
+    def is_empty(self):
+        """check if stack is empty"""
+        if self.count == 0:
+            return True
+        else:
+            return False
 
     def push(self, value):
         """add new item to top of stack"""
@@ -22,30 +34,36 @@ class DSAStack:
             print("Stack full")     # FIXME: handle this correctly
             pass
         else:
-            self[count] = value
+            self.stack[self.count] = value
             self.count += 1
-        pass
 
     def pop(self):
         """take top-most item from stack"""
-        pass
+        if self.is_empty():
+            print("Stack empty")  # FIXME: handle this correctly
+            pass
+        else:
+            popped_val = self.stack[self.count]
+            del self.stack[self.count]
+            self.count -= 1
+            return popped_val
 
     def top(self):
         """look at top-most item, leave it on stack"""
-        pass
-
-    def is_empty(self):
-        """check if stack is empty"""
-        pass
+        if self.is_empty():
+            print("Stack empty")  # FIXME: handle this correctly
+            pass
+        else:
+            return self.stack[self.count]
 
 
 # DSAQueue
 
+
 class DSAQueue:
-    def __init__(self, queue, count, def_cap = 100):
-        self.queue = queue
-        self.count = count
-        self.def_cap = def_cap
+    def __init__(self, n=100):
+        self.queue = np.empty(n)
+        self.count = 0
 
     def get_count(self):
         return self.count
@@ -57,17 +75,23 @@ class DSAQueue:
             return False
 
     def is_full(self):
-        if self.count == self.def_cap:
+        if self.count == len(self.queue):
             return True
         else:
             return False
 
     def enqueue(self, value):
-        pass        # TODO: implement
+        if self.is_full():
+            print("Queue full!")
+            pass
+        else:
+            self.queue[self.count] = value
+            self.count += 1
 
     def dequeue(self):
         last_val = self.queue[-1]
         del self.queue[-1]
+        self.count -= 1
         return last_val
 
     def peek(self):

@@ -1,4 +1,6 @@
+#
 # Activity 3 - Equation Solver
+#
 
 
 """
