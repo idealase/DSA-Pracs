@@ -2,13 +2,19 @@
 
 ## Prac 1 - Files and Sorting
 
- - [x] Bubble Sort
+ - [x] Bubble Sort 
  - [x] Selection Sort
  - [x] Insertion Sort
  - [ ] Exploring Run Times
     - TODO: output table
- - [ ] Sorting a File
-    - TODO: write file
+ - [x] Sorting a File
+    
+ - DSAsorts.py
+ - bubble_test.py
+ - insertion_test.py
+ - selection_test.py
+ - names_sorter.py
+ - SortsTestHarness.py
 
 ## Prac 2 - Stacks and Queues
 
