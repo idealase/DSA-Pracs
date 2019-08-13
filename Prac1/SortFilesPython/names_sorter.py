@@ -15,14 +15,14 @@ def sorter3000():
     if sort_choice.upper() == "B":
         print("Bubble Sort")
         start_time = timeit.default_timer()
-        DSAsorts.bubble_sort(names_list[0:1000])
+        DSAsorts.bubble_sort(names_list[0:2000])
         end_time = timeit.default_timer()
         total_time = (end_time - start_time)
         print(total_time)
     elif sort_choice.upper() == "I":
         print("Insertion Sort")
         start_time = timeit.default_timer()
-        DSAsorts.insertion_sort(names_list[0:1000])
+        DSAsorts.insertion_sort(names_list)
         end_time = timeit.default_timer()
         total_time = (end_time - start_time)
         print(total_time)
