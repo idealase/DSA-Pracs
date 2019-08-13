@@ -9,12 +9,12 @@
     - TODO: output table
  - [x] Sorting a File
     
- - DSAsorts.py
- - bubble_test.py
- - insertion_test.py
- - selection_test.py
- - names_sorter.py
- - SortsTestHarness.py
+ * DSAsorts.py
+ * bubble_test.py
+ * insertion_test.py
+ * selection_test.py
+ * names_sorter.py
+ * SortsTestHarness.py
 
 ## Prac 2 - Stacks and Queues
 
