@@ -1,22 +1,22 @@
-from myStack import *
-from myQueue import *
+import myStack
+import myQueue
 import random
 import reporting
 
-my_stack = DSAStack(99)
+my_stack = myStack.DSAStack(99)
 
 for i in range(0, 99):
-    value = random.randint(5, 10)
+    value = random.randint(0, 100)
     my_stack.push(value)
 
 top_val = my_stack.top()
 
 print(top_val)
 
-my_queue = DSAQueue()
+my_queue = myQueue.DSAQueue()
 
-for i in range(0, 20):
-    value = random.randint(0, 10)
+for i in range(0, 99):
+    value = random.randint(0, 100)
     my_queue.enqueue(value)
 
 peekd_val = my_queue.peek()

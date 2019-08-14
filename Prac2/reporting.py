@@ -2,6 +2,8 @@ import platform, time
 
 
 def gen_report():
+    print("\n\nExecution Information...")
+
     # time report
     time_now = time.localtime()
     print("Date: " + str(time_now[2]) + "-" + str(time_now[1]) + "-" +
