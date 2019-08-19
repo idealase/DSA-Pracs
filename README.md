@@ -8,7 +8,9 @@
  - [ ] Exploring Run Times
     - TODO: output table
  - [x] Sorting a File
-    
+ 
+ ### Files
+ 
  * DSAsorts.py
     - contains classes and methods for bubble, insertion and selection sorts
     - if run as "main" has its own little test
@@ -32,6 +34,8 @@
  - [ ] Equation Solver
  - [x] Tower of Hanoi
  
+  ### Files
+ 
  * DSAPrac2.py
     - deprecated original module containing stack and queue class
  * Equation_solver.py
@@ -54,6 +58,8 @@
  - [ ] Queue with Linked List
  - [ ] Stack with Linked List
  
+  ### Files
+ 
  * UnitTestLinkedList.py
  * linked.py
  * lltest.py
@@ -65,3 +71,6 @@
  - [ ] Add code to traverse the tree
  - [ ] Implement Additional Operations
  - [ ] Add File I/O to Overall Program
+ 
+  ### Files
+  
