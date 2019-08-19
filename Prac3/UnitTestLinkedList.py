@@ -1,3 +1,4 @@
+"""
 #*********************************************************************
 #  FILE: TestLinkedList.java
 #  AUTHOR: Valerie Maxville (Python version
@@ -7,6 +8,7 @@
 #  REQUIRES: linkedlists.py
 #*********************************************************************
 from linkedLists import * 
+"""
 
 numPassed = 0
 numTests = 0
@@ -15,7 +17,7 @@ ll = None
 sTestString = ""
 nodeValue = None
 
-#Test 1 - Constructor
+# Test 1 - Constructor
 print("\n\nTesting Normal Conditions - Constructor")
 print("=======================================")
 try:
@@ -30,7 +32,7 @@ except:
     print("Failed")
 
      
-#Test 2 - Insert First
+# Test 2 - Insert First
 print("\nTest insert first and remove first - stack behaviour")
 print("=======================================")
 try:
@@ -44,7 +46,7 @@ try:
 except:
     print("Failed")
 
-#Test 3 - Peek First
+# Test 3 - Peek First
 try:
     numTests += 1
     print("Testing peek.First():")
@@ -56,7 +58,7 @@ try:
 except:
     print("Failed")
 
-#Test 4 - Remove first
+# Test 4 - Remove first
 try:
     numTests += 1
     print("Testing removeFirst():")
@@ -74,7 +76,7 @@ try:
 except:
     print("Failed")
 
-#Test 5 - Remove from empty list
+# Test 5 - Remove from empty list
 try:
     numTests += 1
     print("Testing removeFirst() when empty")
@@ -86,7 +88,7 @@ except:
     print("Passed")
 
 
-#Test 6 - Insert Last 
+# Test 6 - Insert Last
 print("\nTest insert last and remove first - queue behaviour")
 print("=======================================")
 try:
@@ -100,7 +102,7 @@ try:
 except:
     print("Failed")
 
-#Test 7 - Peek Last
+# Test 7 - Peek Last
 try:
     numTests += 1
     print("Testing peekFirst():")
@@ -112,7 +114,7 @@ try:
 except:
     print("Failed")
 
-#Test 8 - Remove first
+# Test 8 - Remove first
 try:
     numTests += 1
     print("Testing removeFirst():")
@@ -130,7 +132,7 @@ try:
 except:
     print("Failed")
 
-#Test 9 - Is Empty 2
+# Test 9 - Is Empty 2
 try:
     numTests += 1
     print("Testing isEmpty when empty")

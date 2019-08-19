@@ -89,3 +89,10 @@ class DSALinkedList:
             node_value = curr_node.get_value()
         return node_value
 
+
+if __name__ == "__main__":
+
+    my_ll = DSALinkedList()
+    my_ll.insert_first(new_value=29)
+
+
