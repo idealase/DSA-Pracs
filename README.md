@@ -21,7 +21,7 @@
  - [x] UML Diagrams
  - [x] Implement Stack and Queue
  - [ ] Equation Solver
- - [ ] Tower of Hanoi
+ - [x] Tower of Hanoi
  
  * DSAPrac2.py
  * Equation_solver.py
@@ -40,6 +40,8 @@
  - [ ] Stack with Linked List
  
  * UnitTestLinkedList.py
+ * linked.py
+ * lltest.py
  
  ## Prac 4 - Trees
  
