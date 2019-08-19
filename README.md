@@ -18,10 +18,18 @@
 
 ## Prac 2 - Stacks and Queues
 
- - [ ] UML Diagrams
- - [ ] Implement Stack and Queue
+ - [x] UML Diagrams
+ - [x] Implement Stack and Queue
  - [ ] Equation Solver
  - [ ] Tower of Hanoi
+ 
+ * DSAPrac2.py
+ * Equation_solver.py
+ * Hanoi.py
+ * myQueue.py
+ * myStack.py
+ * reporting.py
+ * StackQueueTest.py
     
 ## Prac 3 - Linked Lists and Iterators
 
@@ -30,3 +38,13 @@
  - [ ] Iterable Lists
  - [ ] Queue with Linked List
  - [ ] Stack with Linked List
+ 
+ * UnitTestLinkedList.py
+ 
+ ## Prac 4 - Trees
+ 
+ - [ ] Creating Treenode
+ - [ ] Create Binary Search Tree
+ - [ ] Add code to traverse the tree
+ - [ ] Implement Additional Operations
+ - [ ] Add File I/O to Overall Program
