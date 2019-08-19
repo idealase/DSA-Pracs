@@ -7,7 +7,6 @@
 #  LAST MOD: 31/3/18 
 #  REQUIRES: linkedlists.py
 #*********************************************************************
-from linkedLists import * 
 """
 from linked import *
 
@@ -63,7 +62,7 @@ except:
 try:
     numTests += 1
     print("Testing removeFirst():")
-    testString = ll.remove_First()
+    testString = ll.remove_first()
     if testString != "xyz":
         raise ListError("Remove first failed")
     testString = ll.remove_first()
