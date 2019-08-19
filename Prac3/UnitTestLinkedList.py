@@ -9,6 +9,7 @@
 #*********************************************************************
 from linkedLists import * 
 """
+from linked import *
 
 numPassed = 0
 numTests = 0
@@ -24,7 +25,7 @@ try:
     numTests += 1
     ll = DSALinkedList()
     print("Testing creation of DSALinkedList (isEmpty()):")
-    if (not ll.isEmpty()):
+    if (not ll.is_empty()):
         raise ListError("Head must be None.")
     numPassed += 1
     print("Passed")
@@ -38,9 +39,9 @@ print("=======================================")
 try:
     numTests += 1
     print("Testing insertFirst():")
-    ll.insertFirst("abc")
-    ll.insertFirst("jkl")
-    ll.insertFirst("xyz")
+    ll.insert_first("abc")
+    ll.insert_first("jkl")
+    ll.insert_first("xyz")
     numPassed += 1
     print("Passed")
 except:
@@ -50,7 +51,7 @@ except:
 try:
     numTests += 1
     print("Testing peek.First():")
-    testString = ll.peekFirst()
+    testString = ll.peek_first()
     if testString != "xyz":
         raise ListError("Peek First failed")
     numPassed += 1
@@ -62,13 +63,13 @@ except:
 try:
     numTests += 1
     print("Testing removeFirst():")
-    testString = ll.removeFirst()
+    testString = ll.remove_First()
     if testString != "xyz":
         raise ListError("Remove first failed")
-    testString = ll.removeFirst()
+    testString = ll.remove_first()
     if testString != "jkl":
         raise ListError("Remove first failed")
-    testString = ll.removeFirst()
+    testString = ll.remove_first()
     if testString != "abc":
         raise ListError("Remove first failed")
     numPassed += 1
@@ -80,7 +81,7 @@ except:
 try:
     numTests += 1
     print("Testing removeFirst() when empty")
-    testString = ll.removeFirst()
+    testString = ll.remove_first()
     raise ListError("Remove first when empty failed")
     print("Failed")
 except:
@@ -94,9 +95,9 @@ print("=======================================")
 try:
     numTests += 1
     print("Testing insertLast():")
-    ll.insertLast("abc")
-    ll.insertLast("jkl")
-    ll.insertLast("xyz")
+    ll.insert_last("abc")
+    ll.insert_last("jkl")
+    ll.insert_last("xyz")
     numPassed += 1
     print("Passed")
 except:
@@ -106,7 +107,7 @@ except:
 try:
     numTests += 1
     print("Testing peekFirst():")
-    testString = ll.peekFirst()
+    testString = ll.peek_first()
     if testString != "abc":
         raise ListError("Peek First failed")
     numPassed += 1
@@ -118,13 +119,13 @@ except:
 try:
     numTests += 1
     print("Testing removeFirst():")
-    testString = ll.removeFirst()
+    testString = ll.remove_first()
     if testString != "abc":
         raise ListError("Remove first failed")
-    testString = ll.removeFirst()
+    testString = ll.remove_first()
     if testString != "jkl":
         raise ListError("Remove first failed")
-    testString = ll.removeFirst()
+    testString = ll.remove_first()
     if testString != "xyz":
         raise ListError("Remove first failed")
     numPassed += 1
@@ -136,7 +137,7 @@ except:
 try:
     numTests += 1
     print("Testing isEmpty when empty")
-    testString = ll.removeFirst()
+    testString = ll.remove_first()
     raise ListError("Remove first when empty failed")
     print("Failed")
 except:
