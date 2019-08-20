@@ -30,6 +30,7 @@ REPEATS = 3              # No times to run sorts to get mean time
 NEARLY_PERCENT = 0.10    # % of items to move in nearly sorted array
 RANDOM_TIMES = 100       # No times to randomly swap elements in array
 
+verbose = False
 
 def usage():
     print(" Usage: python SortsTestHarness.py n xy [xy ...]")
@@ -52,13 +53,15 @@ def do_sort(n, sortType, arrayType):
         array = np.arange(1, n+1, 1)   # array w/ values from 1 to n
         
         if arrayType == 'a':
-            print("Ascending: ", array)
+            while verbose:
+                print("Ascending: ", array)
         elif arrayType == 'd':  # convert to descending
             for i in range(0, int(n/2)):
                 temp = array[i]
                 array[i] = array[n-i-1]
                 array[n-i-1] = temp
-            print("Descending: ", array)
+            while verbose:
+                print("Descending: ", array)
         elif arrayType == 'r':
             for i in range(RANDOM_TIMES*n):
                 x = int(random.random()*n)
@@ -66,7 +69,8 @@ def do_sort(n, sortType, arrayType):
                 temp = array[x]
                 array[x] = array[y]
                 array[y] = temp
-            print("Random: ", array)
+            while verbose:
+                print("Random: ", array)
         elif arrayType == 'n':
             for i in range(int(n*NEARLY_PERCENT/2+1)):
                 x = int(random.random()*n)
@@ -74,7 +78,8 @@ def do_sort(n, sortType, arrayType):
                 temp = array[x]
                 array[x] = array[y]
                 array[y] = temp
-            print("Nearly sorted: ", array)
+            while verbose:
+                print("Nearly sorted: ", array)
         else:
             print("Unsupported array type")
 
