@@ -1,21 +1,20 @@
-#
-# Activity 3 - Equation Solver
-#
-
-
 """
+Activity 3 - Equation Solver
+
 Simple class that takes string of infix equation
 
 converts to postfix
 evaluates postfix
 """
+import myQueue
+import myStack
 
-infix = "4 + 3 * 12"
+infix = "((4 + 3) / 20) * 12"
 
 
 class EqSolver:
     def __init__(self):
-
+        pass
 
     def _precedence_of(the_operator):
         """Helper function for parse_infix_2_postfix()
@@ -34,29 +33,32 @@ class EqSolver:
         """Convert infix form equation to postfix
 
         Stores postfix terms in queue of objects"""
-        postfix = []
+
+        postfix_q = myQueue.DSAQueue()
+        op_stack = myStack.DSAStack()
 
         while infix:
-            term = parse_next_term()  # TODO: implement method
+            term = parse_next_term(equation)  # TODO: implement method
 
             if term == "(":
                 op_stack.push("(")  # TODO: implement
             elif term == ")":
                 while op_stack.top() not "(":
-                    postfix = postfix + op_stack.pop()
+                    popped = op_stack.pop()
+                    postfix_q.enqueue(popped)
                 op_stack.pop()
             elif (term == "+") or (term == "-") or (term == "*") or (
                     term == "/"):
                 while (not op_stack.is_empty()) and (op_stack.top()
                 not "(") and (
                 precendence_of(op_stack.top() >= precendence_of(term))):
-                    postfix = postfix + op_stack.pop()
+                    postfix_q.enqueue(op_stack.pop())
                 op_stack.push(term)
             else:
-                postfix = postfix + term
+                postfix_q.enqueue(term)
 
         while not op_stack.is_empty():
-            postfix = postfix + op_stack.pop()
+            postfix_q.enqueue(op_stack.pop())
 
 
 
