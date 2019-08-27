@@ -5,8 +5,7 @@
  - [x] Bubble Sort 
  - [x] Selection Sort
  - [x] Insertion Sort
- - [ ] Exploring Run Times
-    - TODO: output table
+ - [x] Exploring Run Times
  - [x] Sorting a File
  
  ### Files
@@ -19,6 +18,7 @@
  * selection_test.py
     - above three files iteratively perform sorts on lists
     of increasing size and output plot of time complexity growth
+ * bsi_test.py
  * names_sorter.py
     - reads 'RandomNames.csv'
     - takes user input to determine which sort to perform
