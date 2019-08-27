@@ -23,9 +23,10 @@ for i in range(1, 2000, 50):
 print(times)
 
 
-plt.bar(range(len(times)), list(times.values()), align='center')
-plt.xticks(range(len(times)), list(times.keys()))
+plt.bar(range(len(times)), list(times.values()), align='center', color="green")
+plt.xticks(range(len(times)), list(times.keys()), rotation=70)
 plt.xlabel("n")
 plt.ylabel("Time (s)")
 plt.title("Insertion Sort Time Complexity Growth")
+plt.savefig("ins.png")
 plt.show()
