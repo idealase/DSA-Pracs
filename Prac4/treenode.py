@@ -29,7 +29,7 @@ class DSABinarySearchTree:
         return value
 
     def insert(self, key, value):
-        return self._insert_rec(key, value, self._root)
+        self._root = self._insert_rec(key, value, self._root)
 
     def _insert_rec(self, key, value, curr):
         update_node = curr
@@ -37,8 +37,11 @@ class DSABinarySearchTree:
             update_node = DSATreeNode(key, value)
         elif key == curr._key:
             raise ValueError("Already in tree")
-        elif key - curr._key < 0:
-            curr.set_left = _insert_rec(key, value, curr.get_left)
+        elif key <= curr._key:
+            curr.set_left = self._insert_rec(key, value, curr.get_left)
+        return update_node
+
+
 
     def delete(self, key):
         pass
