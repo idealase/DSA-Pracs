@@ -61,7 +61,8 @@
   ### Files
  
  * UnitTestLinkedList.py
- * linked.py
+ * se_linked.py
+ * de_linked.py
  * lltest.py
  
  ## Prac 4 - Trees
@@ -73,4 +74,11 @@
  - [ ] Add File I/O to Overall Program
  
   ### Files
+  
+  * treenode.py
+    - contains TreeNode and BinarySearchTree classes
+  * tree_test.py
+    - tests treenode.py
+  * binarysearch.py
+    - possibly deprecated; incorporated into treenode.py
   
