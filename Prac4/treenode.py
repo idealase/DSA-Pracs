@@ -5,6 +5,9 @@ class DSATreeNode:
         self._left = None
         self._right = None
 
+    def get_left(self):
+        return self._left
+
     def __str__(self):
         return "Key: " + str(self._key) + " Value: " + str(self._value)
 
