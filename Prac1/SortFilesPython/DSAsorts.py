@@ -30,6 +30,7 @@ def bubble_sort(array):
         pass_num += 1
     if verbose_output:
         print("Bubble Sorted list: " + str(array) + "\n")
+    return array
 
 
 def insertion_sort(array):
@@ -48,6 +49,7 @@ def insertion_sort(array):
             ii -= 1
     if verbose_output:
         print("Insertion Sorted list: " + str(array) + "\n")
+    return array
 
 
 def selection_sort(array):
@@ -64,6 +66,7 @@ def selection_sort(array):
             print(str(prev_array) + " -----> " + str(array))
     if verbose_output:
         print("Selection Sorted list: " + str(array) + "\n")
+    return array
 
 
 def merge_sort(array):
