@@ -14,12 +14,12 @@ my_tree = DSABinarySearchTree()
 
 my_tree.insert(7, random.choice(names))
 
-for i in range(0, 18):
-    my_tree.insert(random.randint(1,20), random.choice(names))
+for i in range(0, 15):
+    my_tree.insert(random.randint(1, 15), random.choice(names))
 
 
-my_tree.find(7)
-
+found = my_tree.find(7)
+print(found)
 
 
 
