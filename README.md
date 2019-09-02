@@ -82,3 +82,10 @@
   * binarysearch.py
     - possibly deprecated; incorporated into treenode.py
   
+  ## Prac 5 - Graphs
+  
+ - [ ] UML Class Diagram
+ - [ ] Graph Implementation 
+ - [ ] Read Graph From File
+ - [ ] Manual Depth First Search/Breadth First Search
+ - [ ] Implement Depth First Search/Breadth First Search
