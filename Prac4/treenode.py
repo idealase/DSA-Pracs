@@ -41,6 +41,8 @@ class DSABinarySearchTree:
         elif key == curr._key:
             raise ValueError("Already in tree")
         elif key <= curr._key:
+            # FIXME: could the below line not simply be curr._left
+            # instead of curr.get_left, which just returns curr._left???
             curr.set_left = self._insert_rec(key, value, curr.get_left)
         return update_node
 
