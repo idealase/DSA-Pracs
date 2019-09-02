@@ -24,7 +24,7 @@ class DSAQueue:
 
     def enqueue(self, value):
         if self.is_full():
-            print("Queue full!")
+            print("Queue full!")    # FIXME: exception handling
             pass
         else:
             self.queue[self.count] = value

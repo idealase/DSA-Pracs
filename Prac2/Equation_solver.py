@@ -32,9 +32,9 @@ class EqSolver:
     def _parse_infix_2_postfix(equation):
         """Convert infix form equation to postfix
 
-        Stores postfix terms in queue of objects"""
+        Stores postfix terms in stack of objects"""
 
-        postfix_q = myQueue.DSAQueue()
+        postfix_s = myStack.DSAStack()
         op_stack = myStack.DSAStack()
 
         while infix:
@@ -45,20 +45,20 @@ class EqSolver:
             elif term == ")":
                 while op_stack.top() not "(":
                     popped = op_stack.pop()
-                    postfix_q.enqueue(popped)
+                    postfix_s.push(popped)
                 op_stack.pop()
             elif (term == "+") or (term == "-") or (term == "*") or (
                     term == "/"):
                 while (not op_stack.is_empty()) and (op_stack.top()
                 not "(") and (
                 precendence_of(op_stack.top() >= precendence_of(term))):
-                    postfix_q.enqueue(op_stack.pop())
+                    postfix_s.push(op_stack.pop())
                 op_stack.push(term)
             else:
-                postfix_q.enqueue(term)
+                postfix_s.push(term)
 
         while not op_stack.is_empty():
-            postfix_q.enqueue(op_stack.pop())
+            postfix_s.push(op_stack.pop())
 
 
 
