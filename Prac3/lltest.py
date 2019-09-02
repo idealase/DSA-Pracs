@@ -1,6 +1,6 @@
-import linked
+import se_linked
 
-my_list = linked.DSALinkedList()
+my_list = se_linked.DSALinkedList()
 
 
 my_list.insert_first(29)
