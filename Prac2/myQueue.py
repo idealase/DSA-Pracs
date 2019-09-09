@@ -23,12 +23,11 @@ class DSAQueue:
         return full
 
     def enqueue(self, value):
-        if self.is_full():
-            print("Queue full!")    # FIXME: exception handling
-            pass
-        else:
+        try:
             self.queue[self.count] = value
             self.count += 1
+        except:
+            print("...\nQueue full!")
 
     def dequeue(self):
         last_val = self.queue[self.count-1]

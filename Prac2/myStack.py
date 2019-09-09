@@ -30,12 +30,11 @@ class DSAStack:
 
     def push(self, value):
         """add new item to top of stack"""
-        if self.is_full():
-            print("Stack full")     # FIXME: handle this correctly
-            pass
-        else:
+        try:
             self.stack[self.count] = value
             self.count += 1
+        except:
+            print("...\nStack full!")
 
     def pop(self):
         """take top-most item from stack"""
