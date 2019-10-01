@@ -41,7 +41,7 @@
  * Equation_solver.py
  * Hanoi.py
     - recursive towers of Hanoi implementation
- * myQueue.py
+ * myQueue.py  
     - contains queue class and methods
  * myStack.py
     - contains stack class and methods
