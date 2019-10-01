@@ -52,8 +52,8 @@
     
 ## Prac 3 - Linked Lists and Iterators
 
- - [ ] Linked Lists - Single/Single
- - [ ] Linked Lists - Double/Double 
+ - [x] Linked Lists - Single/Single
+ - [x] Linked Lists - Double/Double 
  - [ ] Iterable Lists
  - [ ] Queue with Linked List
  - [ ] Stack with Linked List
@@ -63,12 +63,13 @@
  * UnitTestLinkedList.py
  * se_linked.py
  * de_linked.py
- * lltest.py
+ * selltest.py
+ * delltest.py
  
  ## Prac 4 - Trees
  
- - [ ] Creating Treenode
- - [ ] Create Binary Search Tree
+ - [x] Creating Treenode
+ - [x] Create Binary Search Tree
  - [ ] Add code to traverse the tree
  - [ ] Implement Additional Operations
  - [ ] Add File I/O to Overall Program
@@ -80,7 +81,7 @@
   * tree_test.py
     - tests treenode.py
   * binarysearch.py
-    - possibly deprecated; incorporated into treenode.py
+    - deprecated; incorporated into treenode.py
   
   ## Prac 5 - Graphs
   
@@ -89,3 +90,25 @@
  - [ ] Read Graph From File
  - [ ] Manual Depth First Search/Breadth First Search
  - [ ] Implement Depth First Search/Breadth First Search
+ 
+  ### Files
+ 
+  ## Prac 6 - Hashing
+   
+  - [ ] Implement Hash Table
+  - [ ] Make Hash table auto resize
+  - [ ] Save to and Reload from file
+   
+  ### Files
+   
+  * hashing.py
+  * RandomNames7000.csv
+   
+   ## Prac 7 - Heaps 
+   
+  - [ ] Implement Heap
+  - [ ] Use it for HeapSort
+  
+  ### Files
+  
+  
