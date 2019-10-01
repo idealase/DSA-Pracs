@@ -2,6 +2,7 @@ class DSAListNode:
     def __init__(self, in_value):
         self.value = in_value
         self.next = None
+        self.prev = None
 
     def get_value(self):
         """this will get the value"""
@@ -15,6 +16,12 @@ class DSAListNode:
 
     def set_next(self, new_next):
         self.next = new_next
+
+    def get_prev(self):
+        return self.prev
+
+    def set_prev(self, new_prev):
+        self.prev = new_prev
 
 
 class DSALinkedList:
@@ -33,6 +40,7 @@ class DSALinkedList:
             self.tail = new_node
         else:
             new_node.set_next(self.head)
+            new_node.set_prev(None)
             self.head = new_node
 
     def insert_last(self, new_value):
@@ -40,11 +48,11 @@ class DSALinkedList:
         if self.is_empty():
             self.head = new_node
             self.tail = new_node
-        else:   # TODO: change to double ended method...
-            curr_node = self.head
-            while curr_node.get_next():
-                curr_node = curr_node.get_next()
+        else:
+            curr_node = self.tail
             curr_node.set_next(new_node)
+            new_node.set_prev(curr_node)
+            self.tail = new_node
 
     def peek_first(self):
         if self.is_empty():
@@ -57,32 +65,33 @@ class DSALinkedList:
         if self.is_empty():
             raise ValueError
         else:
-            curr_node = self.head
-            while curr_node.get_next():
-                curr_node = curr_node.get_next()
-            node_value = curr_node.get_value()
+            node_value = self.tail.get_value()
             return node_value
 
-    def remove_first(self):     # TODO: clarify how tail affects this
-        if self.is_empty():
+    def remove_first(self):
+        if self.is_empty():     # empty case
             raise ValueError
+        elif not self.head.get_next():      # only one node
+            node_value = self.head.get_value()
+            self.head = None
+            self.tail = None
         else:
             node_value = self.head.get_value()
             self.head = self.head.get_next()
-            return node_value
+        return node_value
 
     def remove_last(self):
-        if self.is_empty():
+        if self.is_empty():     # obvious empty case
             raise ValueError
-        elif not self.head.get_next():
+        elif not self.head.get_next():  # single value in list case
             node_value = self.head.get_value()
             self.head = None
-        else:
-            prev_node = None
-            curr_node = self.head
-            while curr_node.get_next():
-                prev_node = curr_node
-                curr_node = curr_node.get_next()
-            prev_node.set_next(None)
+            self.tail = None
+        else:           # multiple nodes in list
+            curr_node = self.tail
             node_value = curr_node.get_value()
+            prev_node = curr_node.get_prev()
+            prev_node.set_next(None)
+            self.tail = prev_node
+
         return node_value
