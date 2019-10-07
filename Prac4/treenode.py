@@ -58,7 +58,10 @@ class DSABinarySearchTree:
     def height(self):
         pass
 
-    def min_rec(self, curr):
+    def min(self):
+        return self._min_rec(self._root)
+
+    def _min_rec(self, curr):
         if curr._left:      # not base case
             min_key = self.min_rec(curr._left)
         else:
