@@ -8,19 +8,25 @@ names = ["Weablo", "Glemdor", "Quamlack", "Tistle", "Marlbornry", "Flantiline",
          "Lamaton", "Woorap"]
 
 # list of non repeated keys
-keys = [2,3,4,5,6,8,9,10,12,15,16,166,424,24,42,63,57]
+#keys = [2,3,4,5,6,8,9,10,12,15,16,166,424,24,42,63,57]
 
+keys = []
+for i in range(0, len(names)):
+    keys.append(random.randint(0, 1000))
+
+
+# MANUAL
 # adds a node with key: 1 and value: "matt" then displays it
-my_node = tree.DSATreeNode(1, "matt")
-print("Displaying node: ")
+my_node = tree.DSATreeNode(555, "Borideton")
+print("Displaying ceremonial MANUAL node: ")
 print(my_node)
 
 
 my_tree = tree.DSABinarySearchTree()
-my_tree.insert(7, random.choice(names))
+my_tree.insert(777, random.choice(names))
 
 count = 1
-for i in range(0, 10):
+for i in range(0, len(names)):
     temp_key = random.choice(keys)
     keys.remove(temp_key)
 
@@ -29,8 +35,9 @@ for i in range(0, 10):
 
     my_tree.insert(temp_key, temp_name)
 
-    print("\nOn iteration " + str(count) + ", added key " + str(temp_key) +
-          " with value " + str(temp_name))
+    print("\nAt entry number " + str(count) + ", a score of \t" +
+          str(temp_key) +
+          " was reported for the suburb of \t" + str(temp_name))
     max_node = my_tree.max()
     print("Max: " + str(max_node))
     min_node = my_tree.min()
