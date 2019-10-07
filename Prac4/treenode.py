@@ -8,6 +8,15 @@ class DSATreeNode:
     def get_left(self):     # TODO: confirm this method is necessary
         return self._left
 
+    def set_left(self):
+        pass
+
+    def get_right(self):
+        return self._right
+
+    def set_right(self):
+        pass
+
     def __str__(self):
         return "Key: " + str(self._key) + " Value: " + str(self._value)
 
@@ -44,7 +53,7 @@ class DSABinarySearchTree:
             # FIXME: could the below line not simply be curr._left
             # instead of curr.get_left, which just returns curr._left???
             # apparently so
-            curr.set_left = self._insert_rec(key, value, curr._left)
+            curr._left = self._insert_rec(key, value, curr._left)
         return update_node
 
 
