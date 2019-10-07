@@ -8,7 +8,7 @@ class DSATreeNode:
     def get_key(self):
         return self._key
 
-    def get_left(self):     # TODO: confirm this method is necessary
+    def get_left(self):
         return self._left
 
     def set_left(self):
@@ -46,16 +46,13 @@ class DSABinarySearchTree:
     def insert(self, key, value):
         self._root = self._insert_rec(key, value, self._root)
 
-    def _insert_rec(self, key, value, curr):
+    def _insert_rec(self, key, value, curr):        # FIXME: recursive insert
         update_node = curr
         if not curr:  # base case - found
             update_node = DSATreeNode(key, value)
         elif key == curr.get_key():
             raise ValueError("Already in tree")
         elif key <= curr.get_key():
-            # FIXME: could the below line not simply be curr._left
-            # instead of curr.get_left, which just returns curr._left???
-            # apparently so
             curr.set_left = self._insert_rec(key, value, curr.get_left())
         else:
             curr.set_right = self._insert_rec(key, value, curr.get_right())
