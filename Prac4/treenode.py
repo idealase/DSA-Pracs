@@ -5,6 +5,9 @@ class DSATreeNode:
         self._left = None
         self._right = None
 
+    def get_key(self):
+        return self._key
+
     def get_left(self):     # TODO: confirm this method is necessary
         return self._left
 
@@ -47,16 +50,16 @@ class DSABinarySearchTree:
         update_node = curr
         if not curr:  # base case - found
             update_node = DSATreeNode(key, value)
-        elif key == curr._key:
+        elif key == curr.get_key():
             raise ValueError("Already in tree")
-        elif key <= curr._key:
+        elif key <= curr.get_key():
             # FIXME: could the below line not simply be curr._left
             # instead of curr.get_left, which just returns curr._left???
             # apparently so
-            curr._left = self._insert_rec(key, value, curr._left)
+            curr.set_left = self._insert_rec(key, value, curr.get_left())
+        else:
+            curr.set_right = self._insert_rec(key, value, curr.get_right())
         return update_node
-
-
 
     def delete(self, key):
         pass
