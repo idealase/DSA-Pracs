@@ -63,10 +63,21 @@ class DSABinarySearchTree:
 
     def _min_rec(self, curr):
         if curr._left:      # not base case
-            min_key = self.min_rec(curr._left)
+            min_key = self._min_rec(curr._left)
         else:
             min_key = curr._key
         return min_key
+
+    def max(self):
+        return self._max_rec(self._root)
+
+    def _max_rec(self, curr):
+        if curr._right:     # not base case
+            max_key = self._max_rec(curr._right)
+        else:
+            max_key = curr._key
+        return max_key
+
 
 # test harness code
 if __name__ == "__main__":
