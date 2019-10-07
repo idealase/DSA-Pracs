@@ -58,6 +58,12 @@ class DSABinarySearchTree:
     def height(self):
         pass
 
+    def min_rec(self, curr):
+        if curr._left:      # not base case
+            min_key = self.min_rec(curr._left)
+        else:
+            min_key = curr._key
+        return min_key
 
 # test harness code
 if __name__ == "__main__":
