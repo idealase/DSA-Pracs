@@ -85,7 +85,7 @@
   
   ## Prac 5 - Graphs
   
- - [ ] UML Class Diagram
+ - [x] UML Class Diagram
  - [ ] Graph Implementation 
  - [ ] Read Graph From File
  - [ ] Manual Depth First Search/Breadth First Search

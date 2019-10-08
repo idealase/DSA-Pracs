@@ -1,6 +1,5 @@
 import treenode as tree
 import random
-from tqdm import tqdm
 import csv
 
 # list of names to be used as values
@@ -40,7 +39,7 @@ my_tree = tree.DSABinarySearchTree()
 my_tree.insert(my_node.get_key(), my_node.get_value())
 
 count = 1
-for i in tqdm(range(0, len(names))):
+for i in range(0, len(names)):
     temp_key = random.choice(keys)
     keys.remove(temp_key)
 
