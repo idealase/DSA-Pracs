@@ -1,32 +1,46 @@
 import treenode as tree
 import random
+from tqdm import tqdm
+import csv
 
 # list of names to be used as values
+"""
 names = ["Weablo", "Glemdor", "Quamlack", "Tistle", "Marlbornry", "Flantiline",
          "Tennerbro", "Gwizzly", "Howerton", "Norlop", "Streeves", "Bannawack",
          "Terrawom", "Glable", "Glebulp", "Nennafet", "Seeply",
          "Lamaton", "Woorap"]
+"""
+
+names = []
+keys = []
+
+with open('RandomNames.csv', 'rt') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        names.append(row[1])
+        keys.append(int(row[0]))
 
 # list of non repeated keys
 #keys = [2,3,4,5,6,8,9,10,12,15,16,166,424,24,42,63,57]
 
-keys = []
+"""
 for i in range(0, len(names)):
     keys.append(random.randint(0, 1000))
-
+"""
 
 # MANUAL
 # adds a node with key: 1 and value: "matt" then displays it
-my_node = tree.DSATreeNode(555, "Borideton")
+my_node = tree.DSATreeNode(13671279, "Brodie Sandford")
 print("Displaying ceremonial MANUAL node: ")
 print(my_node)
 
 
 my_tree = tree.DSABinarySearchTree()
-my_tree.insert(777, random.choice(names))
+# my_tree.insert(777, random.choice(names))
+my_tree.insert(my_node.get_key(), my_node.get_value())
 
 count = 1
-for i in range(0, len(names)):
+for i in tqdm(range(0, len(names))):
     temp_key = random.choice(keys)
     keys.remove(temp_key)
 
@@ -35,29 +49,39 @@ for i in range(0, len(names)):
 
     my_tree.insert(temp_key, temp_name)
 
-    print("\nAt entry number " + str(count) + ", a score of \t" +
+    print("\nAt entry number " + str(count) + ", an ID of \t" +
           str(temp_key) +
-          " was reported for the suburb of \t" + str(temp_name))
+          " was reported for the student\t" + str(temp_name))
     max_node = my_tree.max()
-    print("Max: " + str(max_node))
+    print("\tMax: " + str(max_node))
     min_node = my_tree.min()
-    print("Min: " + str(min_node))
+    print("\tMin: " + str(min_node))
     count += 1
 
 
 print("\nFinal tests...")
-found = my_tree.find(7)
+
+# find the name of the cheaters!!
+found = my_tree.find(777)
 print(found)
 
+# find the winner
 max_node = my_tree.max()
 print(max_node)
 
+# wooden spooner
 min_node = my_tree.min()
 print(min_node)
 
 
+print("Generator Display Method")
+gen_results = my_tree.generative_print()
+print(gen_results)
 
 
+print("Recursive Display Method")
+rec_printed = my_tree.print_tree()
+print(rec_printed)
 
 
 
