@@ -1,3 +1,6 @@
+import myStack
+
+
 class DSATreeNode:
     def __init__(self, in_key, in_value):
         self._key = in_key
@@ -7,6 +10,9 @@ class DSATreeNode:
 
     def get_key(self):
         return self._key
+
+    def get_value(self):
+        return self._value
 
     def get_left(self):
         return self._left
@@ -19,6 +25,20 @@ class DSATreeNode:
 
     def set_right(self):
         pass
+
+    def gen_data(self):
+        """Generator to get tree nodes data"""
+        stack = myStack.DSAStack()
+        node = self
+        while stack or node:
+            if node:
+                stack.push(node)
+                node = node.get_left()
+            else:
+                node = stack.pop()
+                yield node
+                node = node.get_right()
+
 
     def __str__(self):
         return "Key: " + str(self._key) + " Value: " + str(self._value)
@@ -53,9 +73,9 @@ class DSABinarySearchTree:
         elif key == curr.get_key():
             raise ValueError("Already in tree")
         elif key <= curr.get_key():
-            curr.set_left = self._insert_rec(key, value, curr.get_left())
+            curr._left = self._insert_rec(key, value, curr.get_left())
         else:
-            curr.set_right = self._insert_rec(key, value, curr.get_right())
+            curr._right = self._insert_rec(key, value, curr.get_right())
         return update_node
 
     def delete(self, key):
@@ -86,6 +106,20 @@ class DSABinarySearchTree:
         else:
             max_key = curr._key
         return max_key
+
+    def generative_print(self):
+        self._root.gen_data()
+
+    def print_tree(self):
+        return _rec_print_tree(self._root)
+
+    def _rec_print_tree(self):
+        if self._left:
+            _rec_print_tree(self._left)
+        print(self)
+        if self._right:
+            _rec_print_tree(self._right)
+
 
 
 # test harness code
