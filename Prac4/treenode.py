@@ -71,7 +71,7 @@ class DSABinarySearchTree:
         if not curr:  # base case - found
             update_node = DSATreeNode(key, value)
         elif key == curr.get_key():
-            raise ValueError("Already in tree")
+            raise ValueError("Key {} Already in tree".format(key))
         elif key <= curr.get_key():
             curr._left = self._insert_rec(key, value, curr.get_left())
         else:
