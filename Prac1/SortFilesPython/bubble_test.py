@@ -1,5 +1,6 @@
 import DSAsorts, csv, timeit
 import matplotlib.pyplot as plt
+from tqdm import tqdm
 
 names_list = []
 times = {}
