@@ -1,11 +1,16 @@
-
+from se_linked import *
 
 
 class DSAGraph:
-    def __init__(self, vertices):
+    """Uses linked list to store the list of nodes"""
+    def __init__(self, vertices=DSALinkedList()):
         self.vertices = vertices
 
     def add_vertex(self, label, value):
+        # init DSAGraphVertex object
+        new_node = DSAGraphVertex(label, value)
+        # add to vertices linked list
+        self.vertices.insert_last(new_node)
         pass
 
     def add_edge(self, label1, label2):
@@ -37,7 +42,8 @@ class DSAGraph:
 
 
 class DSAGraphVertex:
-    def __init__(self, label, value, links, visited):
+    """Linked lists within each node to store the adjacency list"""
+    def __init__(self, label, value, links=DSALinkedList(), visited=[]):
         self.label = label
         self.value = value
         self.links = links
