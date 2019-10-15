@@ -11,7 +11,6 @@ class DSAGraph:
         new_node = DSAGraphVertex(label, value)
         # add to vertices linked list
         self.vertices.insert_last(new_node)
-        pass
 
     def add_edge(self, label1, label2):
         pass

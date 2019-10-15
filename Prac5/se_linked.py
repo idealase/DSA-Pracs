@@ -90,6 +90,19 @@ class DSALinkedList:
             node_value = curr_node.get_value()
         return node_value
 
+    def __iter__(self):
+        self._curr = self.head
+        return self
+
+    def __next__(self):
+        curval = None
+        if not self._curr:
+            raise StopIteration
+        else:
+            curval = self._curr.value
+            self._curr = self._curr.next
+        return curval
+
 
 if __name__ == "__main__":
 
