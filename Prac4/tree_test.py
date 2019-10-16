@@ -3,12 +3,7 @@ import random
 import csv
 
 # list of names to be used as values
-"""
-names = ["Weablo", "Glemdor", "Quamlack", "Tistle", "Marlbornry", "Flantiline",
-         "Tennerbro", "Gwizzly", "Howerton", "Norlop", "Streeves", "Bannawack",
-         "Terrawom", "Glable", "Glebulp", "Nennafet", "Seeply",
-         "Lamaton", "Woorap"]
-"""
+
 
 names = []
 keys = []
@@ -19,10 +14,13 @@ with open('RandomNames.csv', 'rt') as file:
         names.append(row[1])
         keys.append(int(row[0]))
 
-# list of non repeated keys
-#keys = [2,3,4,5,6,8,9,10,12,15,16,166,424,24,42,63,57]
 
 """
+names = ["Weablo", "Glemdor", "Quamlack", "Tistle", "Marlbornry", "Flantiline",
+         "Tennerbro", "Gwizzly", "Howerton", "Norlop", "Streeves", "Bannawack",
+         "Terrawom", "Glable", "Glebulp", "Nennafet", "Seeply",
+         "Lamaton", "Woorap"]
+
 for i in range(0, len(names)):
     keys.append(random.randint(0, 1000))
 """

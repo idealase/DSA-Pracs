@@ -8,7 +8,7 @@
 #  REQUIRES: linkedlists.py
 #*********************************************************************
 """
-from linked import *
+from de_linked import *
 
 numPassed = 0
 numTests = 0

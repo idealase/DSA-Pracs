@@ -1,21 +1,64 @@
 from graph import *
 
+numPassed = 0
+numTests = 0
+
 # init an empty graph
-test_graph = DSAGraph()
+print("\nTest 1:", end=" ")
+try:
+    numTests += 1
+    test_graph = DSAGraph()
+    print("Initialised empty graph")
+    numPassed += 1
+except:
+    print("Failed")
 
 # init a standalone test node
-test_node = DSAGraphVertex("A", 10)
-print(test_node)
+print("\nTest 2:", end=" ")
+try:
+    numTests += 1
+    test_node = DSAGraphVertex("A", 10)
+    print("Initialised standalone test node")
+    print(test_node)
+    numPassed += 1
+except:
+    print("Failed")
 
 # add a node/vertex to the empty test graph
-test_graph.add_vertex("B", 12)
+print("\nTest 3:", end=" ")
+try:
+    numTests += 1
+    test_graph.add_vertex("B", 12)
+    print("Added node B 12 to graph")
+    numPassed += 1
+except:
+    print("Failed")
 
 # check last vertex in graph vertices linked list
-last_vertex = test_graph.vertices.peek_last()
-print(last_vertex)
+print("\nTest 4:", end=" ")
+try:
+    numTests += 1
+    last_vertex = test_graph.vertices.peek_last()
+    print(last_vertex)
+    numPassed += 1
+except:
+    print("Failed")
 
-test_graph.add_vertex("C", 14)
-print(test_graph.vertices.peek_last())
+# add and check some more
+print("\nTest 5:", end=" ")
+try:
+    numTests += 1
+    test_graph.add_vertex("C", 14)
+    print("Added node")
+    print(test_graph.vertices.peek_last())
+    test_graph.add_vertex("D", 16)
+    print("Added node")
+    print(test_graph.vertices.peek_last())
+    numPassed += 1
+except:
+    print("Failed")
 
-test_graph.add_vertex("D", 16)
-print(test_graph.vertices.peek_last())
+
+# Print test summary
+print("\nNumber PASSED: ", numPassed, "/", numTests)
+print("-> ", numPassed/numTests*100, "%\n")
