@@ -55,7 +55,7 @@ class DSABinarySearchTree:
     def insert(self, key, value):
         self._root = self._insert_rec(key, value, self._root)
 
-    def _insert_rec(self, key, value, curr):        # FIXME: recursive insert
+    def _insert_rec(self, key, value, curr):        # FIXME: ???
         update_node = curr
         if not curr:  # base case - found
             update_node = DSATreeNode(key, value)
@@ -90,20 +90,34 @@ class DSABinarySearchTree:
         return self._min_rec(self._root)
 
     def _min_rec(self, curr):
-        if curr._left:      # not base case
-            min_key = self._min_rec(curr._left)
+        if curr.get_left():      # not base case
+            min_key = self._min_rec(curr.get_left())
         else:
-            min_key = curr._key
+            min_key = curr.get_key()
         return min_key
 
     def max(self):
         return self._max_rec(self._root)
 
     def _max_rec(self, curr):
-        if curr._right:     # not base case
-            max_key = self._max_rec(curr._right)
+        if curr.get_right():     # not base case
+            max_key = self._max_rec(curr.get_right())
         else:
-            max_key = curr._key
+            max_key = curr.get_key()
+        return max_key
+
+    def min_iter(self):
+        curr = self._root
+        while curr.get_left():
+            curr = curr.get_left()
+        min_key = curr.get_key()
+        return min_key
+
+    def max_iter(self):
+        curr = self._root
+        while curr.get_right():
+            curr = curr.get_right()
+        max_key = curr.get_key()
         return max_key
 
     def generative_print(self):
@@ -125,7 +139,7 @@ class DSABinarySearchTree:
     def print_tree(self):
         return self._rec_print_tree(self._root)
 
-    def _rec_print_tree(self, curr):    #FIXME: not defined
+    def _rec_print_tree(self, curr):    # depth first
         if curr.get_left():
             self._rec_print_tree(curr.get_left())
         print(curr)

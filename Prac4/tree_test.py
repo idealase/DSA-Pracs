@@ -79,6 +79,7 @@ except:
 # find the name of the cheaters!!
 found, max_node, min_node = my_tree.find(13485649), my_tree.max(), my_tree.min()
 print("\nCheater: ", found)
+print("\nTesting recursive max/min methods...")
 print("Max score: ", max_node)
 print("Min score: ", min_node)
 
@@ -90,6 +91,14 @@ print("Winner: ", max_node, winner)
 loser = my_tree.find(min_node)
 print("Loser: ", min_node, loser)
 
+print("\nTesting iterative max/min methods")
+try:
+    min_node = my_tree.min_iter()
+    print("Min: ", min_node)
+    max_node = my_tree.max_iter()
+    print("Max: ", max_node)
+except:
+    "Iterative max/min failed"
 
 print("\nGenerator Display Method")
 try:
