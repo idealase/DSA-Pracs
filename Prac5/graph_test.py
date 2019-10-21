@@ -3,6 +3,7 @@ from graph import *
 numPassed = 0
 numTests = 0
 
+# TEST 1
 # init an empty graph
 print("\nTest 1:", end=" ")
 try:
@@ -13,6 +14,7 @@ try:
 except:
     print("Failed")
 
+# TEST 2
 # init a standalone test node
 print("\nTest 2:", end=" ")
 try:
@@ -24,6 +26,7 @@ try:
 except:
     print("Failed")
 
+# TEST 3
 # add a node/vertex to the empty test graph
 print("\nTest 3:", end=" ")
 try:
@@ -34,6 +37,7 @@ try:
 except:
     print("Failed")
 
+# TEST 4
 # check last vertex in graph vertices linked list
 print("\nTest 4:", end=" ")
 try:
@@ -44,6 +48,7 @@ try:
 except:
     print("Failed")
 
+# TEST 5
 # add and check some more
 print("\nTest 5:", end=" ")
 try:
