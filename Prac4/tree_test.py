@@ -3,18 +3,6 @@ import random
 import csv
 
 # list of names to be used as values
-
-
-names = []
-keys = []
-
-with open('RandomNames.csv', 'rt') as file:
-    reader = csv.reader(file)
-    for row in reader:
-        names.append(row[1])
-        keys.append(int(row[0]))
-
-
 """
 names = ["Weablo", "Glemdor", "Quamlack", "Tistle", "Marlbornry", "Flantiline",
          "Tennerbro", "Gwizzly", "Howerton", "Norlop", "Streeves", "Bannawack",
@@ -25,6 +13,15 @@ for i in range(0, len(names)):
     keys.append(random.randint(0, 1000))
 """
 
+names = []
+keys = []
+
+with open('RandomNames.csv', 'rt') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        names.append(row[1])
+        keys.append(int(row[0]))
+
 # MANUAL
 # adds a node with key: 1 and value: "matt" then displays it
 my_node = tree.DSATreeNode(13671279, "Brodie Sandford")
@@ -33,11 +30,21 @@ print(my_node)
 
 
 my_tree = tree.DSABinarySearchTree()
-# my_tree.insert(777, random.choice(names))
+
+try:
+    my_tree.height()
+except:
+    print("Height check failed")
+
 my_tree.insert(my_node.get_key(), my_node.get_value())
 
+try:
+    my_tree.height()
+except:
+    print("Height check failed")
+
 count = 1
-for i in range(0, len(names)):
+for i in range(0, len(names) // 2):
     temp_key = random.choice(keys)
     keys.remove(temp_key)
 

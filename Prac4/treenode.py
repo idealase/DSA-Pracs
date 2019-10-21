@@ -85,7 +85,22 @@ class DSABinarySearchTree:
         pass
 
     def height(self):
-        pass
+        return self._height_rec(self._root)
+
+    def _height_rec(self, curr):
+        if curr is None:    # base case
+            ht_sofar = -1
+        else:
+            left_ht = self._height_rec(curr._left)
+            right_ht = self._height_rec(curr._right)
+        # get highest of left vs right branches
+        if left_ht > right_ht:
+            ht_sofar = left_ht + 1
+        else:
+            ht_sofar = right_ht + 1
+        return ht_sofar
+
+
 
     def min(self):
         return self._min_rec(self._root)

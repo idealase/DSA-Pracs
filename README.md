@@ -54,7 +54,7 @@
 
  - [x] Linked Lists - Single/Single
  - [x] Linked Lists - Double/Double 
- - [ ] Iterable Lists
+ - [x] Iterable Lists
  - [ ] Queue with Linked List
  - [ ] Stack with Linked List
  
