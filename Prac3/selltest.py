@@ -43,3 +43,4 @@ print("\nTraversing list...", end="\t\t")
 # using a for loop to go through list
 for value in ll:
     print(value, end=" --> ")
+print("null")

@@ -87,7 +87,7 @@ class DSABinarySearchTree:
     def height(self):
         return self._height_rec(self._root)
 
-    def _height_rec(self, curr):
+    def _height_rec(self, curr):    # FIXME: left height right height
         if curr is None:    # base case
             ht_sofar = -1
         else:
