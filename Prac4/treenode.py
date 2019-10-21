@@ -26,18 +26,7 @@ class DSATreeNode:
     def set_right(self):
         pass
 
-    def gen_data(self):
-        """Generator to get tree nodes data"""
-        stack = myStack.DSAStack()
-        node = self
-        while stack or node:
-            if node:
-                stack.push(node)
-                node = node.get_left()
-            else:
-                node = stack.pop()
-                yield node
-                node = node.get_right()
+
 
 
     def __str__(self):
@@ -81,9 +70,6 @@ class DSABinarySearchTree:
     def delete(self, key):
         pass
 
-    def display(self):
-        pass
-
     def height(self):
         return self._height_rec(self._root)
 
@@ -99,8 +85,6 @@ class DSABinarySearchTree:
             else:
                 ht_sofar = right_ht + 1
         return ht_sofar
-
-
 
     def min(self):
         return self._min_rec(self._root)
@@ -123,17 +107,30 @@ class DSABinarySearchTree:
         return max_key
 
     def generative_print(self):
-        self._root.gen_data()
+        return self.gen_data(self._root)
+
+    def gen_data(self, curr):
+        """Generator to get tree nodes data"""
+        stack = myStack.DSAStack()
+        node = curr
+        while stack or node:
+            if node:
+                stack.push(node)
+                node = node.get_left()
+            else:
+                node = stack.pop()
+                yield node
+                node = node.get_right()
 
     def print_tree(self):
-        return _rec_print_tree(self._root)
+        return self._rec_print_tree(self._root)
 
     def _rec_print_tree(self, curr):    #FIXME: not defined
-        if curr._left:
-            _rec_print_tree(curr._left)
+        if curr.get_left():
+            self._rec_print_tree(curr.get_left())
         print(curr)
-        if curr._right:
-            _rec_print_tree(curr._right)
+        if curr.get_right():
+            self._rec_print_tree(curr.get_right())
 
 
 

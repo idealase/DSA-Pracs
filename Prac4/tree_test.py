@@ -49,7 +49,7 @@ except:
     print("Height check failed")
 
 count = 1
-for i in range(0, 100):
+for i in range(0, 23):
     temp_key = random.choice(keys)
     keys.remove(temp_key)
 
