@@ -34,7 +34,8 @@ print(my_node)
 my_tree = tree.DSABinarySearchTree()
 
 try:
-    my_tree.height()
+    print("\nExpected height: 0")
+    print("Reported height: ", my_tree.height())
 except:
     print("Height check failed")
 
@@ -42,7 +43,8 @@ my_tree.insert(my_node.get_key(), my_node.get_value())
 my_tree.insert(13485649, "Steve Steverson")
 
 try:
-    my_tree.height()
+    print("\nExpected height: 2")
+    print("Reported height: ", my_tree.height())
 except:
     print("Height check failed")
 
@@ -69,33 +71,40 @@ for i in range(0, 100):
 print("\nFinal tests...")
 
 try:
-    my_tree.height()
+    print("\nExpected height: ???")
+    print("Reported height: ", my_tree.height())
 except:
     print("Height check failed")
 
 # find the name of the cheaters!!
 found, max_node, min_node = my_tree.find(13485649), my_tree.max(), my_tree.min()
-print(found, max_node, min_node)
+print("\nCheater: ", found)
+print("Max score: ", max_node)
+print("Min score: ", min_node)
 
 # find the winner
-max_node = my_tree.max()
 winner = my_tree.find(max_node)
-print(max_node, winner)
+print("Winner: ", max_node, winner)
 
 # wooden spooner
-min_node = my_tree.min()
 loser = my_tree.find(min_node)
-print(min_node, loser)
+print("Loser: ", min_node, loser)
 
 
-print("Generator Display Method")
-gen_results = my_tree.generative_print()
-print(gen_results)
+print("\nGenerator Display Method")
+try:
+    gen_results = my_tree.generative_print()
+    print(gen_results)
+except:
+    print("Generative display failed")
 
 
-print("Recursive Display Method")
-rec_printed = my_tree.print_tree()
-print(rec_printed)
+print("\nRecursive Display Method")
+try:
+    rec_printed = my_tree.print_tree()
+    print(rec_printed)
+except:
+    print("Recursive display failed")
 
 
 

@@ -87,17 +87,17 @@ class DSABinarySearchTree:
     def height(self):
         return self._height_rec(self._root)
 
-    def _height_rec(self, curr):    # FIXME: left height right height
-        if curr is None:    # base case
+    def _height_rec(self, curr):
+        if not curr:    # base case
             ht_sofar = -1
         else:
-            left_ht = self._height_rec(curr._left)
-            right_ht = self._height_rec(curr._right)
-        # get highest of left vs right branches
-        if left_ht > right_ht:
-            ht_sofar = left_ht + 1
-        else:
-            ht_sofar = right_ht + 1
+            left_ht = self._height_rec(curr.get_left())
+            right_ht = self._height_rec(curr.get_right())
+            # get highest of left vs right branches
+            if left_ht > right_ht:
+                ht_sofar = left_ht + 1
+            else:
+                ht_sofar = right_ht + 1
         return ht_sofar
 
 
@@ -128,12 +128,12 @@ class DSABinarySearchTree:
     def print_tree(self):
         return _rec_print_tree(self._root)
 
-    def _rec_print_tree(self):
-        if self._left:
-            _rec_print_tree(self._left)
-        print(self)
-        if self._right:
-            _rec_print_tree(self._right)
+    def _rec_print_tree(self, curr):    #FIXME: not defined
+        if curr._left:
+            _rec_print_tree(curr._left)
+        print(curr)
+        if curr._right:
+            _rec_print_tree(curr._right)
 
 
 
