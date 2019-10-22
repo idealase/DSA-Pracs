@@ -63,6 +63,16 @@ try:
 except:
     print("Failed")
 
+# TEST 6
+# display as list
+print("\nTest 6:", end=" ")
+try:
+    numTests += 1
+    test_graph.display_as_list()
+    numPassed += 1
+except:
+    print("Failed")
+
 
 # Print test summary
 print("\nNumber PASSED: ", numPassed, "/", numTests)

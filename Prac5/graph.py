@@ -12,7 +12,7 @@ class DSAGraph:
         # add to vertices linked list
         self.vertices.insert_last(new_node)
 
-    def add_edge(self, label1, label2):
+    def add_edge(self, label1, label2):     # TODO
         pass
 
     def has_vertex(self, label):
@@ -34,7 +34,11 @@ class DSAGraph:
         pass
 
     def display_as_list(self):
-        pass
+        vertices_iter = iter(self.vertices)
+        val = next(vertices_iter)
+        print("Traversing")
+        for val in vertices_iter:
+            print(val, end=" --> ")
 
     def display_as_matrix(self):
         pass
@@ -55,7 +59,7 @@ class DSAGraphVertex:
         return self.value
 
     def get_adjacent(self):
-        pass
+        return self.links
 
     def add_edge(self, vertex):
         pass
