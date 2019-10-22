@@ -8,15 +8,18 @@ class DSAGraph:
 
     def add_vertex(self, label, value):
         # init DSAGraphVertex object
-        new_node = DSAGraphVertex(label, value)
+        new_vert = DSAGraphVertex(label, value)
         # add to vertices linked list
-        self.vertices.insert_last(new_node)
+        self.vertices.insert_first(new_vert)
 
-    def add_edge(self, label1, label2):     # TODO
+    def add_edge(self, label1, label2):     # TODO ??
         pass
 
-    def has_vertex(self, label):
-        pass
+    def has_vertex(self, label):    # FIXME: weird
+        has_v = False
+        if label in self.vertices:
+            has_v = True
+        return has_v
 
     def get_vertex_count(self):
         pass
@@ -46,7 +49,7 @@ class DSAGraph:
 
 class DSAGraphVertex:
     """Linked lists within each node to store the adjacency list"""
-    def __init__(self, label, value, links=DSALinkedList(), visited=[]):
+    def __init__(self, label, value, links=DSALinkedList(), visited=False):
         self.label = label
         self.value = value
         self.links = links

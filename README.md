@@ -71,7 +71,7 @@
  - [x] Creating Treenode
  - [x] Create Binary Search Tree
  - [ ] Add code to traverse the tree
- - [ ] Implement Additional Operations
+ - [x] Implement Additional Operations
  - [ ] Add File I/O to Overall Program
  
   ### Files

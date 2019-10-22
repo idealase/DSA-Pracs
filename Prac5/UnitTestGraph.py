@@ -74,6 +74,18 @@ except:
     print("Failed")
 
 
+# TEST 7
+# has vertex check
+print("\nTest 7:", end=" ")
+try:
+    numTests += 1
+    test_graph.has_vertex("B")
+    numPassed += 1
+except:
+    print("Failed")
+
+
+
 # Print test summary
 print("\nNumber PASSED: ", numPassed, "/", numTests)
 print("-> ", numPassed/numTests*100, "%\n")

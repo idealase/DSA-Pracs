@@ -110,6 +110,30 @@ try:
 except:
     print("Recursive display failed")
 
+# CSV serialisation
+try:
+    with open('output.csv', 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerows(iter(rec_printed))
+except:
+    print("nah couldn't do csv")
 
+# Pickling time
+import pickle
+try:
+    output = open('tree.pkl', 'wb')
+    pickle.dump(my_tree, output)
+    output.close()
+    print("pickled...")
+except:
+    print("No picklin")
 
+try:
+    pkl_file = open('tree.pkl', 'rb')
+    pickled_tree = pickle.load(pkl_file)
+    pkl_file.close()
+    print("opened the pickle jar")
+except:
+    print("no picklin")
 
+pickled_tree.print_tree()
