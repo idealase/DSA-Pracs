@@ -2,17 +2,6 @@ import treenode as tree
 import random
 import csv
 
-# list of names to be used as values
-"""
-names = ["Weablo", "Glemdor", "Quamlack", "Tistle", "Marlbornry", "Flantiline",
-         "Tennerbro", "Gwizzly", "Howerton", "Norlop", "Streeves", "Bannawack",
-         "Terrawom", "Glable", "Glebulp", "Nennafet", "Seeply",
-         "Lamaton", "Woorap"]
-
-for i in range(0, len(names)):
-    keys.append(random.randint(0, 1000))
-"""
-
 verbose = False
 
 names = []
@@ -24,8 +13,7 @@ with open('RandomNames.csv', 'rt') as file:
         names.append(row[1])
         keys.append(int(row[0]))
 
-# MANUAL
-# adds a node with key: 1 and value: "matt" then displays it
+# MANUAL adds a node
 my_node = tree.DSATreeNode(13671279, "Brodie Sandford")
 print("Displaying ceremonial MANUAL node: ")
 print(my_node)
@@ -39,6 +27,7 @@ try:
 except:
     print("Height check failed")
 
+# add the manually created node, and a new node for steve steversons
 my_tree.insert(my_node.get_key(), my_node.get_value())
 my_tree.insert(13485649, "Steve Steverson")
 
@@ -48,6 +37,8 @@ try:
 except:
     print("Height check failed")
 
+
+# add some random names and IDs to the tree
 count = 1
 for i in range(0, 23):
     temp_key = random.choice(keys)
@@ -68,6 +59,7 @@ for i in range(0, 23):
     count += 1
 
 
+
 print("\nFinal tests...")
 
 try:
@@ -75,6 +67,7 @@ try:
     print("Reported height: ", my_tree.height())
 except:
     print("Height check failed")
+
 
 # find the name of the cheaters!!
 found, max_node, min_node = my_tree.find(13485649), my_tree.max(), my_tree.min()
@@ -91,6 +84,7 @@ print("Winner: ", max_node, winner)
 loser = my_tree.find(min_node)
 print("Loser: ", min_node, loser)
 
+
 print("\nTesting iterative max/min methods")
 try:
     min_node = my_tree.min_iter()
@@ -99,6 +93,7 @@ try:
     print("Max: ", max_node)
 except:
     "Iterative max/min failed"
+
 
 print("\nGenerator Display Method")
 try:
