@@ -55,10 +55,10 @@ try:
     numTests += 1
     test_graph.add_vertex("C", 14)
     print("Added node")
-    print(test_graph.vertices.peek_last())
+    print(test_graph.vertices.peek_first())
     test_graph.add_vertex("D", 16)
     print("Added node")
-    print(test_graph.vertices.peek_last())
+    print(test_graph.vertices.peek_first())
     numPassed += 1
 except:
     print("Failed")
