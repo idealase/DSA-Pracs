@@ -10,7 +10,7 @@ class DSAGraph:
         # init DSAGraphVertex object
         new_vert = DSAGraphVertex(label, value)
         # add to vertices linked list
-        self.vertices.insert_first(new_vert)
+        self.vertices.insert_last(new_vert)
 
     def add_edge(self, label1, label2):     # TODO ??
         pass
