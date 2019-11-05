@@ -97,7 +97,7 @@ class DSALinkedList:
     def __next__(self):
         curval = None
         if not self._curr:
-            raise StopIteration(print("teh end_"))
+            raise StopIteration
         else:
             curval = self._curr.value
             self._curr = self._curr.next
