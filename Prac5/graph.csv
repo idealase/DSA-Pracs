@@ -1,0 +1,9 @@
+Edge_vertex1, Edge_vertex2, Edge_weight
+A, B, 2
+A, C, 2
+B, C, 3
+B, D, 4
+C, D, 6
+D, E, 3
+E, F, 1
+E, G, 2

@@ -65,7 +65,7 @@ class DSAGraphVertex:
         return self.links
 
     def add_edge(self, vertex):
-        pass
+        self.links.insert_first(vertex)
 
     def set_visited(self):
         pass

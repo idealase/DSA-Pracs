@@ -103,7 +103,20 @@ class DSALinkedList:
             self._curr = self._curr.next
         return curval
 
+    def get_length(self):
+        length = 0
+        self._curr = self.head
+        while self._curr:
+            length += 1
+            self._curr = self._curr.get_next()
+        return length
 
+    def display(self):
+        iter_ob = iter(self)
+        value = next(iter_ob)
+        for value in self:
+            print(value, end=" --> ")
+        print("null")
 
 
 if __name__ == "__main__":

@@ -26,6 +26,18 @@ try:
 except:
     print("Failed")
 
+# TEST 2.5
+print("\nTest 2.5:", end=" ")
+try:
+    numTests += 1
+    test_graph.add_vertex(test_node.label, test_node.value)
+    print("Added the test node to graph")
+    test_graph.display_as_list()
+    numPassed += 1
+except:
+    print("failed")
+
+
 # TEST 3
 # add a node/vertex to the empty test graph
 print("\nTest 3:", end=" ")
@@ -33,6 +45,7 @@ try:
     numTests += 1
     test_graph.add_vertex("B", 12)
     print("Added node B 12 to graph")
+    test_graph.display_as_list()
     numPassed += 1
 except:
     print("Failed")
@@ -84,7 +97,15 @@ try:
 except:
     print("Failed")
 
+# TEST 8
+# display vertices
+try:
+    numTests += 1
+    test_graph.vertices.display()
+    numPassed += 1
 
+except:
+    print("Failed")
 
 # Print test summary
 print("\nNumber PASSED: ", numPassed, "/", numTests)

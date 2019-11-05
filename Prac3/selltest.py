@@ -44,3 +44,7 @@ print("\nTraversing list...", end="\t\t")
 for value in ll:
     print(value, end=" --> ")
 print("null")
+
+ll.display()
+
+print(my_list.get_length())
