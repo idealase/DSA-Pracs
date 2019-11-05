@@ -6,7 +6,7 @@ class DSAGraph:
     def __init__(self, vertices=DSALinkedList()):
         self.vertices = vertices
 
-    def add_vertex(self, label, value):
+    def add_vertex(self, label, value=None):
         # init DSAGraphVertex object
         new_vert = DSAGraphVertex(label, value)
         # add to vertices linked list
