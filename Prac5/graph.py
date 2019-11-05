@@ -12,13 +12,26 @@ class DSAGraph:
         # add to vertices linked list
         self.vertices.insert_last(new_vert)
 
-    def add_edge(self, label1, label2):     # TODO ??
-        pass
+    def add_connection(self, label1, label2):     # TODO ??
+        vertices_iter = iter(self.vertices)
+        val = next(vertices_iter)
+        for val in vertices_iter:
+            if val.label == label1:
+                val.links.insert_last(label2)
+                print("Connection established")
+            elif val.label == label2:
+                val.links.insert_last(label1)
+                print("Connection completed")
+                break
+            # print("Label 1 not found")
 
     def has_vertex(self, label):    # FIXME: weird
         has_v = False
-        if label in self.vertices:
-            has_v = True
+        vertices_iter = iter(self.vertices)
+        val = next(vertices_iter)
+        for val in vertices_iter:
+            if val.label == label:
+                has_v = True
         return has_v
 
     def get_vertex_count(self):
@@ -28,7 +41,11 @@ class DSAGraph:
         pass
 
     def get_vertex(self, label):
-        pass
+        vertices_iter = iter(self.vertices)
+        val = next(vertices_iter)
+        for val in vertices_iter:
+            if val.label == label:
+                return val
 
     def get_adjacent(self, label):
         pass
@@ -49,10 +66,10 @@ class DSAGraph:
 
 class DSAGraphVertex:
     """Linked lists within each node to store the adjacency list"""
-    def __init__(self, label, value, links=DSALinkedList(), visited=False):
+    def __init__(self, label, value, visited=False):
         self.label = label
         self.value = value
-        self.links = links
+        self.links = DSALinkedList()
         self.visited = visited
 
     def get_label(self):
@@ -64,8 +81,8 @@ class DSAGraphVertex:
     def get_adjacent(self):
         return self.links
 
-    def add_edge(self, vertex):
-        self.links.insert_first(vertex)
+    def add_edge(self, vertex_label):
+        self.links.insert_first(vertex_label)
 
     def set_visited(self):
         pass

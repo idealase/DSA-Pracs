@@ -92,13 +92,15 @@ except:
 print("\nTest 7:", end=" ")
 try:
     numTests += 1
-    test_graph.has_vertex("B")
+    if test_graph.has_vertex("B"):
+        print("Has b")
     numPassed += 1
 except:
     print("Failed")
 
 # TEST 8
 # display vertices
+print("\nTest 8:", end=" ")
 try:
     numTests += 1
     test_graph.vertices.display()
@@ -106,6 +108,28 @@ try:
 except:
     print("Failed")
 
+
+# TEST 9
+# display vertices
+print("\nTest 9:", end=" ")
+try:
+    numTests += 1
+    test_graph.add_connection("A", "B")
+    test_graph.add_connection("A", "C")
+    test_graph.add_connection("C", "D")
+    numPassed += 1
+except:
+    print("Failed")
+
 # Print test summary
 print("\nNumber PASSED: ", numPassed, "/", numTests)
 print("-> ", numPassed/numTests*100, "%\n")
+
+
+test_graph.get_vertex("A")
+
+for vertex in test_graph.vertices:
+    print(vertex)
+    vlinks = vertex.links
+    print("Displaying the links of " + vertex.label + "...")
+    vlinks.display()
