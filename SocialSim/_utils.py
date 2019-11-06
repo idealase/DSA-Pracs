@@ -91,30 +91,37 @@ class LinkedList:
     def __next__(self):
         curval = None
         if not self._curr:
-            raise StopIteration(print("teh end_"))
+            raise StopIteration(print("_teh end"))
         else:
             curval = self._curr.value
             self._curr = self._curr.next
         return curval
 
+    def display(self):
+        iter_ob = iter(self)
+        value = next(iter_ob)
+        for value in self:
+            print(value, end=" --> ")
+        print("null")
 
-class DSAGraph:
+
+class SocNet:
     """Uses linked list to store the list of nodes"""
-    def __init__(self, vertices=DSALinkedList()):
-        self.vertices = vertices
+    def __init__(self, humanoids=LinkedList()):
+        self.humanoids = humanoids
 
-    def add_vertex(self, label, value):
+    def add_human(self, name, value=None):
         # init DSAGraphVertex object
-        new_vert = DSAGraphVertex(label, value)
-        # add to vertices linked list
-        self.vertices.insert_last(new_vert)
+        new_human = Humanoid(name, value)
+        # add to humanoids linked list
+        self.humanoids.insert_last(new_human)
 
     def add_edge(self, label1, label2):     # TODO ??
         pass
 
     def has_vertex(self, label):    # FIXME: weird
         has_v = False
-        if label in self.vertices:
+        if label in self.humanoids:
             has_v = True
         return has_v
 
@@ -134,22 +141,22 @@ class DSAGraph:
         pass
 
     def display_as_list(self):
-        vertices_iter = iter(self.vertices)
+        vertices_iter = iter(self.humanoids)
         val = next(vertices_iter)
-        print("Traversing")
+        print("SocNet Members:")
         for val in vertices_iter:
-            print(val, end=" --> ")
+            print(val, end="\n")
 
     def display_as_matrix(self):
         pass
 
 
-class DSAGraphVertex:
+class Humanoid:
     """Linked lists within each node to store the adjacency list"""
-    def __init__(self, label, value, links=DSALinkedList(), visited=False):
-        self.label = label
+    def __init__(self, name, value, visited=False):
+        self.label = name
         self.value = value
-        self.links = links
+        self.links = LinkedList()
         self.visited = visited
 
     def get_label(self):
@@ -174,5 +181,5 @@ class DSAGraphVertex:
         pass
 
     def __str__(self):
-        return "Label: {0}\t Value: {1}\tLinks: {2}\t Visited: {3}"\
+        return "Name: {0}\t\t Value: {1}\tLinks: {2}\t Visited: {3}"\
             .format(self.label, self.value, self.links, self.visited)
