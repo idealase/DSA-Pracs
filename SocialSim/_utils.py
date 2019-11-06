@@ -1,5 +1,6 @@
 from time import localtime
 
+
 class ListNode:
     def __init__(self, in_value):
         self.value = in_value
@@ -244,3 +245,28 @@ class Humanoid:
     def __str__(self):
         return "Name: {0}\t\t Value: {1}\t Visited: {2}"\
             .format(self.name, self.value, self.visited)
+
+
+class SocConx:  # DSAGraphEdge
+    def __init__(self, audience, influencer, interest=0.5):
+        self.label = str(audience) + " follows " + str(influencer)
+        self.audience = audience
+        self.influencer = influencer
+        self.interest = interest
+
+    def get_label(self):
+        return self.label
+
+    def get_value(self):
+        return self.interest
+
+    def get_from(self):
+        return self.influencer
+
+    def get_to(self):
+        return self.audience
+
+    def __str__(self):
+        return "{0} is following {1}, " \
+               "with an interest level of {2}"\
+            .format(self.audience, self.influencer, self.interest)
