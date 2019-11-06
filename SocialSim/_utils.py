@@ -1,3 +1,5 @@
+from time import localtime
+
 class ListNode:
     def __init__(self, in_value):
         self.value = in_value
@@ -104,6 +106,15 @@ class LinkedList:
             print(value, end="\n")
         print("null")
 
+    def get_count(self):
+        return self._get_count_rec(self.head)
+
+    def _get_count_rec(self, node):
+        if not node:
+            return 0
+        else:
+            return 1 + self._get_count_rec(node.get_next())
+
 
 class SocNet:
     """Uses linked list to store the list of nodes"""
@@ -131,8 +142,8 @@ class SocNet:
                 has_h = True
         return has_h
 
-    def get_vertex_count(self):
-        pass
+    def get_humanoid_count(self):
+        return self.humanoids.get_count()
 
     def get_edge_count(self):
         pass
@@ -172,14 +183,33 @@ class SocNet:
     def display_as_matrix(self):
         pass
 
+    def infection_report(self):
+        print(" -- Infection Status Report -- ")
+        humanoids_iter = iter(self.humanoids)
+        val = next(humanoids_iter)
+        print("Infected Scum:")
+        for val in humanoids_iter:
+            if val.is_infected():
+                print(val.get_name())
+        print("\nHealthy Pre-scum:")
+        for val in humanoids_iter:
+            if not val.is_infected():
+                print(val.get_name())
+        print(" -- Infection Status Current as of -- ")
+        time_now = localtime()
+        print("\tDate: " + str(time_now[2]) + "-" + str(time_now[1]) + "-" +
+              str(time_now[0]))
+        print("\tTime: " + str(time_now[3]) + ":" + str(time_now[4]) + ":" +
+              str(time_now[5]))
+
 
 class Humanoid:
-    """Linked lists within each node to store the adjacency list"""
-    def __init__(self, name, value, visited=False):
+    def __init__(self, name, value):
         self.name = name
         self.value = value
         self.links = LinkedList()
-        self.visited = visited
+        self.infected = False
+        self.visited = False
 
     def get_name(self):
         return self.name
@@ -192,6 +222,15 @@ class Humanoid:
 
     def add_edge(self, vertex):
         self.links.insert_first(vertex)
+
+    def infect(self):
+        self.infected = True
+
+    def is_infected(self):
+        return self.infected
+
+    def get_friend_count(self):
+        return self.links.get_count()
 
     def set_visited(self):
         pass
