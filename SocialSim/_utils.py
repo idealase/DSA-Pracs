@@ -116,14 +116,20 @@ class SocNet:
         # add to humanoids linked list
         self.humanoids.insert_last(new_human)
 
-    def add_edge(self, label1, label2):     # TODO ??
-        pass
+    def add_relationship(self, name1, name2):   # TODO ??
+        h1 = self.get_human(name1)
+        h2 = self.get_human(name2)
+        h1.links.insert_last(h2)
+        h2.links.insert_last(h1)
 
-    def has_vertex(self, label):    # FIXME: weird
-        has_v = False
-        if label in self.humanoids:
-            has_v = True
-        return has_v
+    def has_humanoid(self, name):    # FIXME: weird
+        has_h = False
+        humanoids_iter = iter(self.humanoids)
+        hum = next(humanoids_iter)
+        for hum in humanoids_iter:
+            if hum.name == name:
+                has_h = True
+        return has_h
 
     def get_vertex_count(self):
         pass
@@ -131,11 +137,21 @@ class SocNet:
     def get_edge_count(self):
         pass
 
-    def get_vertex(self, label):
-        pass
+    def get_human(self, name):
+        humanoids_iter = iter(self.humanoids)
+        hum = next(humanoids_iter)
+        for hum in humanoids_iter:
+            if hum.name == name:
+                return hum
 
-    def get_adjacent(self, label):
-        pass
+    def get_adjacent(self, name):
+        h = self.get_human(name)
+        h.get_adjacent()
+
+    def show_adjacent(self, name):
+        h = self.get_human(name)
+        hlinks = h.get_adjacent()
+        hlinks.display()
 
     def is_adjacent(self, label1, label2):
         pass
@@ -154,13 +170,13 @@ class SocNet:
 class Humanoid:
     """Linked lists within each node to store the adjacency list"""
     def __init__(self, name, value, visited=False):
-        self.label = name
+        self.name = name
         self.value = value
         self.links = LinkedList()
         self.visited = visited
 
-    def get_label(self):
-        return self.label
+    def get_name(self):
+        return self.name
 
     def get_value(self):
         return self.value
@@ -181,5 +197,5 @@ class Humanoid:
         pass
 
     def __str__(self):
-        return "Name: {0}\t\t Value: {1}\tLinks: {2}\t Visited: {3}"\
-            .format(self.label, self.value, self.links, self.visited)
+        return "Name: {0}\t\t Value: {1}\t Visited: {2}"\
+            .format(self.name, self.value, self.visited)
