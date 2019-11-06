@@ -91,7 +91,7 @@ class LinkedList:
     def __next__(self):
         curval = None
         if not self._curr:
-            raise StopIteration(print("_teh end"))
+            raise StopIteration
         else:
             curval = self._curr.value
             self._curr = self._curr.next
@@ -101,7 +101,7 @@ class LinkedList:
         iter_ob = iter(self)
         value = next(iter_ob)
         for value in self:
-            print(value, end=" --> ")
+            print(value, end="\n")
         print("null")
 
 
@@ -116,13 +116,13 @@ class SocNet:
         # add to humanoids linked list
         self.humanoids.insert_last(new_human)
 
-    def add_relationship(self, name1, name2):   # TODO ??
+    def add_relationship(self, name1, name2):
         h1 = self.get_human(name1)
         h2 = self.get_human(name2)
         h1.links.insert_last(h2)
         h2.links.insert_last(h1)
 
-    def has_humanoid(self, name):    # FIXME: weird
+    def has_humanoid(self, name):
         has_h = False
         humanoids_iter = iter(self.humanoids)
         hum = next(humanoids_iter)
@@ -153,8 +153,14 @@ class SocNet:
         hlinks = h.get_adjacent()
         hlinks.display()
 
-    def is_adjacent(self, label1, label2):
-        pass
+    def is_adjacent(self, name1, name2):
+        is_adj = False
+        h1 = self.get_human(name1)
+        h1links = h1.get_adjacent()
+        for link in h1links:
+            if link.name == name2:
+                is_adj = True
+        return is_adj
 
     def display_as_list(self):
         vertices_iter = iter(self.humanoids)
