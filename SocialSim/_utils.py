@@ -119,8 +119,9 @@ class LinkedList:
 
 class SocNet:
     """Uses linked list to store the list of nodes"""
-    def __init__(self, humanoids=LinkedList()):
-        self.humanoids = humanoids
+    def __init__(self):
+        self.humanoids = LinkedList()
+        self.connections = LinkedList()
 
     def add_human(self, name, value=None):
         # init DSAGraphVertex object
@@ -133,6 +134,8 @@ class SocNet:
         h2 = self.get_human(name2)
         h1.links.insert_last(h2)
         h2.links.insert_last(h1)
+        new_conx = SocConx(h1.name, h2.name)
+        self.connections.insert_last(new_conx)
 
     def has_humanoid(self, name):
         has_h = False
@@ -146,8 +149,8 @@ class SocNet:
     def get_humanoid_count(self):
         return self.humanoids.get_count()
 
-    def get_edge_count(self):
-        pass
+    def get_connection_count(self):
+        return self.connections.get_count()
 
     def get_human(self, name):
         humanoids_iter = iter(self.humanoids)
@@ -247,7 +250,7 @@ class Humanoid:
             .format(self.name, self.value, self.visited)
 
 
-class SocConx:  # DSAGraphEdge
+class SocConx:  # GraphEdge
     def __init__(self, audience, influencer, interest=0.5):
         self.label = str(audience) + " follows " + str(influencer)
         self.audience = audience
@@ -265,6 +268,9 @@ class SocConx:  # DSAGraphEdge
 
     def get_to(self):
         return self.audience
+
+    def update_interst(self, modifier):
+        self.interest = self.interest * modifier
 
     def __str__(self):
         return "{0} is following {1}, " \
