@@ -99,8 +99,8 @@ class DSALinkedList:
         if not self._curr:
             raise StopIteration
         else:
-            curval = self._curr.value
-            self._curr = self._curr.next
+            curval = self._curr.get_value()
+            self._curr = self._curr.get_next()
         return curval
 
     def get_length(self):
