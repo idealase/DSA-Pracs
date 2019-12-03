@@ -1,9 +1,9 @@
-Abstract
+# Abstract
 
-Background
+# Background
 
-Methodology
+# Methodology
 
-Results
+# Results
 
-Conclusion and Future Work
+# Conclusion and Future Work
