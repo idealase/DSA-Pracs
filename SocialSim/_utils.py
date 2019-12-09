@@ -222,12 +222,12 @@ class SocNet:
 class Humanoid:
     def __init__(self, name, negativity=0.1):
         self.name = name
-        self.negativity = negativity      # TODO: REMOVE POSSIBLY
+        self.negativity = negativity      # baseline starting negativity
         self.followers = LinkedList()
         self.following = LinkedList()
         self.links = LinkedList()
         self.infected = False
-        self.visited = False
+        self.visited = False        # TODO: remove????
 
     def get_name(self):
         return self.name
@@ -272,14 +272,14 @@ class Humanoid:
         pass
 
     def __str__(self):
-        return "Name: {0}\t\t Negativity: {1}\t Visited: {2}"\
-            .format(self.name, self.negativity, self.visited)
+        return "Name: {0}\t\t\t Negativity: {1}\t\t Infected: {2}"\
+            .format(self.name, self.negativity, self.infected)
 
 
 class SocConx:  # GraphEdge
-    def __init__(self, audience, influencer, interest=0.5):
-        self.label = str(audience) + " follows " + str(influencer)
-        self.audience = audience
+    def __init__(self, follower, influencer, interest=0.5):
+        self.label = str(follower) + " follows " + str(influencer)
+        self.follower = follower
         self.influencer = influencer
         self.interest = interest
 
@@ -293,7 +293,7 @@ class SocConx:  # GraphEdge
         return self.influencer
 
     def get_to(self):
-        return self.audience
+        return self.follower
 
     def update_interst(self, modifier):
         self.interest = self.interest * modifier
@@ -301,4 +301,4 @@ class SocConx:  # GraphEdge
     def __str__(self):
         return "{0} is following {1}, " \
                "with an interest level of {2}"\
-            .format(self.audience, self.influencer, self.interest)
+            .format(self.follower, self.influencer, self.interest)
