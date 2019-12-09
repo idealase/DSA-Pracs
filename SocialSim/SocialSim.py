@@ -4,6 +4,7 @@ SocialSim.py
 """
 import sys
 from _utils import *
+import re
 
 # Usage Guide to be displayed if program launched incorrectly
 usage = "\n\t---\tWelcome to SocialSim.py\t---\t\n " \
@@ -124,11 +125,23 @@ def simulation_mode(netfile, eventfile, p_like, p_follow):
     # handle network file
     with open(netfile, 'r') as network_file:
         net_data = network_file.readlines()
-    for line in net_data:
-        interaction = line.split(":")
-        print(interaction)
-        influencer = interaction[0]
-        follower = interaction[1]
+        interactions = []
+        ppl = []
+        for line in net_data:
+            if re.search(":", line):
+                re.sub(r"\n", "", line)
+                interactions.append(line)
+            else:
+                ppl.append(line)
+        print(interactions)
+        print(ppl)
+
+    #for line in net_data:
+        #print(line)
+        #interaction = line.split(":")
+        #print(interaction)
+        #influencer = interaction[0]
+        # follower = interaction[1]
 
 
 
