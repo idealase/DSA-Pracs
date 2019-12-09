@@ -118,7 +118,6 @@ class LinkedList:
 
 
 class SocNet:
-    """Uses linked list to store the list of nodes"""
     def __init__(self):
         self.humanoids = LinkedList()
         self.connections = LinkedList()
@@ -129,16 +128,6 @@ class SocNet:
         # add to humanoids linked list
         self.humanoids.insert_last(new_human)
 
-    def add_relationship(self, name1, name2):
-        influencer = self.get_human(name1)
-        follower = self.get_human(name2)
-        influencer.followers.insert_last(follower)
-        influencer.links.insert_last(follower)      # LEGACY remove later
-        follower.following.insert_last(influencer)
-        follower.links.insert_last(influencer)      # LEGACY remove later
-        new_conx = SocConx(influencer.name, follower.name)
-        self.connections.insert_last(new_conx)
-
     def has_humanoid(self, name):
         has_h = False
         humanoids_iter = iter(self.humanoids)
@@ -147,6 +136,26 @@ class SocNet:
             if hum.name == name:
                 has_h = True
         return has_h
+
+    def add_relationship(self, name1, name2):
+        """
+        --- IMPORTANT METHOD ---
+        :param name1: Name of the INFLUENCER
+        :param name2: Name of the FOLLOWER
+        :return:
+        """
+        # first checks that these people are present in the network
+        if self.has_humanoid(name1) and self.has_humanoid(name2):
+            influencer = self.get_human(name1)
+            follower = self.get_human(name2)
+            influencer.followers.insert_last(follower)
+            influencer.links.insert_last(follower)      # LEGACY remove later
+            follower.following.insert_last(influencer)
+            follower.links.insert_last(influencer)      # LEGACY remove later
+            new_conx = SocConx(influencer.name, follower.name)
+            self.connections.insert_last(new_conx)
+        else:
+            print("Can't find human")
 
     def get_humanoid_count(self):
         return self.humanoids.get_count()
@@ -200,6 +209,11 @@ class SocNet:
         pass
 
     def infection_report(self):
+        """
+        Generates an output of all humans in the network and their
+        infection status. Sorted by Infected or Healthy
+        :return:
+        """
         print(" -- Infection Status Report -- ")
         humanoids_iter = iter(self.humanoids)
         val = next(humanoids_iter)
