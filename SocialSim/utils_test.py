@@ -32,6 +32,9 @@ survivor_camp.add_relationship("Andy", "Charlie")
 survivor_camp.add_relationship("Andy", "Gerrick")
 survivor_camp.add_relationship("Andy", "Derrick")
 survivor_camp.add_relationship("Andy", "Eric")
+survivor_camp.add_relationship("Derrick", "Andy")
+survivor_camp.add_relationship("Frederic", "Andy")
+survivor_camp.add_relationship("Henrique", "Andy")
 survivor_camp.add_relationship("Charlie", "Bob")
 survivor_camp.add_relationship("Eric", "Bob")
 survivor_camp.add_relationship("Eric", "Henrique")
@@ -41,11 +44,17 @@ survivor_camp.add_relationship("Derrick", "Henrique")
 survivor_camp.add_relationship("Derrick", "Gerrick")
 
 # Test 6
-print("\nTEST 6: See Bob's Relationships")
+print("\nTEST 6: See ALL Bob's Relationships")
 survivor_camp.show_adjacent("Bob")
 # Test 6.5
-print("\nTEST 6.5: See Andy's Relationships")
+print("\nTEST 6.5: See ALL Andy's Relationships")
 survivor_camp.show_adjacent("Andy")
+# Test 6.6
+print("\nTEST 6.6: See Andy's Followers")
+survivor_camp.show_followers("Andy")
+# Test 6.7
+print("\nTEST 6.7: See who Andy Follows")
+survivor_camp.show_following("Andy")
 
 # Test 7
 print("\nTEST 7: Check if Bob and Charlie are friends")

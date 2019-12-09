@@ -134,7 +134,7 @@ class SocNet:
         follower = self.get_human(name2)
         influencer.followers.insert_last(follower)
         influencer.links.insert_last(follower)      # LEGACY remove later
-        follower.follows.insert_last(influencer)
+        follower.following.insert_last(influencer)
         follower.links.insert_last(influencer)      # LEGACY remove later
         new_conx = SocConx(influencer.name, follower.name)
         self.connections.insert_last(new_conx)
@@ -169,6 +169,16 @@ class SocNet:
         h = self.get_human(name)
         hlinks = h.get_adjacent()
         hlinks.display()
+
+    def show_followers(self, name):
+        h = self.get_human(name)
+        hfollowers = h.get_followers()
+        hfollowers.display()
+
+    def show_following(self, name):
+        h = self.get_human(name)
+        hfollowing = h.get_following()
+        hfollowing.display()
 
     def is_adjacent(self, name1, name2):
         is_adj = False
@@ -212,9 +222,9 @@ class SocNet:
 class Humanoid:
     def __init__(self, name, value):
         self.name = name
-        self.value = value
+        self.value = value      # TODO: REMOVE POSSIBLY
         self.followers = LinkedList()
-        self.follows = LinkedList()
+        self.following = LinkedList()
         self.links = LinkedList()
         self.infected = False
         self.visited = False
@@ -222,13 +232,19 @@ class Humanoid:
     def get_name(self):
         return self.name
 
-    def get_value(self):
+    def get_value(self):        # TODO: REMOVE POSSIBLY
         return self.value
 
-    def get_adjacent(self):
+    def get_adjacent(self):     # TODO: LEGACY ... REMOVE POSSIBLY
         return self.links
 
-    def add_edge(self, vertex):
+    def get_followers(self):
+        return self.followers
+
+    def get_following(self):
+        return self.following
+
+    def add_edge(self, vertex):     # TODO: LEGACY ... REMOVE POSSIBLY
         self.links.insert_first(vertex)
 
     def infect(self):
@@ -237,8 +253,14 @@ class Humanoid:
     def is_infected(self):
         return self.infected
 
-    def get_friend_count(self):
+    def get_friend_count(self):     # TODO: LEGACY ... REMOVE POSSIBLY
         return self.links.get_count()
+
+    def get_follower_count(self):
+        return self.followers.get_count()
+
+    def get_following_count(self):
+        return self.following.get_count()
 
     def set_visited(self):
         pass
