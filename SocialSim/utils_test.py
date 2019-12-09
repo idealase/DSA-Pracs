@@ -43,6 +43,9 @@ survivor_camp.add_relationship("Derrick", "Gerrick")
 # Test 6
 print("\nTEST 6: See Bob's Relationships")
 survivor_camp.show_adjacent("Bob")
+# Test 6.5
+print("\nTEST 6.5: See Andy's Relationships")
+survivor_camp.show_adjacent("Andy")
 
 # Test 7
 print("\nTEST 7: Check if Bob and Charlie are friends")

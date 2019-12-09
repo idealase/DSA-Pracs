@@ -130,11 +130,13 @@ class SocNet:
         self.humanoids.insert_last(new_human)
 
     def add_relationship(self, name1, name2):
-        h1 = self.get_human(name1)
-        h2 = self.get_human(name2)
-        h1.links.insert_last(h2)
-        h2.links.insert_last(h1)
-        new_conx = SocConx(h1.name, h2.name)
+        influencer = self.get_human(name1)
+        follower = self.get_human(name2)
+        influencer.followers.insert_last(follower)
+        influencer.links.insert_last(follower)      # LEGACY remove later
+        follower.follows.insert_last(influencer)
+        follower.links.insert_last(influencer)      # LEGACY remove later
+        new_conx = SocConx(influencer.name, follower.name)
         self.connections.insert_last(new_conx)
 
     def has_humanoid(self, name):
@@ -211,6 +213,8 @@ class Humanoid:
     def __init__(self, name, value):
         self.name = name
         self.value = value
+        self.followers = LinkedList()
+        self.follows = LinkedList()
         self.links = LinkedList()
         self.infected = False
         self.visited = False
