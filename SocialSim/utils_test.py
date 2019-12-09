@@ -43,8 +43,8 @@ survivor_camp.add_relationship("Andy", "Gerrick")
 survivor_camp.add_relationship("Andy", "Derrick")
 survivor_camp.add_relationship("Andy", "Eric")
 survivor_camp.add_relationship("Derrick", "Andy")
-survivor_camp.add_relationship("Frederic", "Andy")
-survivor_camp.add_relationship("Henrique", "Andy")
+survivor_camp.add_relationship("Derrick", "Eric")
+survivor_camp.add_relationship("Derrick", "Frederic")
 survivor_camp.add_relationship("Charlie", "Bob")
 survivor_camp.add_relationship("Eric", "Bob")
 survivor_camp.add_relationship("Eric", "Henrique")
@@ -52,6 +52,11 @@ survivor_camp.add_relationship("Eric", "Gerrick")
 survivor_camp.add_relationship("Derrick", "Bob")
 survivor_camp.add_relationship("Derrick", "Henrique")
 survivor_camp.add_relationship("Derrick", "Gerrick")
+survivor_camp.add_relationship("Frederic", "Gerrick")
+survivor_camp.add_relationship("Frederic", "Henrique")
+survivor_camp.add_relationship("Frederic", "Andy")
+survivor_camp.add_relationship("Henrique", "Bob")
+survivor_camp.add_relationship("Henrique", "Andy")
 
 # **************************************************************
 # Test 6
@@ -157,4 +162,13 @@ except:
     print("no picklin")
 
 
-
+# **************************************************************
+# Test 16: POST
+# **************************************************************
+print("\nTEST 16: Make a Post!!!!!!!!!")
+pickled_camp.post("Andy", 0.5)
+pickled_camp.post("Frederic", 0.6)
+pickled_camp.post("Eric", 0.2)
+pickled_camp.post("Charlie", 0.8)
+pickled_camp.post("Tom", 0.2)
+pickled_camp.display_as_list()

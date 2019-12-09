@@ -232,6 +232,25 @@ class SocNet:
         print("\tTime: " + str(time_now[3]) + ":" + str(time_now[4]) + ":" +
               str(time_now[5]))
 
+    def post(self, poster, negativity):
+        if self.has_humanoid(poster):       # check poster exists
+            inf = self.get_human(poster)    # return poster as the influencer
+            neg_mod = 0.01 * inf.get_follower_count()
+            transmitted_neg = negativity * neg_mod
+
+            followers_iter = iter(inf.get_followers())
+            next_follower = next(followers_iter)
+            for next_follower in followers_iter:
+                # universal negativity response
+                next_follower.add_negativity(transmitted_neg)
+                # unique local negativity response
+                unique_neg = negativity * \
+                             (1 / next_follower.get_following_count())
+                next_follower.add_negativity(unique_neg)
+        else:
+            print("Can't find poster " + poster)
+
+
 
 class Humanoid:
     def __init__(self, name, negativity=0.1):
@@ -248,6 +267,9 @@ class Humanoid:
 
     def get_value(self):        # TODO: REMOVE POSSIBLY
         return self.negativity
+
+    def add_negativity(self, neg_addition):
+        self.negativity += neg_addition
 
     def get_adjacent(self):     # TODO: LEGACY ... REMOVE POSSIBLY
         return self.links
@@ -287,7 +309,7 @@ class Humanoid:
 
     def __str__(self):
         return "Name: {0}\t\t\t Negativity: {1}\t\t Infected: {2}"\
-            .format(self.name, self.negativity, self.infected)
+            .format(self.name, round(self.negativity, 2), self.infected)
 
 
 class SocConx:  # GraphEdge
