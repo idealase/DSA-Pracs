@@ -6,7 +6,7 @@ SocialSim.py - the main program
 
 # UML Class Diagram
 
-# Descpription of any classes
+# Description of any classes
 
 - List Node
     contains a value and a next pointer
