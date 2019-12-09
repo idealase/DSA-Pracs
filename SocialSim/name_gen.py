@@ -60,10 +60,10 @@ for name in names:
 for influencer in influencers:
     # add random no. of followers from followers list
     for i in range(0, random.randint(0, MAX_INF_FOLS)):
-        file.write(influencer + " : " + random.choice(followers))
+        file.write(influencer + ":" + random.choice(followers))
         file.write("\n")
     # add 1 random follower from all names
-    file.write(influencer + " : " + random.choice(names))
+    file.write(influencer + ":" + random.choice(names))
     file.write("\n")
 
 # write influencer:follower for the normal people
@@ -72,7 +72,7 @@ for influencer in influencers:
 # NB: duplicates and following self possible
 for name in names:
     for i in range(0, random.randint(0, MAX_NORM_FOLS)):
-        file.write(name + " : " + random.choice(names))
+        file.write(name + ":" + random.choice(names))
         file.write("\n")
 file.close()
 
@@ -85,14 +85,14 @@ events = []
 for name in names:
     for i in range(0, NORM_POSTS):
         negativity_rating = round(random.uniform(NORM_MIN_NEG, NORM_MAX_NEG), 2)
-        new_post = "P: " + name + " : " + str(negativity_rating)
+        new_post = "P:" + name + ":" + str(negativity_rating)
         events.append(new_post)
 
 # posts from influencers
 for influencer in influencers:
     for i in range(0, INF_POSTS):
         negativity_rating = round(random.uniform(INF_MIN_NEG, INF_MAX_NEG), 2)
-        new_post = "P: " + influencer + " : " + str(negativity_rating)
+        new_post = "P:" + influencer + ":" + str(negativity_rating)
         events.append(new_post)
 
 # random new follows
@@ -100,7 +100,7 @@ for i in range(0, NEW_RAND_FOLS):
     new_follower = random.choice(names)
     new_inf = random.choice(names)
     if new_inf != new_follower:
-        new_follow = "F: " + new_inf + " : " + new_follower
+        new_follow = "F:" + new_inf + ":" + new_follower
         events.append(new_follow)
 
 random.shuffle(events)

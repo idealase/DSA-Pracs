@@ -1,509 +1,529 @@
-P: Jessie Leandro : 0.16
-P: Kelly Cheatam : 0.72
-P: Harriett Zollinger : 0.8
-P: Loraine Kimberly : 0.37
-P: Earnestine Maddock : 0.85
-P: Max Levario : 0.16
-P: Mathew Mercedes : 0.69
-P: Nannie Mcgown : 0.51
-P: Harriett Zollinger : 0.71
-P: Erik Deady : 0.68
-P: Penelope Gayman : 0.69
-P: Ted Tallmadge : 0.48
-P: Max Madamba : 0.61
-P: Jamie Seager : 0.51
-P: Guy Fagundes : 0.65
-P: Edwina Esters : 0.58
-F: Nelson Tooker : Fernando Mccardell
-P: Allie Ulland : 0.66
-P: Nelson Valderrama : 0.11
-P: Jamie Seager : 0.7
-P: Javier Kratochvil : 0.51
-P: Mathew Milian : 0.55
-P: Javier Swint : 0.69
-P: Cody Mcmartin : 0.15
-P: Christian Durall : 0.51
-P: Mathew Milian : 0.16
-P: Christian Mullarkey : 0.26
-P: Max Heffelfinger : 0.64
-P: Tyrone Sturman : 0.45
-P: Amie Delcambre : 0.95
-P: Tyrone Seevers : 0.22
-P: Katy Callier : 0.28
-P: Carmella Sheffey : 0.05
-F: Javier Swint : Christian Mullarkey
-P: Mathew Milian : 0.68
-F: Julio Degroat : Katy Tressler
-P: Javier Kratochvil : 0.5
-P: Edwina Fedor : 0.08
-P: Katy Tressler : 0.64
-P: Clayton Salls : 0.45
-P: Kathrine Lainez : 0.69
-P: Hillary Jun : 0.51
-P: Esmeralda Radovich : 0.96
-P: Dollie Dodrill : 0.39
-P: Ted Makuch : 0.53
-P: Tabatha Walworth : 0.19
-P: Mathew Milian : 0.74
-P: Carmella Rondon : 0.9
-P: Kelly Cheatam : 0.05
-F: Mathew Mercedes : Elinor Greig
-P: Max Heffelfinger : 0.6
-P: Earnestine Maddock : 0.62
-P: Chandra Trowell : 0.51
-P: Loraine Kimberly : 0.78
-P: Edwina Esters : 0.68
-P: Jessie Leandro : 0.06
-P: Jamie Upson : 0.25
-P: Earnestine Maddock : 0.42
-F: Dollie Westbury : Neil Brabant
-F: Nannie Mcgown : Dona Mcinnes
-P: Ashlee Capellan : 0.3
-P: Katy Tressler : 0.59
-P: Harriett Zollinger : 0.68
-P: Nelson Tooker : 0.52
-P: Javier Kratochvil : 0.59
-P: Lance Goodpaster : 0.36
-P: Tabatha Walworth : 0.64
-P: Christian Klemm : 0.62
-P: Lenore Decola : 0.27
-P: Chandra Trowell : 0.57
-P: Sofia Kelling : 0.51
-P: Sofia Parente : 0.65
-P: Ted Makuch : 0.84
-F: Emilia Ruddell : Ted Tallmadge
-P: Tabatha Walworth : 0.75
-P: Hillary Jun : 0.31
-P: Guy Fagundes : 0.52
-P: Cody Russom : 0.16
-P: Chandra Trowell : 0.67
-P: Ted Enlow : 0.11
-P: Katy Callier : 0.88
-P: Pearlie Bernat : 0.72
-P: Dollie Westbury : 0.53
-P: Elinor Greig : 0.57
-P: Kelly Cheatam : 0.61
-P: Max Madamba : 0.8
-P: Chandra Trowell : 0.67
-P: Julio Degroat : 0.86
-P: Erik Deady : 0.48
-P: Emilia Ruddell : 0.38
-P: Carmella Calandra : 0.71
-P: Nelson Tooker : 0.69
-P: Max Levario : 0.54
-F: Ted Tallmadge : Tania Mogensen
-P: Jamie Shake : 0.65
-P: Mathew Milian : 0.41
-P: Nannie Mcgown : 0.91
-P: Malinda Dodgen : 0.02
-P: Pearlie Bernat : 0.64
-P: Max Madamba : 0.72
-P: Christian Durall : 0.61
-F: Dollie Dodrill : Malinda Dodgen
-P: Sofia Bonfiglio : 0.84
-P: Jamie Seager : 0.53
-P: Karina Rossin : 0.08
-P: Katy Vacek : 0.06
-P: Christian Durall : 0.6
-P: Mathew Milian : 0.53
-P: Rae Furby : 0.92
-P: Mathew Eslick : 1.0
-P: Maricela Landreneau : 0.9
-P: Fernando Mccardell : 0.9
-P: Christian Klemm : 0.95
-P: Guy Kadel : 0.71
-P: Christian Busbee : 0.74
-P: Mathew Milian : 0.59
-P: Pearlie Bernat : 0.55
-P: Javier Kratochvil : 0.03
-P: Clayton Ricard : 0.41
-P: Harriett Zollinger : 0.15
-P: Guy Snipe : 0.6
-F: Nelson Valderrama : Christian Klemm
-F: Guy Snipe : Kelly Cheatam
-F: Mathew Mercedes : Max Madamba
-P: Gay Ascencio : 0.6
-P: Pearlie Storie : 0.02
-P: Jessie Mayville : 0.13
-P: Lance Buono : 0.54
-P: Jamie Seager : 0.61
-F: Ted Makuch : Christian Mullarkey
-P: Guy Snipe : 0.1
-P: Neil Brabant : 0.48
-P: Hillary Tall : 0.49
-P: Max Madamba : 0.8
-P: Katy Tressler : 0.55
-P: Ted Tallmadge : 0.85
-P: Maricela Landreneau : 0.79
-P: Elinor Greig : 0.64
-P: Tania Mogensen : 0.32
-P: Rae Furby : 0.15
-F: Melisa Mckeel : Guy Loredo
-P: Jessie Mayville : 0.98
-P: Christian Verde : 0.55
-P: Neil Brabant : 0.15
-P: Katy Tressler : 0.54
-P: Christian Busbee : 0.81
-P: Neil Brabant : 0.97
-P: Javier Kratochvil : 0.68
-P: Jessie Dosch : 0.79
-P: Guy Fagundes : 0.61
-F: Harriett Zollinger : Darryl Triche
-P: Carmella Rondon : 0.29
-P: Guy Vanalstyne : 0.21
-P: Elnora Aberle : 0.32
-P: Pearlie Storie : 0.63
-P: Karina Rossin : 0.12
-P: Dollie Dignan : 0.56
-P: Jerri Mayr : 0.59
-P: Max Plain : 0.12
-P: Elinor Greig : 0.48
-P: Edwina Esters : 0.72
-P: Javier Swint : 0.44
-P: Dollie Westbury : 0.74
-P: Javier Kratochvil : 0.6
-P: Edwina Esters : 0.62
-P: Lance Buono : 0.49
-P: Tyrone Sturman : 0.96
-P: Nelson Valderrama : 0.78
-P: Christian Verde : 0.95
-F: Christian Klemm : Penelope Gayman
-P: Katy Tressler : 0.77
-F: Nelson Tooker : Sharron Cournoyer
-P: Lenore Decola : 0.19
-P: Guy Fagundes : 0.58
-P: Guy Snipe : 0.77
-F: Elinor Raco : Clayton Salls
-P: Elinor Raco : 0.63
-P: Sofia Bonfiglio : 0.02
-P: Malinda Dodgen : 0.79
-P: Dona Mcinnes : 0.42
-P: Darren Hadaway : 0.4
-P: Hillary Tall : 0.83
-P: Sofia Kelling : 0.74
-P: Pearlie Bernat : 0.72
-P: Jamie Shake : 0.56
-P: Chandra Trowell : 0.55
-P: Guy Snipe : 0.41
-F: Tabatha Walworth : Hillary Tall
-P: Chandra Trowell : 0.62
-F: Carmella Rondon : Dollie Dodrill
-P: Julio Degroat : 0.25
-P: Kathrine Lainez : 0.46
-F: Cody Mcmartin : Jamie Upson
-P: Edwina Esters : 0.78
-P: Max Heffelfinger : 0.58
-P: Tania Mogensen : 0.73
-P: Karina Rossin : 0.14
-P: Christian Durall : 0.62
-P: Liza Guyette : 0.64
-P: Rae Furby : 0.4
-P: Nelson Tooker : 0.8
-P: Harriett Zollinger : 0.3
-P: Christian Durall : 0.53
-P: Tanisha Coppin : 0.84
-P: Jessie Dosch : 0.91
-P: Clinton Blumer : 0.21
-P: Christian Durall : 0.11
-F: Nelson Valderrama : Melisa Mckeel
-P: Harriett Zollinger : 0.73
-P: Carmella Sheffey : 0.3
-P: Mathew Eslick : 0.54
-P: Katy Tressler : 0.18
-P: Julio Degroat : 0.41
-P: Dollie Westbury : 0.42
-P: Jerri Mayr : 0.54
-F: Elinor Greig : Emilia Ruddell
-P: Mathew Eslick : 0.3
-P: Pearlie Bernat : 0.68
-P: Nelson Tooker : 0.71
-P: Erik Deady : 0.3
-P: Christian Durall : 0.51
-P: Pearlie Storie : 0.21
-P: Pearlie Bernat : 0.25
-P: Dollie Dodrill : 0.22
-P: Pearlie Bernat : 0.51
-P: Kenya Seidman : 0.84
-P: Javier Swint : 0.45
-P: Elinor Greig : 0.81
-P: Emilia Ruddell : 0.22
-P: Nelson Tooker : 0.71
-P: Darryl Triche : 0.69
-P: Amie Delcambre : 0.6
-P: Cody Mcmartin : 0.92
-P: Liza Guyette : 0.38
-P: Clayton Ricard : 0.98
-P: Max Plain : 0.25
-F: Rae Furby : Dollie Dignan
-F: Elnora Aberle : Sharron Cournoyer
-P: Guy Loredo : 0.04
-P: Fernando Mccardell : 0.67
-P: Ashlee Capellan : 0.51
-P: Hillary Jun : 0.14
-P: Carmella Sheffey : 0.29
-P: Harriett Zollinger : 0.72
-P: Chandra Trowell : 0.67
-P: Edwina Esters : 0.7
-P: Pearlie Bernat : 0.7
-P: Jerri Mayr : 0.65
-P: Katy Tressler : 0.76
-F: Lenore Decola : Jessie Leandro
-P: Selena Hoose : 0.37
-P: Jamie Seager : 0.73
-P: Clinton Fehrenbach : 0.57
-P: Dona Mcinnes : 0.11
-P: Tyrone Seevers : 0.94
-P: Guy Vanalstyne : 0.39
-P: Jerri Mayr : 0.15
-P: Ted Enlow : 0.14
-P: Cody Russom : 0.87
-F: Pearlie Bernat : Guy Loredo
-P: Dollie Westbury : 0.64
-P: Guy Vanalstyne : 0.68
-P: Chandra Trowell : 0.58
-P: Lance Goodpaster : 0.87
-P: Harriett Curatolo : 0.59
-P: Jamie Seager : 0.08
-P: Guy Snipe : 0.76
-P: Guy Fagundes : 0.67
-P: Amie Delcambre : 0.97
-P: Elnora Aberle : 0.27
-P: Lance Buono : 0.32
-P: Dollie Westbury : 0.63
-P: Cody Mcmartin : 0.9
-P: Dona Mcinnes : 0.2
-P: Pearlie Bernat : 0.55
-P: Sharron Cournoyer : 0.45
-P: Guy Fagundes : 0.4
-P: Allie Ulland : 0.55
-P: Tyrone Seevers : 0.92
-P: Allie Ulland : 0.81
-P: Carmella Calandra : 0.21
-F: Carmella Calandra : Esmeralda Radovich
-P: Clinton Fehrenbach : 0.91
-P: Sofia Parente : 0.13
-P: Jamie Seager : 0.76
-P: Guy Snipe : 0.75
-P: Harriett Zollinger : 0.53
-P: Jerri Mayr : 0.79
-P: Tyrone Sturman : 0.51
-P: Dollie Westbury : 0.66
-P: Jamie Upson : 0.08
-P: Jamie Shake : 0.93
-P: Sharron Cournoyer : 0.05
-P: Edwina Esters : 0.8
-P: Kenya Seidman : 0.76
-F: Max Madamba : Cody Russom
-P: Mathew Milian : 0.58
-P: Tania Mogensen : 0.08
-P: Loraine Kimberly : 0.94
-P: Edwina Esters : 0.63
-P: Mathew Milian : 0.67
-P: Dollie Westbury : 0.57
-P: Gay Ascencio : 0.6
-P: Kenya Seidman : 0.26
-P: Elinor Raco : 0.49
-P: Javier Kratochvil : 0.78
-P: Clayton Salls : 0.96
-P: Clinton Fehrenbach : 0.26
-P: Dollie Westbury : 0.59
-P: Max Madamba : 0.56
-P: Chandra Trowell : 0.76
-P: Edwina Fedor : 0.93
-P: Katy Tressler : 0.13
-P: Christian Mullarkey : 0.69
-P: Dollie Westbury : 0.5
-P: Elinor Greig : 0.9
-P: Darren Southwood : 0.61
-P: Guy Fagundes : 0.52
-P: Carmella Rondon : 0.75
-P: Jessie Mayville : 0.17
-P: Elinor Raco : 1.0
-P: Pearlie Bernat : 0.75
-P: Guy Fagundes : 0.2
-P: Christian Durall : 0.24
-F: Ashlee Capellan : Earnestine Maddock
-F: Dollie Dodrill : Tabatha Walworth
-P: Jerri Mayr : 0.68
-P: Christian Busbee : 0.58
-P: Max Madamba : 0.36
-P: Elinor Greig : 0.66
-P: Christian Mullarkey : 0.18
-P: Clayton Salls : 0.7
-F: Harriett Zollinger : Erik Deady
-P: Christian Durall : 0.51
-F: Earnestine Maddock : Dona Mcinnes
-P: Emilia Ruddell : 0.64
-P: Guy Snipe : 0.58
-P: Jerri Mayr : 0.67
-P: Katy Callier : 0.56
-P: Elnora Aberle : 0.89
-P: Javier Kratochvil : 0.7
-P: Hillary Tall : 0.14
-F: Earnestine Maddock : Javier Kratochvil
-F: Jessie Leandro : Amie Delcambre
-P: Jerri Mayr : 0.7
-P: Guy Fagundes : 0.68
-P: Jerri Mayr : 0.74
-P: Dollie Westbury : 0.77
-P: Jamie Seager : 0.53
-P: Elinor Greig : 0.55
-P: Darren Hadaway : 0.3
-P: Dollie Westbury : 0.54
-P: Guy Snipe : 0.79
-P: Christian Klemm : 0.1
-F: Harriett Curatolo : Tyrone Seevers
-P: Earnestine Croswell : 0.67
-P: Mathew Milian : 0.52
-P: Nelson Tooker : 0.92
-P: Mathew Milian : 0.51
-P: Katy Vacek : 0.7
-F: Guy Kadel : Nelson Tooker
-P: Earnestine Croswell : 0.24
-P: Christian Durall : 0.63
-P: Harriett Zollinger : 0.55
-P: Melisa Mckeel : 0.25
-P: Dollie Westbury : 0.63
-P: Clayton Ricard : 0.08
-P: Guy Loredo : 0.0
-P: Elinor Greig : 0.59
-P: Katy Tressler : 0.72
-P: Jamie Seager : 0.57
-P: Christian Verde : 0.08
-P: Chandra Trowell : 0.12
-P: Dollie Dodrill : 0.01
-F: Althea Warring : Pearlie Storie
-P: Darryl Triche : 0.78
-P: Earnestine Croswell : 0.7
-P: Jerri Mayr : 0.54
-P: Ted Makuch : 0.7
-P: Althea Warring : 0.15
-P: Edwina Fedor : 0.41
-P: Javier Kratochvil : 0.54
-P: Selena Hoose : 0.97
-P: Tanisha Coppin : 0.23
-P: Max Levario : 0.66
-P: Dollie Dignan : 0.51
-P: Guy Snipe : 0.61
-P: Christian Durall : 0.67
-P: Max Madamba : 0.54
-P: Darryl Triche : 0.99
-P: Guy Fagundes : 0.77
-F: Pearlie Bernat : Clinton Blumer
-P: Dollie Dignan : 0.58
-P: Elinor Greig : 0.72
-P: Guy Snipe : 0.64
-P: Jessie Dosch : 0.16
-P: Edwina Esters : 0.8
-P: Maricela Landreneau : 0.89
-P: Max Plain : 0.92
-P: Nelson Tooker : 0.72
-P: Nelson Tooker : 0.76
-F: Jessie Leandro : Tanisha Coppin
-P: Christian Durall : 0.5
-P: Liza Guyette : 0.34
-P: Kathrine Lainez : 0.29
-P: Max Madamba : 0.79
-P: Nelson Tooker : 0.05
-P: Javier Kratochvil : 0.63
-F: Tanisha Coppin : Emilia Ruddell
-P: Christian Durall : 0.1
-P: Guy Kadel : 0.23
-F: Javier Swint : Hillary Tall
-P: Mathew Mercedes : 0.55
-P: Gay Ascencio : 0.2
-P: Max Madamba : 0.67
-F: Neil Brabant : Christian Mullarkey
-P: Mathew Milian : 0.78
-P: Jamie Seager : 0.27
-P: Jerri Mayr : 0.54
-P: Edwina Esters : 0.47
-P: Jamie Seager : 0.57
-P: Pearlie Bernat : 0.76
-P: Harriett Curatolo : 0.87
-P: Darren Southwood : 0.21
-P: Guy Kadel : 0.82
-P: Guy Fagundes : 0.53
-P: Tanisha Coppin : 0.66
-P: Guy Snipe : 0.67
-P: Nelson Valderrama : 0.21
-P: Dollie Westbury : 0.25
-P: Sofia Kelling : 0.8
-P: Javier Kratochvil : 0.53
-P: Harriett Zollinger : 0.59
-P: Guy Fagundes : 0.52
-P: Katy Tressler : 0.75
-P: Ted Tallmadge : 0.41
-P: Darren Hadaway : 0.12
-P: Nannie Mcgown : 0.23
-P: Jamie Seager : 0.74
-P: Edwina Esters : 0.58
-P: Jamie Upson : 0.82
-P: Chandra Trowell : 0.41
-P: Sofia Parente : 0.16
-P: Max Madamba : 0.75
-P: Selena Hoose : 0.63
-P: Jerri Mayr : 0.72
-P: Nelson Tooker : 0.8
-P: Darren Southwood : 0.36
-P: Katy Tressler : 0.67
-P: Clinton Blumer : 0.18
-P: Jerri Mayr : 0.73
-P: Sofia Bonfiglio : 0.85
-P: Nelson Tooker : 0.51
-F: Javier Swint : Hillary Tall
-P: Althea Warring : 0.96
-F: Chandra Trowell : Christian Mullarkey
-P: Lenore Decola : 0.1
-P: Nelson Tooker : 0.55
-P: Elinor Greig : 0.65
-P: Mathew Mercedes : 0.27
-P: Javier Kratochvil : 0.08
-P: Clinton Blumer : 0.16
-P: Carmella Calandra : 0.39
-P: Katy Vacek : 0.16
-P: Sharron Cournoyer : 0.33
-P: Pearlie Bernat : 0.78
-P: Chandra Trowell : 0.72
-P: Edwina Esters : 0.67
-P: Elinor Greig : 0.66
-P: Nelson Tooker : 0.67
-P: Elinor Greig : 0.69
-P: Jamie Seager : 0.61
-P: Katy Tressler : 0.65
-P: Max Madamba : 0.66
-F: Darren Hadaway : Katy Vacek
-P: Esmeralda Radovich : 0.2
-P: Guy Loredo : 0.35
-P: Melisa Mckeel : 0.38
-P: Max Madamba : 0.58
-P: Harriett Zollinger : 0.7
-P: Ted Enlow : 0.09
-P: Lance Goodpaster : 0.22
-P: Mathew Milian : 0.63
-P: Jessie Leandro : 0.25
-P: Chandra Trowell : 0.56
-P: Althea Warring : 0.99
-P: Cody Russom : 0.42
-P: Penelope Gayman : 0.36
-P: Penelope Gayman : 0.68
-P: Edwina Esters : 0.71
-F: Max Levario : Guy Fagundes
-P: Harriett Zollinger : 0.61
-P: Katy Tressler : 0.74
-P: Melisa Mckeel : 0.39
-P: Javier Kratochvil : 0.53
-F: Hillary Tall : Elinor Greig
-P: Harriett Curatolo : 0.27
-P: Harriett Zollinger : 0.67
-P: Esmeralda Radovich : 0.06
-P: Guy Fagundes : 0.51
-P: Guy Snipe : 0.77
-P: Malinda Dodgen : 0.86
-F: Tyrone Seevers : Ted Tallmadge
-P: Fernando Mccardell : 0.73
-P: Max Madamba : 0.66
-P: Ashlee Capellan : 0.07
-P: Guy Snipe : 0.64
-P: Elinor Greig : 0.64
-P: Pearlie Bernat : 0.25
+P:Malinda Dodgen:0.96
+P:Liza Guyette:0.29
+P:Earnestine Croswell:0.33
+P:Max Madamba:0.52
+P:Maricela Landreneau:0.83
+P:Darryl Triche:0.59
+P:Clayton Salls:0.79
+P:Lenore Decola:0.15
+P:Mathew Eslick:0.81
+P:Melisa Mckeel:0.68
+P:Javier Kratochvil:0.71
+F:Guy Fagundes:Erik Deady
+P:Elinor Greig:0.76
+P:Melisa Mckeel:0.58
+F:Jamie Shake:Guy Fagundes
+P:Max Heffelfinger:0.3
+P:Tanisha Coppin:0.27
+P:Ted Enlow:0.95
+P:Ted Tallmadge:0.25
+P:Ted Tallmadge:0.7
+P:Julio Degroat:0.56
+P:Hillary Jun:0.68
+P:Ashlee Capellan:0.97
+P:Loraine Kimberly:0.09
+P:Nelson Tooker:0.85
+P:Darren Hadaway:0.65
+P:Darryl Triche:0.58
+P:Edwina Fedor:0.78
+P:Darryl Triche:0.73
+P:Edwina Fedor:0.77
+P:Jamie Shake:0.06
+P:Tabatha Walworth:0.27
+P:Althea Warring:0.98
+P:Kelly Cheatam:0.61
+P:Jamie Shake:0.87
+P:Elinor Greig:0.61
+P:Elinor Greig:0.71
+P:Guy Kadel:0.5
+P:Tanisha Coppin:0.77
+P:Darren Southwood:0.67
+P:Dona Mcinnes:0.75
+P:Clayton Salls:0.79
+P:Christian Busbee:0.14
+P:Christian Durall:0.01
+P:Penelope Gayman:0.92
+P:Hillary Tall:0.85
+P:Edwina Fedor:0.71
+P:Christian Busbee:0.57
+P:Mathew Eslick:0.64
+F:Cody Russom:Dollie Dodrill
+F:Dollie Dignan:Edwina Esters
+P:Fernando Mccardell:0.39
+F:Darryl Triche:Mathew Eslick
+P:Katy Callier:0.45
+P:Darryl Triche:0.68
+F:Allie Ulland:Clinton Blumer
+P:Elinor Greig:0.52
+P:Darren Hadaway:0.65
+P:Penelope Gayman:0.54
+F:Erik Deady:Althea Warring
+P:Loraine Kimberly:0.75
+P:Earnestine Croswell:0.06
+P:Tyrone Sturman:0.87
+F:Tyrone Sturman:Guy Fagundes
+P:Melisa Mckeel:0.94
+P:Darren Hadaway:0.02
+P:Kenya Seidman:0.78
+P:Ted Makuch:0.18
+P:Earnestine Maddock:0.5
+P:Ted Makuch:0.11
+P:Jessie Dosch:0.62
+P:Pearlie Storie:0.71
+P:Lenore Decola:0.77
+P:Harriett Zollinger:0.68
+P:Edwina Fedor:0.71
+P:Kenya Seidman:0.69
+F:Pearlie Bernat:Christian Mullarkey
+P:Kenya Seidman:0.63
+P:Mathew Eslick:0.36
+P:Lance Buono:0.79
+P:Christian Verde:0.25
+F:Christian Mullarkey:Amie Delcambre
+P:Sofia Parente:0.55
+P:Melisa Mckeel:0.56
+P:Liza Guyette:0.18
+P:Christian Verde:0.9
+P:Lance Goodpaster:0.66
+P:Melisa Mckeel:0.69
+F:Christian Klemm:Maricela Landreneau
+P:Dollie Dignan:0.84
+P:Esmeralda Radovich:1.0
+P:Jessie Leandro:0.82
+P:Darryl Triche:0.54
+P:Ashlee Capellan:0.43
+P:Kelly Cheatam:0.05
+P:Selena Hoose:0.96
+P:Darryl Triche:0.86
+F:Allie Ulland:Pearlie Storie
+P:Julio Degroat:0.03
+P:Loraine Kimberly:0.83
+P:Melisa Mckeel:0.17
+P:Selena Hoose:0.79
+P:Earnestine Maddock:0.58
+P:Lance Goodpaster:0.79
+P:Nannie Mcgown:0.98
+P:Christian Busbee:0.52
+F:Althea Warring:Clayton Ricard
+P:Cody Russom:0.1
+P:Guy Snipe:0.65
+F:Max Madamba:Max Heffelfinger
+P:Dona Mcinnes:0.22
+P:Max Madamba:0.8
+P:Max Madamba:0.61
+P:Pearlie Bernat:0.79
+P:Penelope Gayman:0.32
+P:Clayton Salls:0.56
+P:Rae Furby:0.41
+P:Max Heffelfinger:0.42
+F:Darren Hadaway:Carmella Rondon
+P:Earnestine Maddock:0.52
+P:Maricela Landreneau:0.67
+P:Hillary Jun:0.49
+P:Jamie Seager:0.18
+P:Karina Rossin:0.6
+P:Max Madamba:0.66
+P:Jamie Shake:0.39
+P:Lance Goodpaster:0.55
+P:Esmeralda Radovich:0.7
+P:Selena Hoose:0.72
+P:Katy Tressler:0.87
+F:Fernando Mccardell:Kenya Seidman
+P:Sofia Kelling:0.07
+P:Darren Hadaway:0.73
+P:Tyrone Sturman:0.87
+P:Guy Kadel:0.22
+P:Jamie Upson:0.36
+P:Guy Snipe:0.52
+P:Max Madamba:0.03
+P:Loraine Kimberly:0.58
+P:Ted Tallmadge:0.61
+P:Pearlie Storie:0.55
+P:Clayton Salls:0.78
+P:Selena Hoose:0.51
+P:Chandra Trowell:0.94
+P:Kenya Seidman:0.75
+P:Christian Busbee:0.59
+P:Cody Mcmartin:0.39
+P:Guy Kadel:0.54
+P:Earnestine Maddock:0.57
+P:Selena Hoose:0.68
+P:Clinton Fehrenbach:0.44
+P:Pearlie Bernat:0.91
+P:Guy Kadel:0.72
+P:Carmella Calandra:0.06
+P:Earnestine Maddock:0.51
+F:Christian Durall:Dollie Dignan
+P:Allie Ulland:0.32
+P:Kathrine Lainez:0.76
+P:Edwina Esters:0.11
+P:Karina Rossin:0.15
+P:Edwina Esters:0.64
+P:Emilia Ruddell:0.66
+P:Guy Fagundes:0.09
+P:Sofia Kelling:0.47
+P:Selena Hoose:0.74
+P:Jamie Seager:0.53
+P:Clinton Blumer:0.48
+P:Christian Busbee:0.77
+P:Guy Vanalstyne:0.78
+P:Christian Klemm:0.31
+P:Tanisha Coppin:0.61
+P:Lenore Decola:0.61
+P:Earnestine Maddock:0.68
+P:Maricela Landreneau:0.61
+P:Elinor Raco:0.45
+F:Christian Durall:Kathrine Lainez
+F:Kenya Seidman:Sofia Parente
+P:Sharron Cournoyer:0.59
+P:Ted Tallmadge:0.56
+P:Guy Vanalstyne:0.23
+F:Jerri Mayr:Hillary Tall
+P:Selena Hoose:0.65
+P:Guy Vanalstyne:0.14
+P:Dona Mcinnes:0.76
+P:Earnestine Maddock:0.67
+P:Max Madamba:0.26
+P:Tanisha Coppin:0.76
+P:Edwina Fedor:0.73
+P:Malinda Dodgen:0.67
+P:Kelly Cheatam:0.75
+P:Ted Tallmadge:0.77
+P:Melisa Mckeel:0.7
+P:Dollie Westbury:0.43
+P:Melisa Mckeel:0.59
+P:Clinton Fehrenbach:0.65
+P:Amie Delcambre:0.65
+P:Nannie Mcgown:0.42
+P:Jessie Leandro:0.48
+P:Lance Buono:0.74
+P:Jessie Mayville:0.29
+P:Christian Verde:0.86
+P:Loraine Kimberly:0.57
+P:Clayton Salls:0.74
+F:Guy Fagundes:Jamie Seager
+P:Melisa Mckeel:0.56
+P:Clayton Ricard:0.45
+P:Tyrone Seevers:0.46
+P:Carmella Rondon:0.45
+P:Max Madamba:0.54
+P:Guy Kadel:0.38
+P:Dona Mcinnes:0.62
+P:Guy Kadel:0.71
+P:Loraine Kimberly:0.72
+F:Harriett Curatolo:Javier Swint
+P:Jerri Mayr:0.11
+F:Guy Snipe:Dollie Westbury
+P:Ted Tallmadge:0.53
+P:Lenore Decola:0.7
+P:Nelson Valderrama:0.42
+P:Lenore Decola:0.79
+P:Earnestine Maddock:0.11
+P:Guy Kadel:0.7
+P:Edwina Fedor:0.54
+F:Dollie Dodrill:Guy Fagundes
+P:Dollie Dodrill:0.59
+P:Kenya Seidman:0.54
+P:Harriett Curatolo:0.45
+P:Katy Callier:0.11
+P:Earnestine Maddock:0.69
+P:Fernando Mccardell:0.97
+F:Christian Mullarkey:Clayton Salls
+P:Elinor Greig:0.69
+P:Sofia Parente:0.2
+P:Javier Swint:0.71
+P:Kenya Seidman:0.7
+P:Chandra Trowell:0.32
+P:Melisa Mckeel:0.98
+P:Lance Goodpaster:0.53
+P:Guy Kadel:0.61
+P:Clayton Ricard:0.88
+P:Jamie Seager:0.83
+P:Christian Durall:0.36
+F:Jerri Mayr:Kathrine Lainez
+P:Christian Klemm:0.34
+P:Neil Brabant:0.42
+P:Christian Busbee:0.52
+P:Guy Fagundes:0.29
+P:Sofia Kelling:0.5
+P:Cody Mcmartin:0.72
+P:Christian Busbee:0.72
+P:Clayton Salls:0.52
+P:Max Levario:0.65
+P:Clayton Salls:0.7
+P:Nelson Tooker:0.03
+P:Elinor Greig:0.6
+F:Pearlie Bernat:Julio Degroat
+P:Jessie Dosch:0.54
+P:Tanisha Coppin:0.55
+P:Sofia Bonfiglio:0.23
+P:Carmella Calandra:0.72
+P:Sofia Bonfiglio:0.05
+P:Katy Tressler:0.36
+P:Sofia Parente:0.91
+P:Pearlie Bernat:0.29
+P:Lance Goodpaster:0.3
+P:Harriett Zollinger:0.02
+F:Elinor Greig:Clayton Salls
+P:Dona Mcinnes:0.7
+P:Cody Russom:0.13
+P:Edwina Fedor:0.32
+P:Darren Hadaway:0.75
+P:Emilia Ruddell:0.72
+P:Melisa Mckeel:0.77
+P:Christian Busbee:0.19
+P:Lance Goodpaster:0.8
+P:Javier Swint:0.92
+P:Selena Hoose:0.86
+P:Loraine Kimberly:0.55
+P:Kenya Seidman:0.69
+P:Earnestine Maddock:0.58
+P:Ted Tallmadge:0.72
+P:Max Madamba:0.76
+P:Lenore Decola:0.54
+P:Christian Busbee:0.67
+P:Jessie Mayville:0.89
+P:Katy Vacek:0.45
+P:Pearlie Storie:0.0
+P:Ted Enlow:0.57
+P:Erik Deady:0.11
+P:Dollie Westbury:0.22
+P:Clayton Ricard:0.1
+P:Tyrone Seevers:0.86
+P:Jessie Leandro:0.85
+P:Hillary Jun:0.15
+P:Karina Rossin:0.04
+P:Max Plain:0.72
+P:Earnestine Maddock:0.63
+P:Max Madamba:0.58
+F:Javier Kratochvil:Chandra Trowell
+P:Tania Mogensen:0.78
+P:Guy Loredo:0.82
+P:Liza Guyette:0.17
+P:Sharron Cournoyer:0.88
+P:Melisa Mckeel:0.78
+P:Loraine Kimberly:0.68
+P:Darryl Triche:0.48
+P:Dona Mcinnes:0.53
+P:Clinton Blumer:0.46
+P:Ted Tallmadge:0.79
+P:Ted Tallmadge:0.64
+P:Darryl Triche:0.53
+F:Dollie Westbury:Chandra Trowell
+P:Clayton Salls:0.54
+P:Tabatha Walworth:0.78
+F:Gay Ascencio:Jamie Shake
+P:Lance Goodpaster:0.49
+P:Ashlee Capellan:0.01
+P:Rae Furby:0.85
+P:Loraine Kimberly:0.77
+P:Ted Tallmadge:0.61
+P:Allie Ulland:0.96
+P:Guy Loredo:0.58
+P:Guy Loredo:0.77
+P:Selena Hoose:0.12
+P:Darren Hadaway:0.52
+P:Max Heffelfinger:0.54
+P:Nelson Tooker:0.79
+P:Katy Callier:0.79
+P:Darryl Triche:0.69
+P:Ted Tallmadge:0.36
+P:Tania Mogensen:0.66
+P:Max Plain:0.31
+P:Lance Goodpaster:0.27
+P:Clayton Salls:0.75
+P:Elinor Greig:0.47
+P:Guy Kadel:0.51
+P:Dollie Dodrill:0.09
+P:Carmella Sheffey:0.75
+P:Nelson Valderrama:0.84
+P:Max Levario:0.85
+P:Harriett Curatolo:0.55
+P:Darryl Triche:0.51
+P:Tanisha Coppin:0.76
+P:Elnora Aberle:0.79
+P:Darren Hadaway:0.3
+P:Max Madamba:0.71
+P:Kenya Seidman:0.66
+P:Christian Busbee:0.62
+P:Cody Mcmartin:0.62
+P:Amie Delcambre:0.87
+P:Elnora Aberle:0.62
+P:Elnora Aberle:0.09
+P:Loraine Kimberly:0.68
+P:Elinor Greig:0.62
+P:Malinda Dodgen:0.74
+P:Lenore Decola:0.65
+P:Javier Kratochvil:0.65
+P:Clinton Fehrenbach:0.73
+P:Emilia Ruddell:0.39
+P:Ted Tallmadge:0.58
+P:Carmella Calandra:0.4
+P:Lance Goodpaster:0.56
+P:Christian Busbee:0.57
+P:Clayton Salls:0.72
+P:Lance Goodpaster:0.55
+P:Gay Ascencio:0.43
+F:Sofia Kelling:Ted Tallmadge
+P:Jerri Mayr:0.48
+P:Loraine Kimberly:0.68
+P:Christian Busbee:0.72
+P:Tyrone Sturman:0.82
+P:Ted Enlow:0.45
+F:Sharron Cournoyer:Liza Guyette
+P:Dona Mcinnes:0.37
+P:Darren Hadaway:0.55
+P:Guy Kadel:0.75
+P:Tania Mogensen:0.78
+P:Darryl Triche:0.8
+F:Jamie Shake:Julio Degroat
+P:Edwina Esters:0.54
+P:Carmella Rondon:0.5
+P:Elinor Greig:0.55
+P:Dona Mcinnes:0.53
+F:Hillary Jun:Ted Tallmadge
+P:Tanisha Coppin:0.77
+F:Kenya Seidman:Pearlie Bernat
+P:Christian Mullarkey:0.1
+P:Mathew Mercedes:0.6
+P:Max Levario:0.23
+P:Christian Busbee:0.56
+P:Guy Kadel:0.63
+P:Melisa Mckeel:0.75
+P:Elinor Greig:0.33
+P:Clayton Salls:0.36
+P:Tabatha Walworth:0.06
+P:Dona Mcinnes:0.66
+P:Lance Buono:0.3
+P:Erik Deady:0.89
+P:Javier Swint:0.33
+F:Clayton Ricard:Christian Klemm
+P:Guy Kadel:0.55
+F:Jessie Dosch:Elnora Aberle
+P:Darren Hadaway:0.74
+P:Edwina Fedor:0.71
+P:Mathew Mercedes:0.99
+P:Lance Goodpaster:0.54
+P:Mathew Mercedes:0.77
+P:Kenya Seidman:0.68
+P:Tanisha Coppin:0.28
+P:Darryl Triche:0.97
+P:Esmeralda Radovich:0.35
+P:Amie Delcambre:0.65
+P:Selena Hoose:0.65
+F:Ted Makuch:Jessie Leandro
+P:Guy Snipe:0.15
+P:Darren Hadaway:0.75
+P:Sofia Bonfiglio:0.45
+P:Selena Hoose:0.79
+P:Edwina Fedor:0.6
+P:Erik Deady:0.22
+P:Lance Goodpaster:0.57
+P:Allie Ulland:0.93
+F:Ted Enlow:Jerri Mayr
+P:Christian Mullarkey:0.23
+P:Julio Degroat:0.87
+F:Clayton Salls:Christian Mullarkey
+P:Selena Hoose:0.62
+P:Edwina Fedor:0.54
+P:Christian Klemm:0.47
+P:Elinor Raco:0.15
+P:Kenya Seidman:0.73
+P:Clayton Salls:0.73
+P:Dona Mcinnes:0.77
+F:Carmella Rondon:Pearlie Bernat
+P:Lenore Decola:0.68
+P:Darren Southwood:0.69
+P:Javier Kratochvil:0.61
+P:Edwina Fedor:0.63
+P:Jessie Mayville:0.02
+F:Carmella Sheffey:Lance Goodpaster
+P:Tanisha Coppin:0.53
+F:Dollie Westbury:Malinda Dodgen
+F:Jessie Mayville:Jamie Seager
+P:Carmella Sheffey:0.92
+P:Tanisha Coppin:0.94
+P:Althea Warring:0.33
+P:Lenore Decola:0.51
+P:Darren Hadaway:0.69
+P:Tyrone Seevers:0.47
+P:Hillary Tall:0.82
+F:Hillary Tall:Max Madamba
+P:Darren Southwood:0.86
+P:Edwina Fedor:0.74
+P:Neil Brabant:0.81
+P:Tanisha Coppin:0.63
+P:Hillary Tall:0.82
+P:Chandra Trowell:0.29
+P:Cody Russom:0.66
+P:Loraine Kimberly:0.78
+P:Elinor Raco:0.55
+P:Earnestine Maddock:0.98
+P:Jerri Mayr:0.21
+P:Clinton Blumer:0.47
+P:Lance Goodpaster:0.68
+P:Max Madamba:0.51
+F:Guy Kadel:Emilia Ruddell
+P:Kenya Seidman:0.78
+P:Althea Warring:0.46
+P:Mathew Milian:0.13
+P:Christian Durall:0.42
+P:Guy Fagundes:0.18
+P:Lenore Decola:0.58
+P:Carmella Sheffey:0.16
+P:Harriett Curatolo:0.54
+P:Darren Hadaway:0.7
+P:Tanisha Coppin:0.79
+P:Jessie Dosch:0.13
+P:Lenore Decola:0.67
+F:Esmeralda Radovich:Althea Warring
+P:Dollie Dignan:0.51
+P:Ted Tallmadge:0.62
+P:Max Plain:0.59
+P:Fernando Mccardell:0.41
+P:Dollie Dodrill:0.19
+P:Jamie Upson:0.37
+P:Darryl Triche:0.52
+P:Kathrine Lainez:0.91
+P:Dona Mcinnes:0.71
+P:Nannie Mcgown:0.58
+P:Jamie Upson:0.27
+P:Darren Hadaway:0.66
+P:Carmella Rondon:0.02
+P:Kenya Seidman:0.43
+P:Elinor Greig:0.62
+P:Christian Mullarkey:0.62
+P:Harriett Zollinger:0.63
+P:Dollie Dignan:0.4
+P:Elinor Greig:0.51
+P:Katy Tressler:0.49
+P:Loraine Kimberly:0.71
+P:Katy Vacek:0.28
+P:Clayton Salls:0.63
+P:Mathew Milian:0.1
+P:Dona Mcinnes:0.54
+P:Gay Ascencio:0.77
+P:Sharron Cournoyer:0.08
+P:Mathew Milian:0.88
+P:Dollie Westbury:0.58
+P:Earnestine Maddock:0.65
+P:Katy Vacek:0.09
+P:Max Madamba:0.62
+P:Nelson Valderrama:0.44
+P:Edwina Fedor:0.74
+P:Lenore Decola:0.52
+P:Rae Furby:0.11
+P:Lenore Decola:0.55
+P:Max Madamba:0.51
+P:Neil Brabant:0.98
+P:Kenya Seidman:0.55
+P:Guy Kadel:0.75
+P:Ted Makuch:0.46
+P:Tanisha Coppin:0.75
+P:Kathrine Lainez:0.56
+P:Selena Hoose:0.53
+P:Earnestine Croswell:0.04
+P:Elinor Greig:0.61
+F:Sharron Cournoyer:Carmella Rondon
+P:Dona Mcinnes:0.73
+P:Gay Ascencio:0.13
