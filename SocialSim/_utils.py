@@ -123,9 +123,9 @@ class SocNet:
         self.humanoids = LinkedList()
         self.connections = LinkedList()
 
-    def add_human(self, name, value=None):
+    def add_human(self, name):
         # init DSAGraphVertex object
-        new_human = Humanoid(name, value)
+        new_human = Humanoid(name)
         # add to humanoids linked list
         self.humanoids.insert_last(new_human)
 
@@ -220,9 +220,9 @@ class SocNet:
 
 
 class Humanoid:
-    def __init__(self, name, value):
+    def __init__(self, name, negativity=0.1):
         self.name = name
-        self.value = value      # TODO: REMOVE POSSIBLY
+        self.negativity = negativity      # TODO: REMOVE POSSIBLY
         self.followers = LinkedList()
         self.following = LinkedList()
         self.links = LinkedList()
@@ -233,7 +233,7 @@ class Humanoid:
         return self.name
 
     def get_value(self):        # TODO: REMOVE POSSIBLY
-        return self.value
+        return self.negativity
 
     def get_adjacent(self):     # TODO: LEGACY ... REMOVE POSSIBLY
         return self.links
@@ -272,8 +272,8 @@ class Humanoid:
         pass
 
     def __str__(self):
-        return "Name: {0}\t\t Value: {1}\t Visited: {2}"\
-            .format(self.name, self.value, self.visited)
+        return "Name: {0}\t\t Negativity: {1}\t Visited: {2}"\
+            .format(self.name, self.negativity, self.visited)
 
 
 class SocConx:  # GraphEdge
