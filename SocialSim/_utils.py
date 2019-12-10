@@ -103,7 +103,7 @@ class LinkedList:
     def display(self):
         iter_ob = iter(self)
         value = next(iter_ob)
-        for value in self:
+        for value in iter_ob:
             print(value, end="\n")
         print("null")
 
@@ -247,6 +247,8 @@ class SocNet:
                 unique_neg = negativity * \
                              (1 / next_follower.get_following_count())
                 next_follower.add_negativity(unique_neg)
+
+                next_follower.infection_check()
         else:
             print("Can't find poster " + poster)
 
@@ -265,7 +267,7 @@ class Humanoid:
     def get_name(self):
         return self.name
 
-    def get_value(self):        # TODO: REMOVE POSSIBLY
+    def get_negativity(self):        # TODO: REMOVE POSSIBLY
         return self.negativity
 
     def add_negativity(self, neg_addition):
@@ -285,6 +287,10 @@ class Humanoid:
 
     def infect(self):
         self.infected = True
+
+    def infection_check(self):
+        if self.get_negativity() > 0.8:
+            self.infect()
 
     def is_infected(self):
         return self.infected
