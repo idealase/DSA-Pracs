@@ -1,21 +1,54 @@
+*******************************************************************************
 # Overview of Code
+*******************************************************************************
 
 _utils.py - contains classes
+
 utils_test.py - testing harness for development purposes
+
 SocialSim.py - the main program
+    Interactive Mode
 
+    Simulation Mode
+
+name_gen.py - script for generating net_file and event_file
+    within name_gen.py there are 12 constants that can be manipulated to adjust network properties
+        NETWORK_POP
+        INFLUENCERS
+        FOLLOWERS
+        MAX_INF_FOLS
+        MAX_NORM_FOLS
+        NORM_POSTS
+        NORM_MIN_NEG
+        NORM_MAX_NEG
+        INF_POSTS
+        INF_MIN_NEG
+        INF_MAX_NEG
+        NEW_RAND_FOLS
+
+*******************************************************************************
 # UML Class Diagram
+*******************************************************************************
 
-# Description of any classes
+
+*******************************************************************************
+# Class Descriptions
+*******************************************************************************
 
 - List Node
     contains a value and a next pointer
+
 - Linked List
     a simple single ended singly linked list
     used twice by the SocNet class for the storing of the humanoids, and the connections between them
+
 - SocNet
+
 - Humanoid
+
 - SocConx
 
 
+*******************************************************************************
 # Justifications
+*******************************************************************************
