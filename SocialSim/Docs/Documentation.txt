@@ -2,7 +2,7 @@
 # Overview of Code
 *******************************************************************************
 
-_utils.py - contains classes
+_utils.py - contains classes as described under "Class Descriptions"
 
 utils_test.py - testing harness for development purposes
 
@@ -30,6 +30,7 @@ name_gen.py - script for generating net_file and event_file
 # UML Class Diagram
 *******************************************************************************
 
+see file uml.mdj
 
 *******************************************************************************
 # Class Descriptions
@@ -43,6 +44,9 @@ name_gen.py - script for generating net_file and event_file
     used twice by the SocNet class for the storing of the humanoids, and the connections between them
 
 - SocNet
+    SocNet is short for Social Network.
+    This class mimics the standard adjacency list implementatin of a graph class.
+
 
 - Humanoid
 

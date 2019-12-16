@@ -7,3 +7,40 @@
 # Results
 
 # Conclusion and Future Work
+
+## Lava Flow
+
+http://antipatterns.com/lavaflow.htm
+
+Though many sources discuss the lava flow anti-pattern in the context of a development team, it can also befall the insufficiently organised solo programmer. The general problem is that poorly structured code is written that satisfies a production requirement, so it is put into production, after which point all further development is restricted to backwards compatible bandaids and workarounds.
+
+For myself, the practice that lured me into this trap was unit testing, or more accurately, the concurrent development and testing of the codebase. My workflow went something like the following:
+    - define class initialisation
+    - TEST: class initialisation
+
+    - add class method 1
+    - TEST: class initialisation, class method 1
+
+    - add class method 2
+    - TEST: class initialisation, class method 1, class method 2
+
+    - attempt to add class method 3
+    - realise class method 3 relies on class attribute not yet implemented
+    - update class initialisation
+    - TEST: class initialisation, class method 1, class method 2
+
+    - add class method 3
+    - TEST: class initialisation, class method 1, class method 2, class method 3
+
+The problem was, often the first attempt at implementing a feature was just a 'first-pass' or 'proof of concept'. This is all well and good if features are optimised piecemeal before continuing, but its too tempting to falsely equate a successful unit test with a code optimisation score of 10/10. Therefore, it is the minimum satisfactory approach to a feature that ends up surviving and being built upon and further referenced in the codebase.
+
+So how then can this happen to the solo programmer, who has the luxury of total project oversight? Usually it is the case that solo projects maintain a structural logic and overall cohesiveness that collaborative work cannot. I put it down to the balancing act that is a full-time university course load and the project timeline. Rather than working on development for lengthy uninterrupted chunks of time, I instead chose to periodically, sporadically even, attack the entire problem. The result was that just about every development window began with a re-familiarisation stage. Rationales were forgotten, implementation pathways abandoned and revisited, and all the while project scope was growing.
+
+Examples:
+    - Humanoid.visited boolean attribute
+    - The SocConx() class (analagous to graph edge)
+    - Maintaining three separate linked lists within the Humanoid() class
+        - self.followers
+        - self.following
+        - self.links
+            self.links was originally the sole linked list to store relationships between humanoids. In an effort to make these relationships directional, to implement a 'follows' feature, the followers/following lists were introduced. This essentially made the non-directed links list superfluous. It was retained for its potential value for some as yet undefined function.

@@ -101,11 +101,14 @@ class LinkedList:
         return curval
 
     def display(self):
-        iter_ob = iter(self)
-        value = next(iter_ob)
-        for value in iter_ob:
-            print(value, end="\n")
-        print("null")
+        if not self.is_empty():
+            iter_ob = iter(self)
+            value = next(iter_ob)
+            for value in iter_ob:
+                print(value, end="\n")
+            print("-- End of List --")
+        else:
+            print("None")
 
     def get_count(self):
         return self._get_count_rec(self.head)
@@ -208,24 +211,36 @@ class SocNet:
     def display_as_matrix(self):
         pass
 
+    def statistics(self):
+        print("\n --- Network Statistics --- \n")
+        print("Total Members: " + str(self.get_humanoid_count()))
+        print("Total Connections: " + str(self.get_connection_count()))
+        humanoids_iter = iter(self.humanoids)
+        hum = next(humanoids_iter)
+        for hum in humanoids_iter:
+            print("\nName: " + hum.get_name())
+            print("Followers: " + str(hum.get_followers_count()))
+            print("Following: " + str(hum.get_following_count()))
+
+
     def infection_report(self):
         """
         Generates an output of all humans in the network and their
         infection status. Sorted by Infected or Healthy
         :return:
         """
-        print(" -- Infection Status Report -- ")
+        print("\n -- Infection Status Report -- \n")
         humanoids_iter = iter(self.humanoids)
         val = next(humanoids_iter)
         print("Infected Scum:")
         for val in humanoids_iter:
             if val.is_infected():
-                print(val.get_name())
+                print("\t" + val.get_name())
         print("\nHealthy Pre-scum:")
         for val in humanoids_iter:
             if not val.is_infected():
-                print(val.get_name())
-        print(" -- Infection Status Current as of -- ")
+                print("\t" + val.get_name())
+        print("\n -- Infection Status Current as of -- ")
         time_now = localtime()
         print("\tDate: " + str(time_now[2]) + "-" + str(time_now[1]) + "-" +
               str(time_now[0]))
@@ -235,7 +250,10 @@ class SocNet:
     def post(self, poster, negativity):
         if self.has_humanoid(poster):       # check poster exists
             inf = self.get_human(poster)    # return poster as the influencer
-            neg_mod = 0.01 * inf.get_follower_count()
+            if inf.is_infected():
+                neg_mod = 0.2 * inf.get_follower_count()
+            else:
+                neg_mod = 0.01 * inf.get_follower_count()
             transmitted_neg = negativity * neg_mod
 
             followers_iter = iter(inf.get_followers())
@@ -279,8 +297,14 @@ class Humanoid:
     def get_followers(self):
         return self.followers
 
+    def get_followers_count(self):
+        return self.followers.get_count()
+
     def get_following(self):
         return self.following
+
+    def get_following_count(self):
+        return self.following.get_count()
 
     def add_edge(self, vertex):     # TODO: LEGACY ... REMOVE POSSIBLY
         self.links.insert_first(vertex)

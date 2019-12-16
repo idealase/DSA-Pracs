@@ -74,5 +74,20 @@ for name in names:
     print("\n ----- " + name + " ------\n")
     print("FOLLOWERS:")
     network.show_followers(name)
-    print("FOLLOWING:")
+    print("\nFOLLOWING:")
     network.show_following(name)
+
+for influencer in influencers:
+    temp_neg = random.uniform(0,1)
+    network.post(influencer, temp_neg)
+
+for name in names:
+    print("\n ----- " + name + " ------\n")
+    print("FOLLOWERS:")
+    network.show_followers(name)
+    print("\nFOLLOWING:")
+    network.show_following(name)
+
+network.infection_report()
+
+network.statistics()

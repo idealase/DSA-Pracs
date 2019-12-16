@@ -168,7 +168,7 @@ except:
 print("\nTEST 16: Make a Post!!!!!!!!!")
 pickled_camp.post("Andy", 0.8)
 pickled_camp.post("Frederic", 0.6)
-pickled_camp.post("Eric", 0.8-)
+pickled_camp.post("Eric", 0.8)
 pickled_camp.post("Charlie", 0.8)
 pickled_camp.post("Tom", 0.2)
 pickled_camp.display_as_list()
