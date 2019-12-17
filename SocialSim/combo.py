@@ -3,11 +3,11 @@ import random
 from _utils import *
 
 # set starting numbers for net_file
-NETWORK_POP = 100
-INFLUENCERS = 20
-FOLLOWERS = 50
-MAX_INF_FOLS = 20
-MAX_NORM_FOLS = 5
+NETWORK_POP = 200
+INFLUENCERS = NETWORK_POP // 5
+FOLLOWERS = NETWORK_POP // 2
+MAX_INF_FOLS = FOLLOWERS // 2
+MAX_NORM_FOLS = FOLLOWERS // 5
 
 # for event file
 NORM_POSTS = 3
