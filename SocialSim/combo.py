@@ -19,6 +19,8 @@ INF_MIN_NEG = 0.5
 INF_MAX_NEG = 0.8
 NEW_RAND_FOLS = 50
 
+#test chane
+
 # -----------------------------------------------------------------------
 # populate the names list
 names = []
