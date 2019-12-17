@@ -121,20 +121,13 @@ def interactive_splash():
 def simulation_mode(netfile, eventfile, p_like, p_follow):
     print("\nSimulation Mode\n")
 
+    # init a social network
+    network = SocNet()
 
-    # handle network file
     with open(netfile, 'r') as network_file:
-        net_data = network_file.readlines()
-        interactions = []
-        ppl = []
-        for line in net_data:
-            if re.search(":", line):
-                re.sub(r"\n", "", line)
-                interactions.append(line)
-            else:
-                ppl.append(line)
-        print(interactions)
-        print(ppl)
+        #net_line = network_file.readlines()
+        print(len(network_file))
+        #print(net_line)
 
     #for line in net_data:
         #print(line)
@@ -153,6 +146,20 @@ def simulation_mode(netfile, eventfile, p_like, p_follow):
     # handle probability of follows
 
 
+""" handle network file
+
+    with open(netfile, 'r') as network_file:
+        net_data = network_file.readlines()
+        interactions = []
+        ppl = []
+        for line in net_data:
+            if re.search(":", line):
+                re.sub(r"\n", "", line)
+                interactions.append(line)
+            else:
+                ppl.append(line)
+        print(interactions)
+        print(ppl)"""
 
 
 
