@@ -89,9 +89,9 @@ def node_ops():
 
 
 # Save Network
-def save_net():
+def save_net(save_net_name: str):
     try:
-        output = open('social_network.pkl', 'wb')
+        output = open(save_net_name, 'wb')
         pickle.dump(network, output)
         output.close()
         print("Network saved using Pickle")
@@ -119,7 +119,8 @@ def interactive_splash():
         print("Created new empty network")
         return interactive_splash()
     elif mm_selection == "1":   # load
-        pass
+        in_net_name = input("Enter name of network file to load: ")
+        load_network(in_net_name)
     elif mm_selection == "2":     # set probs
         pass
     elif mm_selection == "3":     # node ops
