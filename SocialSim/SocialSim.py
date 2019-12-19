@@ -17,14 +17,18 @@ import re
 
 # Usage Guide to be displayed if program launched incorrectly
 usage = "\n\t---\tWelcome to SocialSim.py\t---\t\n " \
-        "\n...\n" \
-        "Instructions...\n\n" \
-        "select \'-i\' for ..." \
-        "\n\t---\tInteractive Test Mode\t---\t\n " \
-        "select \'-s\' for ..." \
-        "\n\t---\tSimulation Mode\t---\t\n " \
-        "\n\ne.g.\n\t" \
-        ">> python SocialSim.py -s netfile eventfile p_like p_follow" \
+        "\nInstructions...\n" \
+        "\n\t---\tInteractive Test Mode\t---\t\n" \
+        "use option \'-i\'" \
+	"\ne.g. >> python3 SocialSim.py -i" \
+        "\n\n\n\t---\tSimulation Mode\t---\t\n" \
+	"\nuse option \'-s\'" \
+	"NB: simulation mode requires 4 additional input args\n" \
+	"\t - a network file\n" \
+	"\t - an event file\n" \
+	"\t - a base probalility of liking a post\n" \
+	"\t - a base probability of following a user\n" \
+        "\ne.g. >> python3 SocialSim.py -s netfile eventfile p_like p_follow" \
 
 # ----------------------------------------------
 # INTERACTIVE FUNCTIONS
