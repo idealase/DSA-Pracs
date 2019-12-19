@@ -36,6 +36,20 @@ usage = "\n\t---\tWelcome to SocialSim.py\t---\t\n " \
     "\t - a base probability of following a user\n" \
     "\ne.g. >> python3 SocialSim.py -s netfile eventfile p_like p_follow" \
 
+
+
+# FIXME: how???
+def breakage_prompt(func):
+    """Called after errors in interactive mode
+    Gives user the option to try again or exit program"""
+    print("Try (a)gain or e(x)it?")
+    ans = input()
+    if ans.lower() == "a":
+        return func
+    elif ans.lower() == "x":
+        print("Unplugging from the social network... good bye")
+        exit()
+
 # ----------------------------------------------
 # INTERACTIVE FUNCTIONS
 # ----------------------------------------------
@@ -48,8 +62,10 @@ def load_network(in_net_name: str):
         network = pickle.load(in_net_file)
         in_net_file.close()
         print("Successfully loaded network")
+        interactive_splash()
     except:
         print("Unable to load network")
+        interactive_splash()
 
 
 # Set Probabilities
@@ -100,7 +116,6 @@ def save_net(save_net_name: str):
 
 
 def interactive_splash():
-    print("\nInteractive Test Mode\n")
     print("Main Menu: Select an option from below")
     print("(N)\t Make new Empty Network\n"
           "(1)\t Load Network\n"
@@ -140,6 +155,7 @@ def interactive_splash():
         save_net_name = input("Save network as: ")
         save_net(save_net_name)
     elif mm_selection.upper() == "X":
+        print("Unplugging from the social network... good bye")
         exit()
     else:
         print("Error")
@@ -213,33 +229,33 @@ def simulation_mode(netfile, eventfile, p_like, p_follow):
 try:
     run_mode = sys.argv[1]
     if run_mode == "-i":
+        print("\nInteractive Test Mode\n")
         interactive_splash()
     elif run_mode == "-s":
-        print("Loading Network File")
+        print("Loading Network File...")
         netfile = sys.argv[2]
-        print(str(netfile))
+        print("Loaded: " + str(netfile))
 
-        print("Loading Event File")
+        print("Loading Event File...")
         eventfile = sys.argv[3]
-        print(str(eventfile))
+        print("Loaded: " + str(eventfile))
 
-        print("Loading Prob Like")
+        print("Loading Prob Like...")
         p_like = sys.argv[4]
-        print(p_like)
+        print("Prob Like: " + p_like)
 
-        print("Loading Prob Follow")
+        print("Loading Prob Follow...")
         p_follow = sys.argv[5]
-        print(p_follow)
+        print("Prob Follow: " + p_follow)
+
+        simulation_mode(netfile, eventfile, p_like, p_follow)
     else:
         print(usage)
         exit()
 except IndexError:
-    print("Ind Err ???")
     print(usage)
     exit()
 
-if run_mode == "-s":
-    simulation_mode(netfile, eventfile, p_like, p_follow)
 
 
 
