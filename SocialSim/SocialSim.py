@@ -61,12 +61,12 @@ def load_network(in_net_name: str):
         in_net_file = open(in_net_name, 'rb')
         network = pickle.load(in_net_file)
         in_net_file.close()
-        print("Successfully loaded network")
-        interactive_splash()
-    except:
+        print("\nSuccessfully loaded network\n")
+        return network, interactive_splash(network)
+    except NameError:
         print("Unable to load network")
         interactive_splash()
-
+    # interactive_splash()
 
 # Set Probabilities
 
@@ -105,17 +105,18 @@ def node_ops():
 
 
 # Save Network
-def save_net(save_net_name: str):
-    try:
-        output = open(save_net_name, 'wb')
-        pickle.dump(network, output)
-        output.close()
-        print("Network saved using Pickle")
-    except:
-        print("Error: Network Saving Failed")
+def save_net(network: object, save_net_name: str):
+    #try:
+    output = open(save_net_name, 'wb')
+    pickle.dump(network, output)
+    output.close()
+    print("Network saved using Pickle")
+    return interactive_splash(network)
+    #except:
+        #print("Error: Network Saving Failed")
 
 
-def interactive_splash():
+def interactive_splash(network=None):
     print("Main Menu: Select an option from below")
     print("(N)\t Make new Empty Network\n"
           "(1)\t Load Network\n"
@@ -133,7 +134,7 @@ def interactive_splash():
     if mm_selection.upper() == "N":
         network = SocNet()
         print("Created new empty network")
-        return interactive_splash()
+        return network, interactive_splash()
     elif mm_selection == "1":   # load
         in_net_name = input("Enter name of network file to load: ")
         load_network(in_net_name)
@@ -153,7 +154,7 @@ def interactive_splash():
         pass
     elif mm_selection == "9":     # save
         save_net_name = input("Save network as: ")
-        save_net(save_net_name)
+        save_net(network, save_net_name)
     elif mm_selection.upper() == "X":
         print("Unplugging from the social network... good bye")
         exit()
