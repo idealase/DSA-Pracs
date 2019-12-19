@@ -90,11 +90,18 @@ def node_ops():
         pass
     else:
         print("Invalid Selection")
+
+
 # Edge Operations
 
 # New Post
 
 # Display Network
+def display_net(network):
+    network.display_as_list()
+    print("\n")
+    return interactive_splash(network)
+
 
 # Display Statistics
     # events in order of popularity
@@ -134,7 +141,7 @@ def interactive_splash(network=None):
     if mm_selection.upper() == "N":
         network = SocNet()
         print("Created new empty network")
-        return network, interactive_splash()
+        return network, interactive_splash(network)
     elif mm_selection == "1":   # load
         in_net_name = input("Enter name of network file to load: ")
         load_network(in_net_name)
@@ -147,7 +154,7 @@ def interactive_splash(network=None):
     elif mm_selection == "5":     # new post
         pass
     elif mm_selection == "6":     # display net
-        pass
+        display_net(network)
     elif mm_selection == "7":     # display stats
         pass
     elif mm_selection == "8":     # update
