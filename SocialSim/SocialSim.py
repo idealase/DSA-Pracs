@@ -1,42 +1,59 @@
 """"
+# ----------------------------------------------
 SocialSim.py
+# ----------------------------------------------
 
-The program of the Social Network Simulator
+The main python program of the Social Network Simulator
 
 Run SocialSim.py in a terminal as per instructions in usage guide
-	Simulation - python3 SocialSim.py -s <netfile> <eventfile> <p_like> <p_follow>
-	Interactive - python3 SocialSim.py -i
+    Sim - python3 SocialSim.py -s <netfile> <eventfile> <p_like> <p_follow>
+    Interactive - python3 SocialSim.py -i
 
 For a self-contained version of the simulation function, you can run combo.py
-combo.py is simply a combination of the name generator script name_gen.py and the functionality of SocialSim.py simulation function
-It was made for the purpose of circumventing the need to parse text file input with regex - implenting text parsing presented a major bottleneck in development
+combo.py is simply a combination of:
+    the name generator script name_gen.py, and
+    the functionality of SocialSim.py simulation function
+combo.py was made to circumvent the need to parse text file input with regex
+    - implementing text parsing presented a major bottleneck in development
 """
 import sys
 from _utils import *
 import re
+import pickle
 
 # Usage Guide to be displayed if program launched incorrectly
 usage = "\n\t---\tWelcome to SocialSim.py\t---\t\n " \
         "\nInstructions...\n" \
         "\n\t---\tInteractive Test Mode\t---\t\n" \
         "use option \'-i\'" \
-	"\ne.g. >> python3 SocialSim.py -i" \
-        "\n\n\n\t---\tSimulation Mode\t---\t\n" \
-	"\nuse option \'-s\'" \
-	"NB: simulation mode requires 4 additional input args\n" \
-	"\t - a network file\n" \
-	"\t - an event file\n" \
-	"\t - a base probalility of liking a post\n" \
-	"\t - a base probability of following a user\n" \
-        "\ne.g. >> python3 SocialSim.py -s netfile eventfile p_like p_follow" \
+    "\ne.g. >> python3 SocialSim.py -i" \
+    "\n\n\n\t---\tSimulation Mode\t---\t\n" \
+    "\nuse option \'-s\'" \
+    "NB: simulation mode requires 4 additional input args\n" \
+    "\t - a network file\n" \
+    "\t - an event file\n" \
+    "\t - a base probalility of liking a post\n" \
+    "\t - a base probability of following a user\n" \
+    "\ne.g. >> python3 SocialSim.py -s netfile eventfile p_like p_follow" \
 
 # ----------------------------------------------
 # INTERACTIVE FUNCTIONS
 # ----------------------------------------------
 
-# Load Network
+
+# Load a previously saved network
+def load_network(in_net_name: str):
+    try:
+        in_net_file = open(in_net_name, 'rb')
+        network = pickle.load(in_net_file)
+        in_net_file.close()
+        print("Successfully loaded network")
+    except:
+        print("Unable to load network")
+
 
 # Set Probabilities
+
 
 # Node Operations (find, insert, delete)
 def node_ops():
@@ -64,15 +81,15 @@ def node_ops():
 # Display Network
 
 # Display Statistics
-# events in order of popularity
+    # events in order of popularity
 # people in order of popularity
 # a person's record - #events, #followers, #following etc
 
 # Update (timestep)
 
+
 # Save Network
 def save_net():
-    import pickle
     try:
         output = open('social_network.pkl', 'wb')
         pickle.dump(network, output)
