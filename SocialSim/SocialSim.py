@@ -1,6 +1,15 @@
 """"
 SocialSim.py
 
+The program of the Social Network Simulator
+
+Run SocialSim.py in a terminal as per instructions in usage guide
+	Simulation - python3 SocialSim.py -s <netfile> <eventfile> <p_like> <p_follow>
+	Interactive - python3 SocialSim.py -i
+
+For a self-contained version of the simulation function, you can run combo.py
+combo.py is simply a combination of the name generator script name_gen.py and the functionality of SocialSim.py simulation function
+It was made for the purpose of circumventing the need to parse text file input with regex - implenting text parsing presented a major bottleneck in development
 """
 import sys
 from _utils import *
