@@ -111,7 +111,8 @@ def interactive_splash():
           "(6)\t Display Network\n"
           "(7)\t Display Statistics\n"
           "(8)\t Update (run a timestep)\n"
-          "(9)\t Save Network\n")
+          "(9)\t Save Network\n"
+          "(X)\t Exit\n")
     mm_selection = input()
 
     if mm_selection.upper() == "N":
@@ -136,7 +137,10 @@ def interactive_splash():
     elif mm_selection == "8":     # update
         pass
     elif mm_selection == "9":     # save
-        save_net()
+        save_net_name = input("Save network as: ")
+        save_net(save_net_name)
+    elif mm_selection.upper() == "X":
+        exit()
     else:
         print("Error")
 
