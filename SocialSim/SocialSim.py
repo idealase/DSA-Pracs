@@ -72,24 +72,31 @@ def load_network(in_net_name: str):
 
 
 # Node Operations (find, insert, delete)
-def node_ops():
-    print("Choose a Node Operation to perform\n"
+def node_ops(network):
+    print("\nChoose a Node Operation to perform\n"
           "(I)nsert\n"
           "(D)elete\n"
           "(F)ind\n")
     node_op = input()
     if node_op.upper() == "I":  # insert
         try:
-            ins_name = input("Name of person to be inserted")
+            ins_name = input("\nName of person to be inserted: ")
             network.add_human(str(ins_name))
         except NameError:
-            print("No Network Established")
+            print("Operation failed - NameError")
     elif node_op.upper() == "D":    # delete
         pass
     elif node_op.upper() == "F":    # find
-        pass
+        try:
+            find_name = input("\nName to find in network: ")
+            network.find_disp_hum(str(find_name))
+        except NameError:
+            print("Operation failed - NameError")
     else:
         print("Invalid Selection")
+
+    interactive_splash(network)
+
 
 
 # Edge Operations
@@ -105,8 +112,8 @@ def display_net(network):
 
 # Display Statistics
     # events in order of popularity
-# people in order of popularity
-# a person's record - #events, #followers, #following etc
+    # people in order of popularity
+    # a person's record - #events, #followers, #following etc
 
 # Update (timestep)
 
@@ -148,7 +155,7 @@ def interactive_splash(network=None):
     elif mm_selection == "2":     # set probs
         pass
     elif mm_selection == "3":     # node ops
-        node_ops()
+        node_ops(network)
     elif mm_selection == "4":     # edge ops
         pass
     elif mm_selection == "5":     # new post
