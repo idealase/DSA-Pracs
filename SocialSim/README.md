@@ -40,4 +40,14 @@ Running without options will output usage instructions, e.g.
     
 
 
+## Known Issues/Unimplemented Features
 
+* Interactive Mode:
+    + Set Probabilities
+    + Edge Operations
+    + Update Network
+ * Simulation Mode:
+    + handling of network file and event file
+    + implementation of like/follow probabilites
+        - not yet incorporated into network dynamics   
+ 
