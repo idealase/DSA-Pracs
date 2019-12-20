@@ -147,8 +147,10 @@ def display_net(network):
 
 # Display Statistics
 def stats(network):
-    return nyi(network)
-
+    network.statistics()
+    print("\nPress any key to continue")
+    while getch():
+        return interactive_splash(network)
 
 # Update (timestep)
 def update(network):
