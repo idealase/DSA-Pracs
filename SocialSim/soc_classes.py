@@ -216,19 +216,20 @@ class SocNet:
     def display_as_matrix(self):
         pass
 
-    def statistics(self):
+    def statistics(self, verbose=False):
         print("\n --- Network Statistics --- \n")
         print("Total Members: " + str(self.get_humanoid_count()))
         print("Total Connections: " + str(self.get_connection_count()))
-        humanoids_iter = iter(self.humanoids)
-        hum = next(humanoids_iter)
-        for hum in humanoids_iter:
-            print("\nName: " + hum.get_name())
-            print("Followers: " + str(hum.get_followers_count()))
-            print("Following: " + str(hum.get_following_count()))
+        if verbose:
+            humanoids_iter = iter(self.humanoids)
+            hum = next(humanoids_iter)
+            for hum in humanoids_iter:
+                print("\nName: " + hum.get_name())
+                print("Followers: " + str(hum.get_followers_count()))
+                print("Following: " + str(hum.get_following_count()))
 
 
-    def infection_report(self):
+    def infection_report(self, timelog=False):
         """
         Generates an output of all humans in the network and their
         infection status. Sorted by Infected or Healthy
@@ -245,12 +246,13 @@ class SocNet:
         for val in humanoids_iter:
             if not val.is_infected():
                 print("\t" + val.get_name())
-        print("\n -- Infection Status Current as of -- ")
-        time_now = localtime()
-        print("\tDate: " + str(time_now[2]) + "-" + str(time_now[1]) + "-" +
-              str(time_now[0]))
-        print("\tTime: " + str(time_now[3]) + ":" + str(time_now[4]) + ":" +
-              str(time_now[5]))
+        if timelog:
+            print("\n -- Infection Status Current as of -- ")
+            time_now = localtime()
+            print("\tDate: " + str(time_now[2]) + "-" + str(time_now[1]) + "-" +
+                  str(time_now[0]))
+            print("\tTime: " + str(time_now[3]) + ":" + str(time_now[4]) + ":" +
+                  str(time_now[5]))
 
     def post(self, poster, negativity):
         if self.has_humanoid(poster):       # check poster exists
