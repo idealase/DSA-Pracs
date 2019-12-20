@@ -20,7 +20,6 @@ import sys                  # for taking command line options
 import re                   # for parsing input files
 import pickle               # for loading/saving
 import os                   # for clearing terminal output
-from msvcrt import getch    # for "Press any key to continue"
 from time import sleep      # for delaying terminal clearing
 from soc_classes import *   # classes
 
@@ -45,9 +44,8 @@ usage = "\n\t---\tWelcome to SocialSim.py\t---\t\n " \
 # for unfinished functions to prevent crashes
 def nyi(network=None):
     print("SORRY - NOT YET IMPLEMENTED")
-    print("Press any key to return to main menu")
-    while getch():
-        return interactive_splash(network)
+    input("Press ENTER to return to main menu")
+    return interactive_splash(network)
 
 # ----------------------------------------------
 # INTERACTIVE FUNCTIONS
@@ -127,17 +125,16 @@ def post(network):
 # Display Network
 def display_net(network):
     network.display_as_list()
-    print("\nPress any key to return to main menu")
-    while getch():
-        return interactive_splash(network)
+    input("\nPress ENTER to return to main menu")
+    return interactive_splash(network)
 
 
 # Display Statistics
 def stats(network):
     network.statistics()
-    print("\nPress any key to continue")
-    while getch():
-        return interactive_splash(network)
+    input("\nPress ENTER to continue")
+    return interactive_splash(network)
+
 
 # Update (timestep)
 def update(network):
