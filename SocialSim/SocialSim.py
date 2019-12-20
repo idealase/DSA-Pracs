@@ -41,19 +41,6 @@ usage = "\n\t---\tWelcome to SocialSim.py\t---\t\n " \
 
 
 
-# FIXME: how???
-def breakage_prompt(func):
-    """Called after errors in interactive mode
-    Gives user the option to try again or exit program"""
-    print("Try (a)gain or e(x)it?")
-    ans = input()
-    if ans.lower() == "a":
-        return func
-    elif ans.lower() == "x":
-        print("Unplugging from the social network... good bye")
-        exit()
-
-
 # NOT YET IMPLEMENTED PLACEHOLDER
 # for unfinished functions to prevent crashes
 def nyi(network=None):
