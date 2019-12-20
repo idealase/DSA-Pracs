@@ -16,6 +16,20 @@ Run options:
 Running without options will output usage instructions, e.g.
 > python3 SocialSim.py
 
-## Social Network Analysis
+## Directory Contents
+
+* SocialSim.py
+* soc_classes.py
+* soc_classes_test.py
+* name_gen.py
+* combo.py
+* net_file.txt
+* event_file.txt
+* Docs/
+* misc/
+    + RandomNames.csv
+* saves/
+    + test_net.pkl
+
 
 

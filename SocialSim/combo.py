@@ -20,9 +20,8 @@ INF_MIN_NEG = 0.5
 INF_MAX_NEG = 0.8
 NEW_RAND_FOLS = 50
 
-#test chane
-
 # -----------------------------------------------------------------------
+
 # populate the names list
 names = []
 with open('misc/RandomNames.csv', 'rt') as file:
@@ -47,15 +46,6 @@ for i in range(0, FOLLOWERS):
     temp_fol = random.choice(names)
     if temp_fol not in followers:
         followers.append(temp_fol)
-
-
-
-
-
-
-
-
-
 
 # ******************************************************************************
 
@@ -95,6 +85,6 @@ network.infection_report()
 network.statistics()
 
 # save for loading in SocialSim.py interactive mode
-output = open('saves/test_net.pkl', 'wb')
+output = open('saves/combo_net.pkl', 'wb')
 pickle.dump(network, output)
 output.close()
