@@ -21,7 +21,7 @@ NEW_RAND_FOLS = 50
 # -----------------------------------------------------------------------
 # populate the names list
 names = []
-with open('bin/RandomNames.csv', 'rt') as file:
+with open('misc/RandomNames.csv', 'rt') as file:
     reader = csv.reader(file)
     i = 0
     for row in reader:

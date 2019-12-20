@@ -1,28 +1,28 @@
-""""
+#
 # ----------------------------------------------
-SocialSim.py
+# SocialSim.py
 # ----------------------------------------------
+#
+# The main program of the Social Network Simulator
+#
+# Run SocialSim.py in a terminal as per instructions in usage guide
+#    Sim - python3 SocialSim.py -s <netfile> <eventfile> <p_like> <p_follow>
+#    Interactive - python3 SocialSim.py -i
+#
+# For a self-contained version of the simulation function, you can run combo.py
+#   combo.py is simply a combination of:
+#       the name generator script name_gen.py, and
+#       the functionality of SocialSim.py simulation function
+#   combo.py was made to circumvent the need to parse text file input with
+#   regex - implementing text parsing was a major bottleneck in development
 
-The main python program of the Social Network Simulator
-
-Run SocialSim.py in a terminal as per instructions in usage guide
-    Sim - python3 SocialSim.py -s <netfile> <eventfile> <p_like> <p_follow>
-    Interactive - python3 SocialSim.py -i
-
-For a self-contained version of the simulation function, you can run combo.py
-combo.py is simply a combination of:
-    the name generator script name_gen.py, and
-    the functionality of SocialSim.py simulation function
-combo.py was made to circumvent the need to parse text file input with regex
-    - implementing text parsing presented a major bottleneck in development
-"""
 import sys                  # for taking command line options
 import re                   # for parsing input files
 import pickle               # for loading/saving
 import os                   # for clearing terminal output
 from msvcrt import getch    # for "Press any key to continue"
-from time import sleep
-from _utils import *
+from time import sleep      # for delaying terminal clearing
+from soc_classes import *   # classes
 
 # Usage Guide to be displayed if program launched incorrectly
 usage = "\n\t---\tWelcome to SocialSim.py\t---\t\n " \
@@ -54,6 +54,8 @@ def breakage_prompt(func):
         exit()
 
 
+# NOT YET IMPLEMENTED PLACEHOLDER
+# for unfinished functions to prevent crashes
 def nyi(network=None):
     print("SORRY - NOT YET IMPLEMENTED")
     print("Press any key to return to main menu")
@@ -68,15 +70,16 @@ def nyi(network=None):
 # Load a previously saved network
 def load_network(in_net_name: str):
     try:
-        in_net_file = open(in_net_name, 'rb')
+        in_net_file = open('saves/' + in_net_name, 'rb')
         network = pickle.load(in_net_file)
         in_net_file.close()
         print("\nSuccessfully loaded network\n")
         return network, interactive_splash(network)
     except FileNotFoundError:
         print("Unable to load network")
+        print("\nReturning to Main Menu")
+        sleep(2)
         interactive_splash()
-    # interactive_splash()
 
 
 # Set Probabilities
@@ -90,8 +93,10 @@ def node_ops(network):
           "(I)nsert\n"
           "(D)elete\n"
           "(F)ind\n")
+
     node_op = input()
-    if node_op.upper() == "I":  # insert
+    # INSERT
+    if node_op.upper() == "I":
         try:
             ins_name = input("\nName of person to be inserted: ")
             network.add_human(str(ins_name))
@@ -99,9 +104,11 @@ def node_ops(network):
             sleep(1)
         except NameError:
             print("Operation failed - NameError")
-    elif node_op.upper() == "D":    # delete
+    # DELETE
+    elif node_op.upper() == "D":
         pass
-    elif node_op.upper() == "F":    # find
+    # FIND
+    elif node_op.upper() == "F":
         try:
             find_name = input("\nName to find in network: ")
             network.find_disp_hum(str(find_name))
@@ -119,8 +126,6 @@ def node_ops(network):
         interactive_splash(network)
 
 
-
-
 # Edge Operations
 def edge_ops(network):
     return nyi(network)
@@ -129,6 +134,7 @@ def edge_ops(network):
 # New Post
 def post(network):
     return nyi(network)
+
 
 # Display Network
 def display_net(network):
@@ -145,6 +151,7 @@ def display_net(network):
 def stats(network):
     return nyi(network)
 
+
 # Update (timestep)
 def update(network):
     return nyi(network)
@@ -152,14 +159,11 @@ def update(network):
 
 # Save Network
 def save_net(network: object, save_net_name: str):
-    #try:
-    output = open(save_net_name, 'wb')
+    output = open('saves/' + save_net_name, 'wb')
     pickle.dump(network, output)
     output.close()
     print("Network saved using Pickle")
     return interactive_splash(network)
-    #except:
-        #print("Error: Network Saving Failed")
 
 
 def interactive_splash(network=None):

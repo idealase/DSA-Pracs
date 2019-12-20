@@ -1,4 +1,4 @@
-from _utils import *
+from soc_classes import *
 
 # **************************************************************
 # Test 1: Initialise an empty graph
@@ -142,7 +142,7 @@ survivor_camp.connections.display()
 print("\nTEST 14: Saving with Pickle")
 import pickle
 try:
-    output = open('bin/social_network.pkl', 'wb')
+    output = open('misc/social_network.pkl', 'wb')
     pickle.dump(survivor_camp, output)
     output.close()
     print("Network saved using Pickle")
@@ -154,7 +154,7 @@ except:
 # **************************************************************
 print("\nTEST 15: Opening with Pickle")
 try:
-    pkl_file = open('bin/social_network.pkl', 'rb')
+    pkl_file = open('misc/social_network.pkl', 'rb')
     pickled_camp = pickle.load(pkl_file)
     pkl_file.close()
     print("opened the pickled camp")
