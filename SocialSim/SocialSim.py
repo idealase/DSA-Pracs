@@ -73,7 +73,7 @@ def load_network(in_net_name: str):
         in_net_file.close()
         print("\nSuccessfully loaded network\n")
         return network, interactive_splash(network)
-    except NameError:
+    except FileNotFoundError:
         print("Unable to load network")
         interactive_splash()
     # interactive_splash()
@@ -111,9 +111,13 @@ def node_ops(network):
     else:
         print("Invalid Selection")
 
-    opt = input("Perform more (n)ode operations or return to (m)ain menu")
-    complexx
-    interactive_splash(network)
+    opt = input("Perform more (n)ode operations or "
+                "enter any key to return to main menu")
+    if opt.lower() == "n":
+        node_ops(network)
+    else:
+        interactive_splash(network)
+
 
 
 
@@ -161,57 +165,68 @@ def save_net(network: object, save_net_name: str):
 def interactive_splash(network=None):
     os.system('cls' if os.name == 'nt' else 'clear')
     print("Main Menu: Select an option from below\n")
-    print("(N)\t Make new Empty Network\n"
-          "(1)\t Load Network\n"
-          "(2)\t Set Probalities\n"
-          "(3)\t Node Operations\n"
-          "(4)\t Edge Operations\n"
-          "(5)\t New Post\n"
-          "(6)\t Display Network\n"
-          "(7)\t Display Statistics\n"
-          "(8)\t Update (run a timestep)\n"
-          "(9)\t Save Network\n"
-          "(X)\t Exit\n")
+    print("(M)ake new Empty Network\n"
+          "(L)oad Network\n"
+          "Set P(r)obabilities\n"
+          "(N)ode Operations\n"
+          "(E)dge Operations\n"
+          "New (P)ost\n"
+          "(D)isplay Network\n"
+          "Display S(t)atistics\n"
+          "(U)pdate (run a timestep)\n"
+          "(S)ave Network\n"
+          "E(x)it\n")
 
     mm_selection = input()
 
-    if mm_selection.upper() == "N":
+    # INITIALISE NETWORK
+    if mm_selection.lower() == "m":
         network = SocNet()
         print("Created new empty network")
         sleep(1)
         return network, interactive_splash(network)
 
-    elif mm_selection == "1" or "l":   # load
+    # LOAD NETWORK
+    elif mm_selection.lower() == "l":
         in_net_name = input("Enter name of network file to load: ")
         load_network(in_net_name)
 
-    elif mm_selection == "2" or "r":     # set probs
+    # SET PROBABILITIES
+    elif mm_selection.lower() == "r":
         set_probs(network)
 
-    elif mm_selection == "3" or "n":     # node ops
+    # NODE OPERATIONS
+    elif mm_selection.lower() == "n":
         node_ops(network)
 
-    elif mm_selection == "4" or "e":     # edge ops
+    # EDGE OPERATIONS
+    elif mm_selection.lower() == "e":
         edge_ops(network)
 
-    elif mm_selection == "5" or "p":     # new post
+    # NEW POST
+    elif mm_selection.lower() == "p":
         post(network)
 
-    elif mm_selection == "6" or "d":     # display net
+    # DISPLAY NETWORK
+    elif mm_selection.lower() == "d":
         display_net(network)
 
-    elif mm_selection == "7" or "t":     # display stats
+    # DISPLAY STATS
+    elif mm_selection.lower() == "t":
         stats(network)
 
-    elif mm_selection == "8" or "u":     # update
+    # UPDATE
+    elif mm_selection.lower() == "u":
         update(network)
 
-    elif mm_selection == "9" or "s":     # save
+    # SAVE NETWORK
+    elif mm_selection.lower() == "s":
         save_net_name = input("Save network as: ")
         save_net(network, save_net_name)
 
-    elif mm_selection.upper() == "X":
-        print("Unplugging from the social network... good bye")
+    # EXIT
+    elif mm_selection.lower() == "x":
+        print("\nUnplugging from the social network... good bye")
         exit()
 
     else:
@@ -285,24 +300,32 @@ def simulation_mode(netfile, eventfile, p_like, p_follow):
 # ----------------------------------------------
 try:
     run_mode = sys.argv[1]
+
     if run_mode == "-i":
         print("\nInteractive Test Mode\n")
+        sleep(2)
         interactive_splash()
+
     elif run_mode == "-s":
+
         print("Loading Network File...")
         netfile = sys.argv[2]
+        sleep(1)
         print("Loaded: " + str(netfile))
 
         print("Loading Event File...")
         eventfile = sys.argv[3]
+        sleep(1)
         print("Loaded: " + str(eventfile))
 
         print("Loading Prob Like...")
         p_like = sys.argv[4]
+        sleep(1)
         print("Prob Like: " + p_like)
 
         print("Loading Prob Follow...")
         p_follow = sys.argv[5]
+        sleep(1)
         print("Prob Follow: " + p_follow)
 
         simulation_mode(netfile, eventfile, p_like, p_follow)
