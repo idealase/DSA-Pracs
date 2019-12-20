@@ -74,6 +74,7 @@ def load_network(in_net_name: str):
         network = pickle.load(in_net_file)
         in_net_file.close()
         print("\nSuccessfully loaded network\n")
+        sleep(1)
         return network, interactive_splash(network)
     except FileNotFoundError:
         print("Unable to load network")
@@ -160,6 +161,7 @@ def save_net(network: object, save_net_name: str):
     pickle.dump(network, output)
     output.close()
     print("Network saved using Pickle")
+    sleep(1)
     return interactive_splash(network)
 
 
@@ -189,6 +191,14 @@ def interactive_splash(network=None):
 
     # LOAD NETWORK
     elif mm_selection.lower() == "l":
+        if network:
+            cont = input("This will replace current network - continue? y/n")
+            if cont.lower() == "y":
+                pass
+            else:
+                print("Loading aborted")
+                sleep(1)
+                interactive_splash(network)
         in_net_name = input("Enter name of network file to load: ")
         load_network(in_net_name)
 
@@ -303,12 +313,13 @@ try:
     run_mode = sys.argv[1]
 
     if run_mode == "-i":
-        print("\nInteractive Test Mode\n")
+        print("\nEntering Interactive Test Mode...\n")
         sleep(2)
         interactive_splash()
 
     elif run_mode == "-s":
-
+        print("Entering Simulation Mode...")
+        sleep(1)
         print("Loading Network File...")
         netfile = sys.argv[2]
         sleep(1)
