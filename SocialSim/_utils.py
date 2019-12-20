@@ -173,6 +173,11 @@ class SocNet:
             if hum.name == name:
                 return hum
 
+    def find_disp_hum(self, name):
+        hum = self.get_human(name)
+        print("Found " + name)
+        print(hum)
+
     def get_adjacent(self, name):
         h = self.get_human(name)
         h.get_adjacent()

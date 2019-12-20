@@ -16,10 +16,13 @@ combo.py is simply a combination of:
 combo.py was made to circumvent the need to parse text file input with regex
     - implementing text parsing presented a major bottleneck in development
 """
-import sys
+import sys                  # for taking command line options
+import re                   # for parsing input files
+import pickle               # for loading/saving
+import os                   # for clearing terminal output
+from msvcrt import getch    # for "Press any key to continue"
+from time import sleep
 from _utils import *
-import re
-import pickle
 
 # Usage Guide to be displayed if program launched incorrectly
 usage = "\n\t---\tWelcome to SocialSim.py\t---\t\n " \
@@ -50,6 +53,13 @@ def breakage_prompt(func):
         print("Unplugging from the social network... good bye")
         exit()
 
+
+def nyi(network=None):
+    print("SORRY - NOT YET IMPLEMENTED")
+    print("Press any key to return to main menu")
+    while getch():
+        return interactive_splash(network)
+
 # ----------------------------------------------
 # INTERACTIVE FUNCTIONS
 # ----------------------------------------------
@@ -68,47 +78,72 @@ def load_network(in_net_name: str):
         interactive_splash()
     # interactive_splash()
 
+
 # Set Probabilities
+def set_probs(network):
+    return nyi(network)
 
 
 # Node Operations (find, insert, delete)
-def node_ops():
-    print("Choose a Node Operation to perform\n"
+def node_ops(network):
+    print("\nChoose a Node Operation to perform\n"
           "(I)nsert\n"
           "(D)elete\n"
           "(F)ind\n")
     node_op = input()
     if node_op.upper() == "I":  # insert
         try:
-            ins_name = input("Name of person to be inserted")
+            ins_name = input("\nName of person to be inserted: ")
             network.add_human(str(ins_name))
+            print("Added " + ins_name + " to network succesfully")
+            sleep(1)
         except NameError:
-            print("No Network Established")
+            print("Operation failed - NameError")
     elif node_op.upper() == "D":    # delete
         pass
     elif node_op.upper() == "F":    # find
-        pass
+        try:
+            find_name = input("\nName to find in network: ")
+            network.find_disp_hum(str(find_name))
+
+        except NameError:
+            print("Operation failed - NameError")
     else:
         print("Invalid Selection")
 
+    opt = input("Perform more (n)ode operations or return to (m)ain menu")
+    complexx
+    interactive_splash(network)
+
+
 
 # Edge Operations
+def edge_ops(network):
+    return nyi(network)
+
 
 # New Post
+def post(network):
+    return nyi(network)
 
 # Display Network
 def display_net(network):
     network.display_as_list()
-    print("\n")
-    return interactive_splash(network)
+    print("\nPress any key to return to main menu")
+    while getch():
+        return interactive_splash(network)
 
 
 # Display Statistics
     # events in order of popularity
-# people in order of popularity
-# a person's record - #events, #followers, #following etc
+    # people in order of popularity
+    # a person's record - #events, #followers, #following etc
+def stats(network):
+    return nyi(network)
 
 # Update (timestep)
+def update(network):
+    return nyi(network)
 
 
 # Save Network
@@ -124,7 +159,8 @@ def save_net(network: object, save_net_name: str):
 
 
 def interactive_splash(network=None):
-    print("Main Menu: Select an option from below")
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("Main Menu: Select an option from below\n")
     print("(N)\t Make new Empty Network\n"
           "(1)\t Load Network\n"
           "(2)\t Set Probalities\n"
@@ -136,35 +172,48 @@ def interactive_splash(network=None):
           "(8)\t Update (run a timestep)\n"
           "(9)\t Save Network\n"
           "(X)\t Exit\n")
+
     mm_selection = input()
 
     if mm_selection.upper() == "N":
         network = SocNet()
         print("Created new empty network")
+        sleep(1)
         return network, interactive_splash(network)
-    elif mm_selection == "1":   # load
+
+    elif mm_selection == "1" or "l":   # load
         in_net_name = input("Enter name of network file to load: ")
         load_network(in_net_name)
-    elif mm_selection == "2":     # set probs
-        pass
-    elif mm_selection == "3":     # node ops
-        node_ops()
-    elif mm_selection == "4":     # edge ops
-        pass
-    elif mm_selection == "5":     # new post
-        pass
-    elif mm_selection == "6":     # display net
+
+    elif mm_selection == "2" or "r":     # set probs
+        set_probs(network)
+
+    elif mm_selection == "3" or "n":     # node ops
+        node_ops(network)
+
+    elif mm_selection == "4" or "e":     # edge ops
+        edge_ops(network)
+
+    elif mm_selection == "5" or "p":     # new post
+        post(network)
+
+    elif mm_selection == "6" or "d":     # display net
         display_net(network)
-    elif mm_selection == "7":     # display stats
-        pass
-    elif mm_selection == "8":     # update
-        pass
-    elif mm_selection == "9":     # save
+
+    elif mm_selection == "7" or "t":     # display stats
+        stats(network)
+
+    elif mm_selection == "8" or "u":     # update
+        update(network)
+
+    elif mm_selection == "9" or "s":     # save
         save_net_name = input("Save network as: ")
         save_net(network, save_net_name)
+
     elif mm_selection.upper() == "X":
         print("Unplugging from the social network... good bye")
         exit()
+
     else:
         print("Error")
 
