@@ -94,7 +94,7 @@ def node_ops(network):
             print("Operation failed - NameError")
     # DELETE
     elif node_op.upper() == "D":
-        pass
+        nyi(network)
     # FIND
     elif node_op.upper() == "F":
         try:
