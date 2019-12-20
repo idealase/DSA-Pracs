@@ -145,9 +145,6 @@ def display_net(network):
 
 
 # Display Statistics
-    # events in order of popularity
-    # people in order of popularity
-    # a person's record - #events, #followers, #following etc
 def stats(network):
     return nyi(network)
 

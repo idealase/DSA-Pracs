@@ -1,6 +1,7 @@
 import csv
 import random
-from _utils import *
+import pickle
+from soc_classes import *
 
 # set starting numbers for net_file
 NETWORK_POP = 50
@@ -91,5 +92,9 @@ for name in names:
     network.show_following(name)
 
 network.infection_report()
-
 network.statistics()
+
+# save for loading in SocialSim.py interactive mode
+output = open('saves/test_net.pkl', 'wb')
+pickle.dump(network, output)
+output.close()
