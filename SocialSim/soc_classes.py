@@ -228,7 +228,6 @@ class SocNet:
                 print("Followers: " + str(hum.get_followers_count()))
                 print("Following: " + str(hum.get_following_count()))
 
-
     def infection_report(self, timelog=False):
         """
         Generates an output of all humans in the network and their
@@ -248,7 +247,10 @@ class SocNet:
                 print("\t" + val.get_name())
         if timelog:
             print("\n -- Infection Status Current as of -- ")
-            time_now = localtime()
+            try:
+                time_now = localtime()
+            except:
+                pass
             print("\tDate: " + str(time_now[2]) + "-" + str(time_now[1]) + "-" +
                   str(time_now[0]))
             print("\tTime: " + str(time_now[3]) + ":" + str(time_now[4]) + ":" +
@@ -276,7 +278,6 @@ class SocNet:
                 next_follower.infection_check()
         else:
             print("Can't find poster " + poster)
-
 
 
 class Humanoid:
@@ -351,6 +352,10 @@ class Humanoid:
 
 class SocConx:  # GraphEdge
     def __init__(self, follower, influencer, interest=0.5):
+        """
+
+        :type influencer: object
+        """
         self.label = str(follower) + " follows " + str(influencer)
         self.follower = follower
         self.influencer = influencer
@@ -375,3 +380,9 @@ class SocConx:  # GraphEdge
         return "{0} is following {1}, " \
                "with an interest level of {2}"\
             .format(self.follower, self.influencer, self.interest)
+
+
+if __name__ == "__main__":
+    print("soc_classes.py\n\n"
+          "This file contains the classes used in SocialSim.py\n\nRun "
+          "SocialSim.py to use the social network simulator")

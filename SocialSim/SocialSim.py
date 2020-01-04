@@ -17,7 +17,7 @@
 #   regex - implementing text parsing was a major bottleneck in development
 
 import sys                  # for taking command line options
-import re                   # for parsing input files
+#import re                   # for parsing input files
 import pickle               # for loading/saving
 import os                   # for clearing terminal output
 from time import sleep      # for delaying terminal clearing
@@ -151,6 +151,9 @@ def save_net(network: object, save_net_name: str):
     return interactive_splash(network)
 
 
+# ----------------------------------------------
+# INTERACTIVE MODE
+# ----------------------------------------------
 def interactive_splash(network=None):
     os.system('cls' if os.name == 'nt' else 'clear')
     print("Main Menu: Select an option from below\n")
@@ -230,24 +233,23 @@ def interactive_splash(network=None):
         print("Error")
 
 
-
-
-
-
-
 # ----------------------------------------------
 # SIMULATION MODE
 # ----------------------------------------------
+
 def simulation_mode(netfile, eventfile, p_like, p_follow):
-    print("\nSimulation Mode\n")
+    try:
+        print("\nSimulation Mode\n")
 
-    # init a social network
-    network = SocNet()
+        # init a social network
+        network = SocNet()
 
-    with open(netfile, 'r') as network_file:
-        #net_line = network_file.readlines()
-        print(len(network_file))
-        #print(net_line)
+        with open(netfile, 'r') as network_file:
+            #net_line = network_file.readlines()
+            print(len(network_file))
+            #print(net_line)
+    except:
+        return nyi()
 
     #for line in net_data:
         #print(line)
@@ -256,16 +258,9 @@ def simulation_mode(netfile, eventfile, p_like, p_follow):
         #influencer = interaction[0]
         # follower = interaction[1]
 
-
-
-
     # handle event file
-
     # handle probability of likes
-
     # handle probability of follows
-
-
 """ handle network file
 
     with open(netfile, 'r') as network_file:
@@ -282,18 +277,9 @@ def simulation_mode(netfile, eventfile, p_like, p_follow):
         print(ppl)"""
 
 
-
-
-
-
-
-
-
-
-
-
 # ----------------------------------------------
-# PARSING RUN OPTIONS
+# PARSING USER RUN OPTIONS AND RUNNING
+# aka "main()"
 # ----------------------------------------------
 try:
     run_mode = sys.argv[1]

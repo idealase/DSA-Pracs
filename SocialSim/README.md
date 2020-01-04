@@ -45,7 +45,9 @@ Running without options will output usage instructions, e.g.
 * Interactive Mode:
     + Set Probabilities
     + Edge Operations
+        - NO DELETE METHOD
     + Update Network
+        - NO TIMESTEP FEATURE
  * Simulation Mode:
     + handling of network file and event file
     + implementation of like/follow probabilites
