@@ -4,6 +4,12 @@ Simulating information spread through a social network. In particular, the proli
 
 ## Running Instructions:
 
+Required packages/modules:
+* sys
+* pickle
+* os
+* time.sleep
+
 In a terminal run:
 
 > python3 SocialSim.py [options]

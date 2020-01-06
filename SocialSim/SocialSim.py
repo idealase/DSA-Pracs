@@ -36,12 +36,13 @@ usage = "\n\t---\tWelcome to SocialSim.py\t---\t\n " \
     "\t - an event file\n" \
     "\t - a base probalility of liking a post\n" \
     "\t - a base probability of following a user\n" \
-    "\ne.g. >> python3 SocialSim.py -s netfile eventfile p_like p_follow" \
+    "\ne.g. >> python3 SocialSim.py -s netfile eventfile p_like p_follow"
 
 
-
+# ----------------------------------------------
 # NOT YET IMPLEMENTED PLACEHOLDER
 # for unfinished functions to prevent crashes
+# ----------------------------------------------
 def nyi(network=None):
     print("SORRY - NOT YET IMPLEMENTED")
     input("Press ENTER to return to main menu")
